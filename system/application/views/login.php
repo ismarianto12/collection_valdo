@@ -5,7 +5,7 @@
 
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Debt Collection Management | Login</title>
   <script type="text/javascript" src="<?php echo base_url() ?>assets/pngfix/iepngfix_tilebg.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css" />
@@ -56,6 +56,9 @@
 
   <form method="post" action="#">
     <div id="login_wrap">
+      <br /> <br />
+      <br />
+
       <center>
         <a href="#"> <img src="<?= base_url() ?>/assets/images/logo.png" /></a>
       </center>
