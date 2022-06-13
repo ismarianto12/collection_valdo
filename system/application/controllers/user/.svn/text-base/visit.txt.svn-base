@@ -1,0 +1,52 @@
+    function visit()
+    {
+		$this->load->library('cezpdf');
+		$this->load->helper('pdf');  
+		prep_pdf();
+		$mainFont = './fonts/Helvetica.afm';
+		$this->cezpdf->selectFont($mainFont);
+        
+        $kop = "SURAT TUGAS PENAGIHAN\n";
+        $kop .= "<b>KARTU KREDIT BANK BUMIPUTERA</b>\n";
+        $kop_alamat = "JL. Raden Saleh I No. 3A Jakarta 10340,Phone 021 31990588 Fax 021 3900005.\n\n";
+        
+		$img = ImageCreatefromjpeg(base_url().'assets/images/bp.jpg');
+        //$this->cezpdf->ezText(date("Y-m-d H:i:s"), 6, array('aleft'=>100));
+        $this->cezpdf->addImage($img,50,765,100,25,100);
+        $this->cezpdf->ezText($kop, 8, array('aleft'=>160));
+        $this->cezpdf->ezText($kop_alamat, 8);
+        $this->cezpdf->setLineStyle(2,1);
+		$this->cezpdf->line(500,750,50,750);
+        
+        // body
+		$data = array(
+		array('num'=>1,'name'=>'Agency','val'=>': FAJKT','name2'=>'Limit','val2'=>'4000000')
+		,array('num'=>2,'name'=>'Tgl Serah','val'=>': 1/14/2010','name2'=>'','val2'=>'')
+		,array('num'=>3,'name'=>'Tgl Tarik','val'=>': 1/21/2010','name2'=>'Out Standing','val2'=>'')
+		,array('num'=>4,'name'=>'','val'=>'','name2'=>'Current','val2'=>'')
+        ,array('num'=>5,'name'=>'No. Kartu','val'=>'2615 2357 2735 2863','name2'=>'X-Days','val2'=>'')
+        ,array('num'=>6,'name'=>'Nama','val'=>'Andy Oktana','name2'=>'30Dpd','val2'=>'4000000')
+        ,array('num'=>7,'name'=>'Gender','val'=>'Male','name2'=>'60Dpd','val2'=>'4000000')
+        ,array('num'=>8,'name'=>'Lahir','val'=>'19/12/1988','name2'=>'90Dpd','val2'=>'4000000')
+        ,array('num'=>9,'name'=>'Ibu Kandung','val'=>'Sri Sukamti','name2'=>'120Dpd','val2'=>'4000000')
+        ,array('num'=>10,'name'=>'Open Date','val'=>'4/23/2009','name2'=>'150Dpd','val2'=>'4000000')
+        ,array('num'=>11,'name'=>'Cycle','val'=>'23','name2'=>'180Dpd','val2'=>'4000000')
+        ,array('num'=>12,'name'=>'Bucket','val'=>'180 hari ++','name2'=>'210Dpd','val2'=>'4000000')
+        ,array('num'=>13,'name'=>'Last Pay (Date)','val'=>'','name2'=>'TOTAL','val2'=>'4000000')
+        ,array('num'=>14,'name'=>'Last Pay (Rp)','val'=>'Rp 0.00','name2'=>'','val2'=>'')
+        ,array('num'=>15,'name'=>'Alamat Rumah','val'=>'Jl. Limo Tengah No 16 rt 003 rw 001 cinere - limo - limo - depok 16515 - INDONESIA','name2'=>'Kantor','val2'=>'AIG LIFE')
+        ,array('num'=>16,'name'=>'','val'=>'','name2'=>'Posisi','val2'=>'Officer')
+        ,array('num'=>17,'name'=>'Nama ECON','val'=>'HARTINI NOVIKA SARI','name2'=>'Alamat Kantor','val2'=>'KOMP PERKANTORAN GOLDER PLAZA BLOK A18 JL. RS FATMAWATI NO105-12420')
+        ,array('num'=>18,'name'=>'Alamat ECON','val'=>'Jl. Limo Tengah No 16 rt 003 rw 001 cinere - limo - limo - depok 16515 - INDONESIA','name2'=>'Telp Rumah','val2'=>'926378298')
+        ,array('num'=>19,'name'=>'','val'=>'','name2'=>'Telp KAntor','val2'=>'926378298')
+        ,array('num'=>19,'name'=>'','val'=>'','name2'=>'HP','val2'=>'926378298')
+		);
+                        
+        $this->cezpdf->ezTable($data,array('name'=>'','val'=>'','name2'=>'','val2'=>''),'',array('xPos'=>'left','xPos'=>255,'showHeadings'=>0,'shaded'=>0,'showLines'=>0,'maxWidth'=>400,'fontSize'=>8));
+        
+        $this->cezpdf->ezText("NOTE", 8);
+        $this->cezpdf->setLineStyle(2,1);
+        $this->cezpdf->line(500,380,50,380);
+        
+		$this->cezpdf->stream(array('Content-Disposition'=>'spppp'));      
+    }

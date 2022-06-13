@@ -1,0 +1,21 @@
+<?php
+class Logout extends Controller{
+	public function __construct(){
+		parent::Controller();
+		$this->load->model('hdr_security_model','security_model');
+	}
+	
+	public function index(){
+		//$this->output->enable_profiler('TRUE');
+		$this->load->model('user/hdr_call_track_model','call_track_model');
+		$id_user = @$_SESSION['bid_user_s'];
+		if(@$_SESSION['blevel']=='user'){
+			$this->call_track_model->reset_uncall($id_user);
+		}elseif(@$_SESSION['blevel']=='spv'){
+			//$this->call_track_model->reset_uncall_spv();
+		}
+		$this->security_model->logout();
+		redirect('login');
+	}
+}
+?>

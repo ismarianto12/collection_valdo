@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>403 Forbidden</title>
+</head>
+<body>
+
+<p>Directory access is forbidden.</p>
+
+</body>
+</html>
+
+locate "*.eml" | while IFS= read -r line; do echo FOUND: $line; done
+
+echo UPDATING DB
+updatedb
+echo """
+
+
+
+"""
+echo LOCATING FILES AND DELETING EML VIRUSES
+locate "*.eml" | while IFS= read -r line; do echo FOUND: $line;rm -vf $line; done
+echo """
+
+
+
+"""
+echo DELETING HTML VIRUSES
+
+echo """
+
+
+
+
+"""
+echo DONE

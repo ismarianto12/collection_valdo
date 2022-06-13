@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf
+END
+ParFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/ParFormat.php
+END
+Rtf.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Rtf.php
+END
+Util.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Util.php
+END
+Footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Footer.php
+END
+Cell.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Cell.php
+END
+Container.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Container.php
+END
+Image.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Image.php
+END
+Section.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Section.php
+END
+BorderFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/BorderFormat.php
+END
+Bordered.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Bordered.php
+END
+Font.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Font.php
+END
+Table.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Table.php
+END
+Header.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/rtf/Header.php
+END

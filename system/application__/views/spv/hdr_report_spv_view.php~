@@ -1,0 +1,68 @@
+
+<script>
+ $(document).ready(function() {
+  var begindate = '<?=date('Y-m-d')?>';
+	  var enddate = '<?=date('Y-m-d')?>';
+ 	// $("#responsecontainer").load("response.php");
+   var refreshId = setInterval(function() {
+      reloadSumCases(begindate,enddate);
+   }, 360000); //60 seccond
+});
+
+$(document).ready(function(){
+ var begindate = $('.begindate').val();
+	  var enddate = $('.enddate').val();
+	$('.sum_report').load('<?=site_url()?>spv/hdr_spv_report_cont/sum_report/'+begindate+'/'+enddate)	
+ });
+function reloadSumCases(begindate,enddate){
+//notif.hide();
+$(document).ready(function(){
+	$('.sum_report').load('<?=site_url()?>spv/hdr_spv_report_cont/sum_report/'+begindate+'/'+enddate)	
+ });	
+}
+function goSumCases(){
+loading('Please Wait...<br/>if take more than 5 sec press F5');
+$(document).ready(function(){
+      var begindate = $('.begindate').val();
+	  var enddate = $('.enddate').val();
+	  //alert(filterdate);
+      reloadSumCases(begindate,enddate);
+    });
+
+}
+</script>
+<div class="content">
+	<!-- start of CONTENT FULL -->
+	<div class="cnfull">
+		<span class="boxfull_top"></span>
+		<div class="boxfull_box">
+			<center><h2 class="tit">&nbsp;CALL TRACK REPORT</h2></center>
+			<br/>
+			
+			<br/>
+			<center><h3 class="tit">&nbsp;Total Need To Call Debtor <?=$total_to_call;?></h2></center>
+			<br/>
+			<h2 class="tit">&nbsp;Filter</h2>
+			<br/>
+			<label class="batch" style="width:50px;">Date</label><input type="text" class="begindate" id="datepicker" size="9" value="<?=date('Y-m-d')?>"  /> to <input type="text" class="enddate" id="datepicker2"  size="9" value="<?=date('Y-m-d')?>" />&nbsp;&nbsp;&nbsp;<input type="button" value="GO / Refresh" class="but_reg" onclick="goSumCases();return false;">
+		<br/>
+			<br/>
+			<div class="sum_report"><center><img src="<?=base_url()?>assets/images/loader.gif" /><center></div>
+			<br/>
+			<br/>
+			<br/>
+			</div>
+		<span class="boxfull_bot"></span>
+	</div>
+	<!-- end of CONTENT FULL -->
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

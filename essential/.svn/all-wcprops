@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/finansia_collection/!svn/ver/1/essential
+END
+php.ini
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/finansia_collection/!svn/ver/1/essential/php.ini
+END
+CentOS-Base.repo
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/finansia_collection/!svn/ver/1/essential/CentOS-Base.repo
+END
+nginx.conf
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/finansia_collection/!svn/ver/1/essential/nginx.conf
+END
+phpinfo().html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/finansia_collection/!svn/ver/1/essential/phpinfo().html
+END
+www.conf
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/finansia_collection/!svn/ver/1/essential/www.conf
+END
+php-fpm.conf
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/finansia_collection/!svn/ver/1/essential/php-fpm.conf
+END
+CentOS-Media.repo
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/finansia_collection/!svn/ver/1/essential/CentOS-Media.repo
+END

@@ -1,0 +1,89 @@
+fieldset { border:1px solid #c4c1c1; }
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid #c4c1c1;
+  color:#4e4c4c;
+  font-size:90%;
+  text-align:left;
+  }
+
+ul, li{margin:0; padding:0; list-style:none;}
+.menu_body4 {display:none; width: auto;border:0px solid #998675;  font-size:12px;}
+.menu_body4 li{background:#f6f6f6;}
+.menu_body4 li.alt{background:#e7edf0;}
+.menu_body4 li a{color:#4e4d4d; text-decoration:none; padding:6px; display:block;}
+.menu_body4 li a:hover{padding:6px 6px; font-weight:bold;}
+.linkbos a {font-family:Arial, Helvetica, sans-serif; text-decoration:none; font-size:12px; } 
+
+
+	*{
+	font-size:12px;
+}
+body {
+background-color:#f6f6f6;
+	 font-family:helvetica,tahoma,verdana,sans-serif;
+    padding:20px;
+    font-size:13px;
+    margin:0;
+}
+h2 {
+    font-size:14px;
+    color:#BF7DBF;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+.demo-info{
+	background:#FFFEE6;
+	color:#8F5700;
+	padding:12px;
+}
+.demo-tip{
+	width:16px;
+	height:16px;
+	margin-right:8px;
+	float:left;
+}
+		#fm{
+			margin:0;
+			padding:10px 30px;
+		}
+		.ftitle{
+			font-size:14px;
+			font-weight:bold;
+			color:#666;
+			padding:5px 0;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+		.fitem{
+			margin-bottom:5px;
+		}
+		.fitem label{
+			display:inline-block;
+			width:80px;
+		}
+		
+		.style5 {font-family:  Helvetica, sans-serif, Geneva, Arial; font-size: 12px;  }
+		
+input {border: 1px solid #D3D3D3;
+font-family:Verdana, Arial, Helvetica, sans-serif; color:#000; font-size:11px; padding: 4px; background-color:#fcfdfd; }
+
+select {  
+	border: 1px solid #D3D3D3; 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	color:#000; font-size:12px; padding: 1px; 
+	background-color:#fcfdfd; 
+	height:auto; }
+
+textarea { border: 1px solid #D3D3D3; font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#000; }
+.slct{
+    height: 160px !important;
+    width: 136px !important;
+}
+img {
+    border: medium none;
+    cursor: pointer;
+    vertical-align: middle;
+}

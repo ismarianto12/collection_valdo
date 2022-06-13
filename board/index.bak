@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title>Wallboard</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<script src="../assets/js/jquery-1.3.2.min.js"></script>
+
+ <script>
+
+/*
+var auto_refresh_outbound = setInterval(
+function()
+{
+	$('#loaddiv_outbound').fadeOut('slow').load('/reload/outbound').fadeIn("slow");
+}, 1000);
+
+var auto_refresh_inbound = setInterval(
+function()
+{
+	$('#loaddiv_inbound').fadeOut('slow').load('/reload/inbound').fadeIn("slow");
+}, 1000);
+*/
+
+$(document).ready(function()
+{
+	$('#loaddiv_inbound1').fadeOut('slow').load('../index.php/reload/topfive').fadeIn("slow");
+	$('#loaddiv_inbound2').fadeOut('slow').load('../index.php/reload/worstfive').fadeIn("slow");
+	$('#loaddiv_outbound').fadeOut('slow').load('../index.php/reload/monitoring').fadeIn("slow");
+});
+
+</script>
+
+</head>
+<body>
+<div id="pagebody">
+  <!-- container -->
+  <div id="container">
+    <div id="container-inner" class="pkg">
+
+		<!-- alpha -->
+		<div id="alpha">
+			<div id="alpha-inner" class="pkg">
+
+		    <div id="inbound-title">
+		    	<h1>TOP Five</h1>
+		    </div>
+
+		    <div id="inbound-body">
+		    	<div id="inbound-body-inner" class="pkg">
+		    		<div id="loaddiv_inbound1"></div>
+		    	</div>
+		    </div>
+
+		    <div id="inbound-title">
+		    	<h1>Worst 5</h1>
+		    </div>
+
+		    <div id="inbound-body">
+		    	<div id="inbound-body-inner" class="pkg">
+		    		<div id="loaddiv_inbound2"></div>
+		    	</div>
+		    </div>
+
+			</div>
+		</div>
+		<!-- /alpha -->
+
+		<!-- beta -->
+		<div id="beta">
+			<div id="beta-inner" class="pkg">
+
+		    <div id="outbound-title">
+		    	<h1>Monitoring Untounch</h1
+		    </div>
+
+		    <div id="outbound-body">
+		    	<div id="outbound-body-inner" class="pkg">
+						<div id="loaddiv_outbound"></div>
+		    	</div>
+		    </div>
+
+			</div>
+		</div>
+		<!-- /beta -->
+
+    </div>
+  </div>
+  <!-- /container -->
+
+</div>
+</body>
+</html>

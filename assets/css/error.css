@@ -1,0 +1,22 @@
+body {
+	margin: top 50px;
+	background: #FFF;
+	line-height: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFF;
+}
+
+#wrapper { width:100%; margin:50px; }
+#image { background-image:url(../images/Under-Construction.jpg); background-repeat:no-repeat; width:300px; height:300px; margin: 0 auto;}
+#text {
+	display:block;
+	font-size:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#333;
+	margin: 0 auto;
+	text-align: center;
+	height:100px;
+}
+
+h1 { color:#F00; float:left; }

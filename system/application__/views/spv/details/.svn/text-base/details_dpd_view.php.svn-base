@@ -1,0 +1,43 @@
+<div style="width:900px;height:300px;overflow:auto;" align="center">
+    <table frame=void cellspacing=0 cols=3 rules=none border=0>
+        <colgroup><col width=100><col width=100><col width=100><col width=100><col width=100><col width=100><col width=100><col width=100><col width=100><col width=100></colgroup>
+        <tbody>
+            <tr>
+                <td>dpd</td>
+                <td>Data Clean</td>
+                <td>Need Call</td>
+                <td>Dont Call</td>
+                <td>Already Call</td>
+                <td>Remaining</td>
+                <td>RemainingShift1</td>
+                <td>RemainingShift2</td>
+                <td>Shift 1</td>
+                <td>Shift 2</td>
+            </tr>
+            <?php $b = 0; ?>
+            <?php
+              foreach ($dpd_list as $row_dpd) {
+                  $b++;
+                  $class_type = $b % 2 == 0 ? 'a' : 'b';
+                  $class = $row_dpd->dpd <= '4' && $row_dpd->dpd != '0' ? 'class="dpd_real' . $class_type . '"' : '';
+            ?>
+
+                  <tr>
+
+                      <td <?= $class; ?>><?= $row_dpd->dpd ?></td>
+                      <td <?= $class; ?>><?= $row_dpd->list ?></td>
+                      <td <?= $class; ?>><?= $row_dpd->dpd_call ?></td>
+                <?php $set = $row_dpd->dpd <= '4'  && $row_dpd->dpd !='0' ? $this->details_dpd->set_shift(1, $row_dpd->dpd, round($row_dpd->dpd_call / 2)) . $this->details_dpd->set_shift(2, $row_dpd->dpd, round($row_dpd->dpd_call / 2)) : ''; ?>
+                  <td <?= $class; ?>><?= $row_dpd->dpd_out ?></td>
+                  <td <?= $class; ?>><?= $row_dpd->dpd_called ?></td>
+                  <td <?= $class; ?>><?= $row_dpd->remaining ?></td>
+                  <td <?= $class; ?>><?= $row_dpd->remaining_shift1 ?></td>
+                  <td <?= $class; ?>><?= $row_dpd->remaining_shift2 ?></td>
+                  <td <?= $class; ?>><?= $row_dpd->shift1 ?></td>
+                  <td <?= $class; ?>><?= $row_dpd->shift2 ?></td>
+              </tr>
+            <?php } ?>
+
+        </tbody>
+    </table>
+</div>

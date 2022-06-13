@@ -1,0 +1,89 @@
+<?php
+
+/*
+  This script software package is NOT FREE And is Copyright 2010 (C) Valdo-intl all rights reserved.
+  we do supply help or support or further modification to this script by Contact
+  Haidar Mar'ie
+  e-mail = haidar.m@valdo-intl.com
+  e-mail = coder5@ymail.com
+ */
+
+class Insert_payment extends Controller {
+
+    public function __construct() {
+      parent::Controller();
+      $this->load->model('hdr_debtor/hdr_debtor_model', 'debtor_model');
+      $this->load->model('user/hdr_call_track_model', 'call_track_model');
+      $this->load->model('spv/hdr_report_spv_model', 'spv_report_model');
+    }
+
+    public function index()
+    {
+      $this->insert_payment();
+    }
+
+
+    public function insert_payment()
+    {
+
+	    //check setiap jam 1 malem update report
+    	$time = date('H');
+    	//die($time);
+			if($time == '01')
+			{
+	    	$this->spv_report_model->report_filter();
+			}
+
+      $db_finansia = $this->load->database('db_finansia', TRUE);
+
+			$today = date('Y-m-d');
+      $sql = "SELECT ID,AgreementNo,convert(varchar, DateTransaction, 120) as trx_date,
+          convert(varchar, DateTimeUpdate, 120) as update_date,AngsuranKe,
+          Amount,JenisTransaksi FROM PaymentTypeValdo
+          where month(DateTransaction) = month(getdate())
+					and year(DateTransaction)=year(getdate())
+					and day(DateTransaction)=day(getdate())
+          order by DateTransaction";
+          //WHERE DateTransaction = '".$today."'";
+      //die($sql);
+      $query = $db_finansia->query($sql);
+
+			if($query->num_rows() > 0)
+			{
+	      foreach ($query->result() as $row)
+	      {
+	          $sql = "INSERT IGNORE INTO  `finansia_collection`.`hdr_payment` (`primary_1` ,`trx_date` ,update_date ,`angsuran_ke` ,`amount` ,`description` ,`create_date`) VALUES (
+							'" . $row->AgreementNo . "',  '" . $row->trx_date . "' , '" . $row->update_date . "', '" . $row->AngsuranKe . "', '" . $row->Amount . "','" . $row->JenisTransaksi . "',CURRENT_TIMESTAMP);
+							 ";
+	          //die($sql);
+	          $this->db->query($sql);
+	      }
+			}
+
+    	$sql = "update hdr_debtor_main set dpd = datediff(now(),due_date) where due_date is not null ";
+			$this->db->query($sql);
+
+      echo 'Success';
+
+    }
+
+    public function test()
+    {
+    	$sql = "show fields from hdr_tmp_log;";
+    	$q = $this->db->query($sql);
+
+			$arr_temp1 = array();
+    	foreach($q->result_array() as $row)
+    	{
+    		if($row['Field'] == 'id_debtor_det') continue;
+    		//var_dump($row['Field']);
+				$arr_temp1[] = '`' . $row['Field'] . '`';
+    	}
+    	$st_val = implode(",",$arr_temp1);
+
+    	die($st_val);
+
+    }
+
+}
+?>

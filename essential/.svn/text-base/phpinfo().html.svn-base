@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)http://192.168.1.104/finansia/index.php/login/info -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+body {background-color: #ffffff; color: #000000;}
+body, td, th, h1, h2 {font-family: sans-serif;}
+pre {margin: 0px; font-family: monospace;}
+a:link {color: #000099; text-decoration: none; background-color: #ffffff;}
+a:hover {text-decoration: underline;}
+table {border-collapse: collapse;}
+.center {text-align: center;}
+.center table { margin-left: auto; margin-right: auto; text-align: left;}
+.center th { text-align: center !important; }
+td, th { border: 1px solid #000000; font-size: 75%; vertical-align: baseline;}
+h1 {font-size: 150%;}
+h2 {font-size: 125%;}
+.p {text-align: left;}
+.e {background-color: #ccccff; font-weight: bold; color: #000000;}
+.h {background-color: #9999cc; font-weight: bold; color: #000000;}
+.v {background-color: #cccccc; color: #000000;}
+.vr {background-color: #cccccc; text-align: right; color: #000000;}
+img {float: right; border: 0px;}
+hr {width: 600px; background-color: #cccccc; border: 0px; height: 1px; color: #000000;}
+</style>
+<title>phpinfo()</title><meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE"></head>
+<body><div class="center">
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><td>
+<a href="http://www.php.net/"><img border="0" src="./phpinfo()_files/index.php" alt="PHP Logo"></a><h1 class="p">PHP Version 5.3.6</h1>
+</td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">System </td><td class="v">Linux localhost.localdomain 2.6.18-194.el5 #1 SMP Fri Apr 2 14:58:14 EDT 2010 x86_64 </td></tr>
+<tr><td class="e">Build Date </td><td class="v">Apr 15 2011 18:13:15 </td></tr>
+<tr><td class="e">Configure Command </td><td class="v"> './configure'  '--build=x86_64-redhat-linux-gnu' '--host=x86_64-redhat-linux-gnu' '--target=x86_64-redhat-linux-gnu' '--program-prefix=' '--prefix=/usr' '--exec-prefix=/usr' '--bindir=/usr/bin' '--sbindir=/usr/sbin' '--sysconfdir=/etc' '--datadir=/usr/share' '--includedir=/usr/include' '--libdir=/usr/lib64' '--libexecdir=/usr/libexec' '--localstatedir=/var' '--sharedstatedir=/usr/com' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--cache-file=../config.cache' '--with-libdir=lib64' '--with-config-file-path=/etc' '--with-config-file-scan-dir=/etc/php.d' '--disable-debug' '--with-pic' '--disable-rpath' '--without-pear' '--with-bz2' '--with-exec-dir=/usr/bin' '--with-freetype-dir=/usr' '--with-png-dir=/usr' '--with-xpm-dir=/usr' '--enable-gd-native-ttf' '--with-t1lib=/usr' '--without-gdbm' '--with-gettext' '--with-gmp' '--with-iconv' '--with-jpeg-dir=/usr' '--with-openssl' '--with-zlib' '--with-layout=GNU' '--enable-exif' '--enable-ftp' '--enable-magic-quotes' '--enable-sockets' '--with-kerberos' '--enable-ucd-snmp-hack' '--enable-shmop' '--enable-calendar' '--with-libxml-dir=/usr' '--enable-xml' '--with-system-tzdata' '--with-mhash' '--enable-fpm' '--without-mysql' '--without-gd' '--disable-dom' '--disable-dba' '--without-unixODBC' '--disable-pdo' '--disable-xmlreader' '--disable-xmlwriter' '--without-sqlite' '--without-sqlite3' '--disable-phar' '--disable-fileinfo' '--disable-json' '--without-pspell' '--disable-wddx' '--without-curl' '--disable-posix' '--disable-sysvmsg' '--disable-sysvshm' '--disable-sysvsem' </td></tr>
+<tr><td class="e">Server API </td><td class="v">FPM/FastCGI </td></tr>
+<tr><td class="e">Virtual Directory Support </td><td class="v">disabled </td></tr>
+<tr><td class="e">Configuration File (php.ini) Path </td><td class="v">/etc </td></tr>
+<tr><td class="e">Loaded Configuration File </td><td class="v">/etc/php.ini </td></tr>
+<tr><td class="e">Scan this dir for additional .ini files </td><td class="v">/etc/php.d </td></tr>
+<tr><td class="e">Additional .ini files parsed </td><td class="v">/etc/php.d/curl.ini,
+/etc/php.d/dom.ini,
+/etc/php.d/fileinfo.ini,
+/etc/php.d/gd.ini,
+/etc/php.d/intl.ini,
+/etc/php.d/json.ini,
+/etc/php.d/ldap.ini,
+/etc/php.d/mbstring.ini,
+/etc/php.d/mcrypt.ini,
+/etc/php.d/mssql.ini,
+/etc/php.d/mysql.ini,
+/etc/php.d/mysqli.ini,
+/etc/php.d/odbc.ini,
+/etc/php.d/pdo.ini,
+/etc/php.d/pdo_dblib.ini,
+/etc/php.d/pdo_mysql.ini,
+/etc/php.d/pdo_odbc.ini,
+/etc/php.d/pdo_sqlite.ini,
+/etc/php.d/phar.ini,
+/etc/php.d/tidy.ini,
+/etc/php.d/wddx.ini,
+/etc/php.d/xmlreader.ini,
+/etc/php.d/xmlrpc.ini,
+/etc/php.d/xmlwriter.ini,
+/etc/php.d/xsl.ini,
+/etc/php.d/zip.ini
+ </td></tr>
+<tr><td class="e">PHP API </td><td class="v">20090626 </td></tr>
+<tr><td class="e">PHP Extension </td><td class="v">20090626 </td></tr>
+<tr><td class="e">Zend Extension </td><td class="v">220090626 </td></tr>
+<tr><td class="e">Zend Extension Build </td><td class="v">API220090626,NTS </td></tr>
+<tr><td class="e">PHP Extension Build </td><td class="v">API20090626,NTS </td></tr>
+<tr><td class="e">Debug Build </td><td class="v">no </td></tr>
+<tr><td class="e">Thread Safety </td><td class="v">disabled </td></tr>
+<tr><td class="e">Zend Memory Manager </td><td class="v">enabled </td></tr>
+<tr><td class="e">Zend Multibyte Support </td><td class="v">disabled </td></tr>
+<tr><td class="e">IPv6 Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Registered PHP Streams </td><td class="v">https, ftps, compress.zlib, compress.bzip2, php, file, glob, data, http, ftp, phar, zip   </td></tr>
+<tr><td class="e">Registered Stream Socket Transports </td><td class="v">tcp, udp, unix, udg, ssl, sslv3, sslv2, tls </td></tr>
+<tr><td class="e">Registered Stream Filters </td><td class="v">zlib.*, bzip2.*, convert.iconv.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk, mcrypt.*, mdecrypt.* </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="v"><td>
+<a href="http://www.zend.com/"><img border="0" src="./phpinfo()_files/index(1).php" alt="Zend logo"></a>
+This program makes use of the Zend Scripting Language Engine:<br>Zend&nbsp;Engine&nbsp;v2.3.0,&nbsp;Copyright&nbsp;(c)&nbsp;1998-2011&nbsp;Zend&nbsp;Technologies<br></td></tr>
+</tbody></table><br>
+<hr>
+<h1><a href="http://192.168.1.104/finansia/index.php?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000">PHP Credits</a></h1>
+<hr>
+<h1>Configuration</h1>
+<h2><a name="module_bz2">bz2</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">BZip2 Support </td><td class="v">Enabled </td></tr>
+<tr><td class="e">Stream Wrapper support </td><td class="v">compress.bzip2:// </td></tr>
+<tr><td class="e">Stream Filter support </td><td class="v">bzip2.decompress, bzip2.compress </td></tr>
+<tr><td class="e">BZip2 Version </td><td class="v">1.0.3, 15-Feb-2005 </td></tr>
+</tbody></table><br>
+<h2><a name="module_calendar">calendar</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Calendar support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_cgi-fcgi">cgi-fcgi</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">php-fpm </td><td class="v">active </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">cgi.discard_path</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">cgi.fix_pathinfo</td><td class="v">1</td><td class="v">1</td></tr>
+<tr><td class="e">cgi.force_redirect</td><td class="v">1</td><td class="v">1</td></tr>
+<tr><td class="e">cgi.nph</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">cgi.redirect_status_env</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">cgi.rfc2616_headers</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">fastcgi.error_header</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">fastcgi.logging</td><td class="v">1</td><td class="v">1</td></tr>
+<tr><td class="e">fpm.config</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2><a name="module_Core">Core</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">PHP Version </td><td class="v">5.3.6 </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">allow_call_time_pass_reference</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">allow_url_fopen</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">allow_url_include</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">always_populate_raw_post_data</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">arg_separator.input</td><td class="v">&amp;</td><td class="v">&amp;</td></tr>
+<tr><td class="e">arg_separator.output</td><td class="v">&amp;</td><td class="v">&amp;</td></tr>
+<tr><td class="e">asp_tags</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">auto_append_file</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">auto_globals_jit</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">auto_prepend_file</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">browscap</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">default_charset</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">default_mimetype</td><td class="v">text/html</td><td class="v">text/html</td></tr>
+<tr><td class="e">define_syslog_variables</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">disable_classes</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">disable_functions</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">display_errors</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">display_startup_errors</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">doc_root</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">docref_ext</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">docref_root</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">enable_dl</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">error_append_string</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">error_log</td><td class="v">/var/log/php-fpm/www-error.log</td><td class="v">/var/log/php-fpm/www-error.log</td></tr>
+<tr><td class="e">error_prepend_string</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">error_reporting</td><td class="v">30719</td><td class="v">22527</td></tr>
+<tr><td class="e">exit_on_timeout</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">expose_php</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">extension_dir</td><td class="v">/usr/lib64/php/modules</td><td class="v">/usr/lib64/php/modules</td></tr>
+<tr><td class="e">file_uploads</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">highlight.bg</td><td class="v"><font style="color: #FFFFFF">#FFFFFF</font></td><td class="v"><font style="color: #FFFFFF">#FFFFFF</font></td></tr>
+<tr><td class="e">highlight.comment</td><td class="v"><font style="color: #FF8000">#FF8000</font></td><td class="v"><font style="color: #FF8000">#FF8000</font></td></tr>
+<tr><td class="e">highlight.default</td><td class="v"><font style="color: #0000BB">#0000BB</font></td><td class="v"><font style="color: #0000BB">#0000BB</font></td></tr>
+<tr><td class="e">highlight.html</td><td class="v"><font style="color: #000000">#000000</font></td><td class="v"><font style="color: #000000">#000000</font></td></tr>
+<tr><td class="e">highlight.keyword</td><td class="v"><font style="color: #007700">#007700</font></td><td class="v"><font style="color: #007700">#007700</font></td></tr>
+<tr><td class="e">highlight.string</td><td class="v"><font style="color: #DD0000">#DD0000</font></td><td class="v"><font style="color: #DD0000">#DD0000</font></td></tr>
+<tr><td class="e">html_errors</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">ignore_repeated_errors</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">ignore_repeated_source</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">ignore_user_abort</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">implicit_flush</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">include_path</td><td class="v">.:/usr/share/pear:/usr/share/php</td><td class="v">.:/usr/share/pear:/usr/share/php</td></tr>
+<tr><td class="e">log_errors</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">log_errors_max_len</td><td class="v">1024</td><td class="v">1024</td></tr>
+<tr><td class="e">magic_quotes_gpc</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">magic_quotes_runtime</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">magic_quotes_sybase</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">mail.add_x_header</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">mail.force_extra_parameters</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mail.log</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">max_execution_time</td><td class="v">30</td><td class="v">30</td></tr>
+<tr><td class="e">max_file_uploads</td><td class="v">20</td><td class="v">20</td></tr>
+<tr><td class="e">max_input_nesting_level</td><td class="v">64</td><td class="v">64</td></tr>
+<tr><td class="e">max_input_time</td><td class="v">60</td><td class="v">60</td></tr>
+<tr><td class="e">memory_limit</td><td class="v">512M</td><td class="v">512M</td></tr>
+<tr><td class="e">open_basedir</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">output_buffering</td><td class="v">4096</td><td class="v">4096</td></tr>
+<tr><td class="e">output_handler</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">post_max_size</td><td class="v">300M</td><td class="v">300M</td></tr>
+<tr><td class="e">precision</td><td class="v">14</td><td class="v">14</td></tr>
+<tr><td class="e">realpath_cache_size</td><td class="v">16K</td><td class="v">16K</td></tr>
+<tr><td class="e">realpath_cache_ttl</td><td class="v">120</td><td class="v">120</td></tr>
+<tr><td class="e">register_argc_argv</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">register_globals</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">register_long_arrays</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">report_memleaks</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">report_zend_debug</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">request_order</td><td class="v">GP</td><td class="v">GP</td></tr>
+<tr><td class="e">safe_mode</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">safe_mode_exec_dir</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">safe_mode_gid</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">safe_mode_include_dir</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">sendmail_from</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">sendmail_path</td><td class="v">/usr/sbin/sendmail&nbsp;-t&nbsp;-i</td><td class="v">/usr/sbin/sendmail&nbsp;-t&nbsp;-i</td></tr>
+<tr><td class="e">serialize_precision</td><td class="v">100</td><td class="v">100</td></tr>
+<tr><td class="e">short_open_tag</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">SMTP</td><td class="v">localhost</td><td class="v">localhost</td></tr>
+<tr><td class="e">smtp_port</td><td class="v">25</td><td class="v">25</td></tr>
+<tr><td class="e">sql.safe_mode</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">track_errors</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">unserialize_callback_func</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">upload_max_filesize</td><td class="v">300M</td><td class="v">300M</td></tr>
+<tr><td class="e">upload_tmp_dir</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">user_dir</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">user_ini.cache_ttl</td><td class="v">300</td><td class="v">300</td></tr>
+<tr><td class="e">user_ini.filename</td><td class="v">.user.ini</td><td class="v">.user.ini</td></tr>
+<tr><td class="e">variables_order</td><td class="v">GPCS</td><td class="v">GPCS</td></tr>
+<tr><td class="e">xmlrpc_error_number</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">xmlrpc_errors</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">y2k_compliance</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">zend.enable_gc</td><td class="v">On</td><td class="v">On</td></tr>
+</tbody></table><br>
+<h2><a name="module_ctype">ctype</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">ctype functions </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_curl">curl</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">cURL support </td><td class="v">enabled </td></tr>
+<tr><td class="e">cURL Information </td><td class="v">7.15.5 </td></tr>
+<tr><td class="e">Age </td><td class="v">2 </td></tr>
+<tr><td class="e">Features </td></tr>
+<tr><td class="e">AsynchDNS </td><td class="v">No </td></tr>
+<tr><td class="e">Debug </td><td class="v">No </td></tr>
+<tr><td class="e">GSS-Negotiate </td><td class="v">Yes </td></tr>
+<tr><td class="e">IDN </td><td class="v">Yes </td></tr>
+<tr><td class="e">IPv6 </td><td class="v">Yes </td></tr>
+<tr><td class="e">Largefile </td><td class="v">Yes </td></tr>
+<tr><td class="e">NTLM </td><td class="v">Yes </td></tr>
+<tr><td class="e">SPNEGO </td><td class="v">No </td></tr>
+<tr><td class="e">SSL </td><td class="v">Yes </td></tr>
+<tr><td class="e">SSPI </td><td class="v">No </td></tr>
+<tr><td class="e">krb4 </td><td class="v">No </td></tr>
+<tr><td class="e">libz </td><td class="v">Yes </td></tr>
+<tr><td class="e">CharConv </td><td class="v">No </td></tr>
+<tr><td class="e">Protocols </td><td class="v">tftp, ftp, telnet, dict, ldap, http, file, https, ftps </td></tr>
+<tr><td class="e">Host </td><td class="v">x86_64-redhat-linux-gnu </td></tr>
+<tr><td class="e">SSL Version </td><td class="v"> OpenSSL/0.9.8b </td></tr>
+<tr><td class="e">ZLib Version </td><td class="v">1.2.3 </td></tr>
+</tbody></table><br>
+<h2><a name="module_date">date</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">date/time support </td><td class="v">enabled </td></tr>
+<tr><td class="e">"Olson" Timezone Database Version </td><td class="v">0.system </td></tr>
+<tr><td class="e">Timezone Database </td><td class="v">internal </td></tr>
+<tr><td class="e">Default timezone </td><td class="v">Asia/Jakarta </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">date.default_latitude</td><td class="v">31.7667</td><td class="v">31.7667</td></tr>
+<tr><td class="e">date.default_longitude</td><td class="v">35.2333</td><td class="v">35.2333</td></tr>
+<tr><td class="e">date.sunrise_zenith</td><td class="v">90.583333</td><td class="v">90.583333</td></tr>
+<tr><td class="e">date.sunset_zenith</td><td class="v">90.583333</td><td class="v">90.583333</td></tr>
+<tr><td class="e">date.timezone</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2><a name="module_dom">dom</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">DOM/XML </td><td class="v">enabled </td></tr>
+<tr><td class="e">DOM/XML API Version </td><td class="v">20031129 </td></tr>
+<tr><td class="e">libxml Version </td><td class="v">2.6.26 </td></tr>
+<tr><td class="e">HTML Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">XPath Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">XPointer Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Schema Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">RelaxNG Support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_ereg">ereg</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Regex Library </td><td class="v">Bundled library enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_exif">exif</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">EXIF Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">EXIF Version </td><td class="v">1.4 $Id: exif.c 308362 2011-02-15 14:02:26Z pajoye $ </td></tr>
+<tr><td class="e">Supported EXIF Version </td><td class="v">0220 </td></tr>
+<tr><td class="e">Supported filetypes </td><td class="v">JPEG,TIFF </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">exif.decode_jis_intel</td><td class="v">JIS</td><td class="v">JIS</td></tr>
+<tr><td class="e">exif.decode_jis_motorola</td><td class="v">JIS</td><td class="v">JIS</td></tr>
+<tr><td class="e">exif.decode_unicode_intel</td><td class="v">UCS-2LE</td><td class="v">UCS-2LE</td></tr>
+<tr><td class="e">exif.decode_unicode_motorola</td><td class="v">UCS-2BE</td><td class="v">UCS-2BE</td></tr>
+<tr><td class="e">exif.encode_jis</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">exif.encode_unicode</td><td class="v">ISO-8859-15</td><td class="v">ISO-8859-15</td></tr>
+</tbody></table><br>
+<h2><a name="module_fileinfo">fileinfo</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>fileinfo support</th><th>enabled</th></tr>
+<tr><td class="e">version </td><td class="v">1.0.5-dev </td></tr>
+</tbody></table><br>
+<h2><a name="module_filter">filter</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Input Validation and Filtering </td><td class="v">enabled </td></tr>
+<tr><td class="e">Revision </td><td class="v">$Revision: 306939 $ </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">filter.default</td><td class="v">unsafe_raw</td><td class="v">unsafe_raw</td></tr>
+<tr><td class="e">filter.default_flags</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2><a name="module_ftp">ftp</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">FTP support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_gd">gd</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">GD Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">GD Version </td><td class="v">bundled (2.0.34 compatible) </td></tr>
+<tr><td class="e">FreeType Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">FreeType Linkage </td><td class="v">with freetype </td></tr>
+<tr><td class="e">FreeType Version </td><td class="v">2.2.1 </td></tr>
+<tr><td class="e">T1Lib Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">GIF Read Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">GIF Create Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">JPEG Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">libJPEG Version </td><td class="v">6b </td></tr>
+<tr><td class="e">PNG Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">libPNG Version </td><td class="v">1.2.10 </td></tr>
+<tr><td class="e">WBMP Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">XPM Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">XBM Support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">gd.jpeg_ignore_warning</td><td class="v">0</td><td class="v">0</td></tr>
+</tbody></table><br>
+<h2><a name="module_gettext">gettext</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">GetText Support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_gmp">gmp</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">gmp support </td><td class="v">enabled </td></tr>
+<tr><td class="e">GMP version </td><td class="v">4.1.4 </td></tr>
+</tbody></table><br>
+<h2><a name="module_hash">hash</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">hash support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Hashing Engines </td><td class="v">md2 md4 md5 sha1 sha224 sha256 sha384 sha512 ripemd128 ripemd160 ripemd256 ripemd320 whirlpool tiger128,3 tiger160,3 tiger192,3 tiger128,4 tiger160,4 tiger192,4 snefru snefru256 gost adler32 crc32 crc32b salsa10 salsa20 haval128,3 haval160,3 haval192,3 haval224,3 haval256,3 haval128,4 haval160,4 haval192,4 haval224,4 haval256,4 haval128,5 haval160,5 haval192,5 haval224,5 haval256,5  </td></tr>
+</tbody></table><br>
+<h2><a name="module_iconv">iconv</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">iconv support </td><td class="v">enabled </td></tr>
+<tr><td class="e">iconv implementation </td><td class="v">glibc </td></tr>
+<tr><td class="e">iconv library version </td><td class="v">2.5 </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">iconv.input_encoding</td><td class="v">ISO-8859-1</td><td class="v">ISO-8859-1</td></tr>
+<tr><td class="e">iconv.internal_encoding</td><td class="v">ISO-8859-1</td><td class="v">ISO-8859-1</td></tr>
+<tr><td class="e">iconv.output_encoding</td><td class="v">ISO-8859-1</td><td class="v">ISO-8859-1</td></tr>
+</tbody></table><br>
+<h2><a name="module_intl">intl</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Internationalization support</th><th>enabled</th></tr>
+<tr><td class="e">version </td><td class="v">1.1.0 </td></tr>
+<tr><td class="e">ICU version </td><td class="v">3.6 </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">intl.default_locale</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">intl.error_level</td><td class="v">0</td><td class="v">0</td></tr>
+</tbody></table><br>
+<h2><a name="module_json">json</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">json support </td><td class="v">enabled </td></tr>
+<tr><td class="e">json version </td><td class="v">1.2.1 </td></tr>
+</tbody></table><br>
+<h2><a name="module_ldap">ldap</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">LDAP Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">RCS Version </td><td class="v">$Id: ldap.c 306939 2011-01-01 02:19:59Z felipe $ </td></tr>
+<tr><td class="e">Total Links </td><td class="v">0/unlimited </td></tr>
+<tr><td class="e">API Version </td><td class="v">3001 </td></tr>
+<tr><td class="e">Vendor Name </td><td class="v">OpenLDAP </td></tr>
+<tr><td class="e">Vendor Version </td><td class="v">20343 </td></tr>
+<tr><td class="e">SASL Support </td><td class="v">Enabled </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">ldap.max_links</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+</tbody></table><br>
+<h2><a name="module_libxml">libxml</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">libXML support </td><td class="v">active </td></tr>
+<tr><td class="e">libXML Compiled Version </td><td class="v">2.6.26 </td></tr>
+<tr><td class="e">libXML Loaded Version </td><td class="v">20626 </td></tr>
+<tr><td class="e">libXML streams </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_mbstring">mbstring</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Multibyte Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Multibyte string engine </td><td class="v">libmbfl </td></tr>
+<tr><td class="e">HTTP input encoding translation </td><td class="v">disabled </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>mbstring extension makes use of "streamable kanji code filter and converter", which is distributed under the GNU Lesser General Public License version 2.1.</th></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Multibyte (japanese) regex support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Multibyte regex (oniguruma) backtrack check </td><td class="v">On </td></tr>
+<tr><td class="e">Multibyte regex (oniguruma) version </td><td class="v">4.7.1 </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">mbstring.detect_order</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mbstring.encoding_translation</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">mbstring.func_overload</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">mbstring.http_input</td><td class="v">pass</td><td class="v">pass</td></tr>
+<tr><td class="e">mbstring.http_output</td><td class="v">pass</td><td class="v">pass</td></tr>
+<tr><td class="e">mbstring.http_output_conv_mimetypes</td><td class="v">^(text/|application/xhtml\+xml)</td><td class="v">^(text/|application/xhtml\+xml)</td></tr>
+<tr><td class="e">mbstring.internal_encoding</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mbstring.language</td><td class="v">neutral</td><td class="v">neutral</td></tr>
+<tr><td class="e">mbstring.strict_detection</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">mbstring.substitute_character</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2><a name="module_mcrypt">mcrypt</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>mcrypt support</th><th>enabled</th></tr>
+<tr class="h"><th>mcrypt_filter support</th><th>enabled</th></tr>
+<tr><td class="e">Version </td><td class="v">2.5.7 </td></tr>
+<tr><td class="e">Api No </td><td class="v">20021217 </td></tr>
+<tr><td class="e">Supported ciphers </td><td class="v">cast-128 gost rijndael-128 twofish arcfour cast-256 loki97 rijndael-192 saferplus wake blowfish-compat des rijndael-256 serpent xtea blowfish enigma rc2 tripledes  </td></tr>
+<tr><td class="e">Supported modes </td><td class="v">cbc cfb ctr ecb ncfb nofb ofb stream  </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">mcrypt.algorithms_dir</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mcrypt.modes_dir</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2><a name="module_mhash">mhash</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">MHASH support </td><td class="v">Enabled </td></tr>
+<tr><td class="e">MHASH API Version </td><td class="v">Emulated Support </td></tr>
+</tbody></table><br>
+<h2><a name="module_mssql">mssql</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>MSSQL Support</th><th>enabled</th></tr>
+<tr><td class="e">Active Persistent Links </td><td class="v">0 </td></tr>
+<tr><td class="e">Active Links </td><td class="v">0 </td></tr>
+<tr><td class="e">Library version </td><td class="v">FreeTDS </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">mssql.allow_persistent</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">mssql.batchsize</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">mssql.charset</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mssql.compatability_mode</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">mssql.connect_timeout</td><td class="v">5</td><td class="v">5</td></tr>
+<tr><td class="e">mssql.datetimeconvert</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">mssql.max_links</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">mssql.max_persistent</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">mssql.max_procs</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">mssql.min_error_severity</td><td class="v">10</td><td class="v">10</td></tr>
+<tr><td class="e">mssql.min_message_severity</td><td class="v">10</td><td class="v">10</td></tr>
+<tr><td class="e">mssql.secure_connection</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">mssql.textlimit</td><td class="v">Server default</td><td class="v">Server default</td></tr>
+<tr><td class="e">mssql.textsize</td><td class="v">Server default</td><td class="v">Server default</td></tr>
+<tr><td class="e">mssql.timeout</td><td class="v">60</td><td class="v">60</td></tr>
+</tbody></table><br>
+<h2><a name="module_mysql">mysql</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>MySQL Support</th><th>enabled</th></tr>
+<tr><td class="e">Active Persistent Links </td><td class="v">1 </td></tr>
+<tr><td class="e">Active Links </td><td class="v">1 </td></tr>
+<tr><td class="e">Client API version </td><td class="v">5.5.11 </td></tr>
+<tr><td class="e">MYSQL_MODULE_TYPE </td><td class="v">external </td></tr>
+<tr><td class="e">MYSQL_SOCKET </td><td class="v">/var/lib/mysql/mysql.sock </td></tr>
+<tr><td class="e">MYSQL_INCLUDE </td><td class="v">-I/usr/include/mysql </td></tr>
+<tr><td class="e">MYSQL_LIBS </td><td class="v">-L/usr/lib64/mysql -lmysqlclient  </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">mysql.allow_local_infile</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">mysql.allow_persistent</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">mysql.connect_timeout</td><td class="v">60</td><td class="v">60</td></tr>
+<tr><td class="e">mysql.default_host</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysql.default_password</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysql.default_port</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysql.default_socket</td><td class="v">/var/lib/mysql/mysql.sock</td><td class="v">/var/lib/mysql/mysql.sock</td></tr>
+<tr><td class="e">mysql.default_user</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysql.max_links</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">mysql.max_persistent</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">mysql.trace_mode</td><td class="v">Off</td><td class="v">Off</td></tr>
+</tbody></table><br>
+<h2><a name="module_mysqli">mysqli</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>MysqlI Support</th><th>enabled</th></tr>
+<tr><td class="e">Client API library version </td><td class="v">5.5.11 </td></tr>
+<tr><td class="e">Active Persistent Links </td><td class="v">0 </td></tr>
+<tr><td class="e">Inactive Persistent Links </td><td class="v">0 </td></tr>
+<tr><td class="e">Active Links </td><td class="v">0 </td></tr>
+<tr><td class="e">Client API header version </td><td class="v">5.5.11 </td></tr>
+<tr><td class="e">MYSQLI_SOCKET </td><td class="v">/var/lib/mysql/mysql.sock </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">mysqli.allow_local_infile</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">mysqli.allow_persistent</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">mysqli.default_host</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysqli.default_port</td><td class="v">3306</td><td class="v">3306</td></tr>
+<tr><td class="e">mysqli.default_pw</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysqli.default_socket</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysqli.default_user</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">mysqli.max_links</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">mysqli.max_persistent</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">mysqli.reconnect</td><td class="v">Off</td><td class="v">Off</td></tr>
+</tbody></table><br>
+<h2><a name="module_odbc">odbc</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>ODBC Support</th><th>enabled</th></tr>
+<tr><td class="e">Active Persistent Links </td><td class="v">0 </td></tr>
+<tr><td class="e">Active Links </td><td class="v">0 </td></tr>
+<tr><td class="e">ODBC library </td><td class="v">unixODBC </td></tr>
+<tr><td class="e">ODBC_INCLUDE </td><td class="v">-I/usr/include </td></tr>
+<tr><td class="e">ODBC_LFLAGS </td><td class="v">-L/usr/lib64 </td></tr>
+<tr><td class="e">ODBC_LIBS </td><td class="v">-lodbc </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">odbc.allow_persistent</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">odbc.check_persistent</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">odbc.default_cursortype</td><td class="v">Static cursor</td><td class="v">Static cursor</td></tr>
+<tr><td class="e">odbc.default_db</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">odbc.default_pw</td><td class="v">no value</td><td class="v">no value</td></tr>
+<tr><td class="e">odbc.default_user</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">odbc.defaultbinmode</td><td class="v">return as is</td><td class="v">return as is</td></tr>
+<tr><td class="e">odbc.defaultlrl</td><td class="v">return up to 4096 bytes</td><td class="v">return up to 4096 bytes</td></tr>
+<tr><td class="e">odbc.max_links</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+<tr><td class="e">odbc.max_persistent</td><td class="v">Unlimited</td><td class="v">Unlimited</td></tr>
+</tbody></table><br>
+<h2><a name="module_openssl">openssl</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">OpenSSL support </td><td class="v">enabled </td></tr>
+<tr><td class="e">OpenSSL Library Version </td><td class="v">OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008 </td></tr>
+<tr><td class="e">OpenSSL Header Version </td><td class="v">OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008 </td></tr>
+</tbody></table><br>
+<h2><a name="module_pcre">pcre</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">PCRE (Perl Compatible Regular Expressions) Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">PCRE Library Version </td><td class="v">8.11 2010-12-10 </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">pcre.backtrack_limit</td><td class="v">100000</td><td class="v">100000</td></tr>
+<tr><td class="e">pcre.recursion_limit</td><td class="v">100000</td><td class="v">100000</td></tr>
+</tbody></table><br>
+<h2><a name="module_PDO">PDO</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>PDO support</th><th>enabled</th></tr>
+<tr><td class="e">PDO drivers </td><td class="v">dblib, mysql, odbc, sqlite </td></tr>
+</tbody></table><br>
+<h2><a name="module_pdo_dblib">pdo_dblib</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>PDO Driver for FreeTDS/Sybase DB-lib</th><th>enabled</th></tr>
+<tr><td class="e">Flavour </td><td class="v">freetds </td></tr>
+</tbody></table><br>
+<h2><a name="module_pdo_mysql">pdo_mysql</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>PDO Driver for MySQL</th><th>enabled</th></tr>
+<tr><td class="e">Client API version </td><td class="v">5.5.11 </td></tr>
+</tbody></table><br>
+<h2><a name="module_PDO_ODBC">PDO_ODBC</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>PDO Driver for ODBC (unixODBC)</th><th>enabled</th></tr>
+<tr><td class="e">ODBC Connection Pooling </td><td class="v">Enabled, strict matching </td></tr>
+</tbody></table><br>
+<h2><a name="module_pdo_sqlite">pdo_sqlite</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>PDO Driver for SQLite 3.x</th><th>enabled</th></tr>
+<tr><td class="e">SQLite Library </td><td class="v">3.3.6 </td></tr>
+</tbody></table><br>
+<h2><a name="module_Phar">Phar</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Phar: PHP Archive support</th><th>enabled</th></tr>
+<tr><td class="e">Phar EXT version </td><td class="v">2.0.1 </td></tr>
+<tr><td class="e">Phar API version </td><td class="v">1.1.1 </td></tr>
+<tr><td class="e">SVN revision </td><td class="v">$Revision: 307915 $ </td></tr>
+<tr><td class="e">Phar-based phar archives </td><td class="v">enabled </td></tr>
+<tr><td class="e">Tar-based phar archives </td><td class="v">enabled </td></tr>
+<tr><td class="e">ZIP-based phar archives </td><td class="v">enabled </td></tr>
+<tr><td class="e">gzip compression </td><td class="v">enabled </td></tr>
+<tr><td class="e">bzip2 compression </td><td class="v">enabled </td></tr>
+<tr><td class="e">Native OpenSSL support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="v"><td>
+Phar based on pear/PHP_Archive, original concept by Davey Shafik.<br>Phar fully realized by Gregory Beaver and Marcus Boerger.<br>Portions of tar implementation Copyright (c) 2003-2009 Tim Kientzle.</td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">phar.cache_list</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">phar.readonly</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">phar.require_hash</td><td class="v">On</td><td class="v">On</td></tr>
+</tbody></table><br>
+<h2><a name="module_Reflection">Reflection</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Reflection</th><th>enabled</th></tr>
+<tr><td class="e">Version </td><td class="v">$Revision: 307971 $ </td></tr>
+</tbody></table><br>
+<h2><a name="module_session">session</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Session Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Registered save handlers </td><td class="v">files user  </td></tr>
+<tr><td class="e">Registered serializer handlers </td><td class="v">php php_binary wddx  </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">session.auto_start</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">session.bug_compat_42</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">session.bug_compat_warn</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">session.cache_expire</td><td class="v">180</td><td class="v">180</td></tr>
+<tr><td class="e">session.cache_limiter</td><td class="v">nocache</td><td class="v">nocache</td></tr>
+<tr><td class="e">session.cookie_domain</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">session.cookie_httponly</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">session.cookie_lifetime</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">session.cookie_path</td><td class="v">/</td><td class="v">/</td></tr>
+<tr><td class="e">session.cookie_secure</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">session.entropy_file</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">session.entropy_length</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">session.gc_divisor</td><td class="v">1000</td><td class="v">1000</td></tr>
+<tr><td class="e">session.gc_maxlifetime</td><td class="v">1440</td><td class="v">1440</td></tr>
+<tr><td class="e">session.gc_probability</td><td class="v">1</td><td class="v">1</td></tr>
+<tr><td class="e">session.hash_bits_per_character</td><td class="v">5</td><td class="v">5</td></tr>
+<tr><td class="e">session.hash_function</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">session.name</td><td class="v">PHPSESSID</td><td class="v">PHPSESSID</td></tr>
+<tr><td class="e">session.referer_check</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">session.save_handler</td><td class="v">files</td><td class="v">files</td></tr>
+<tr><td class="e">session.save_path</td><td class="v">/var/lib/php/session</td><td class="v">/var/lib/php/session</td></tr>
+<tr><td class="e">session.serialize_handler</td><td class="v">php</td><td class="v">php</td></tr>
+<tr><td class="e">session.use_cookies</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">session.use_only_cookies</td><td class="v">On</td><td class="v">On</td></tr>
+<tr><td class="e">session.use_trans_sid</td><td class="v">0</td><td class="v">0</td></tr>
+</tbody></table><br>
+<h2><a name="module_shmop">shmop</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">shmop support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_SimpleXML">SimpleXML</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Simplexml support</th><th>enabled</th></tr>
+<tr><td class="e">Revision </td><td class="v">$Revision: 308262 $ </td></tr>
+<tr><td class="e">Schema support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_sockets">sockets</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Sockets Support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_SPL">SPL</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>SPL support</th><th>enabled</th></tr>
+<tr><td class="e">Interfaces </td><td class="v">Countable, OuterIterator, RecursiveIterator, SeekableIterator, SplObserver, SplSubject </td></tr>
+<tr><td class="e">Classes </td><td class="v">AppendIterator, ArrayIterator, ArrayObject, BadFunctionCallException, BadMethodCallException, CachingIterator, DirectoryIterator, DomainException, EmptyIterator, FilesystemIterator, FilterIterator, GlobIterator, InfiniteIterator, InvalidArgumentException, IteratorIterator, LengthException, LimitIterator, LogicException, MultipleIterator, NoRewindIterator, OutOfBoundsException, OutOfRangeException, OverflowException, ParentIterator, RangeException, RecursiveArrayIterator, RecursiveCachingIterator, RecursiveDirectoryIterator, RecursiveFilterIterator, RecursiveIteratorIterator, RecursiveRegexIterator, RecursiveTreeIterator, RegexIterator, RuntimeException, SplDoublyLinkedList, SplFileInfo, SplFileObject, SplFixedArray, SplHeap, SplMinHeap, SplMaxHeap, SplObjectStorage, SplPriorityQueue, SplQueue, SplStack, SplTempFileObject, UnderflowException, UnexpectedValueException </td></tr>
+</tbody></table><br>
+<h2><a name="module_standard">standard</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Dynamic Library Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Path to sendmail </td><td class="v">/usr/sbin/sendmail -t -i </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">assert.active</td><td class="v">1</td><td class="v">1</td></tr>
+<tr><td class="e">assert.bail</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">assert.callback</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">assert.quiet_eval</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">assert.warning</td><td class="v">1</td><td class="v">1</td></tr>
+<tr><td class="e">auto_detect_line_endings</td><td class="v">0</td><td class="v">0</td></tr>
+<tr><td class="e">default_socket_timeout</td><td class="v">60</td><td class="v">60</td></tr>
+<tr><td class="e">from</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">safe_mode_allowed_env_vars</td><td class="v">PHP_</td><td class="v">PHP_</td></tr>
+<tr><td class="e">safe_mode_protected_env_vars</td><td class="v">LD_LIBRARY_PATH</td><td class="v">LD_LIBRARY_PATH</td></tr>
+<tr><td class="e">url_rewriter.tags</td><td class="v">a=href,area=href,frame=src,input=src,form=fakeentry</td><td class="v">a=href,area=href,frame=src,input=src,form=fakeentry</td></tr>
+<tr><td class="e">user_agent</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2><a name="module_tidy">tidy</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Tidy support</th><th>enabled</th></tr>
+<tr><td class="e">libTidy Release </td><td class="v">14 June 2007 </td></tr>
+<tr><td class="e">Extension Version </td><td class="v">2.0 ($Id: tidy.c 306939 2011-01-01 02:19:59Z felipe $) </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">tidy.clean_output</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">tidy.default_config</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2><a name="module_tokenizer">tokenizer</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Tokenizer Support </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_wddx">wddx</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>WDDX Support</th><th>enabled</th></tr>
+<tr><td class="e">WDDX Session Serializer </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_xml">xml</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">XML Support </td><td class="v">active </td></tr>
+<tr><td class="e">XML Namespace Support </td><td class="v">active </td></tr>
+<tr><td class="e">libxml2 Version </td><td class="v">2.6.26 </td></tr>
+</tbody></table><br>
+<h2><a name="module_xmlreader">xmlreader</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">XMLReader </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_xmlrpc">xmlrpc</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">core library version </td><td class="v">xmlrpc-epi v. 0.51 </td></tr>
+<tr><td class="e">php extension version </td><td class="v">0.51 </td></tr>
+<tr><td class="e">author </td><td class="v">Dan Libby </td></tr>
+<tr><td class="e">homepage </td><td class="v">http://xmlrpc-epi.sourceforge.net </td></tr>
+<tr><td class="e">open sourced by </td><td class="v">Epinions.com </td></tr>
+</tbody></table><br>
+<h2><a name="module_xmlwriter">xmlwriter</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">XMLWriter </td><td class="v">enabled </td></tr>
+</tbody></table><br>
+<h2><a name="module_xsl">xsl</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">XSL </td><td class="v">enabled </td></tr>
+<tr><td class="e">libxslt Version </td><td class="v">1.1.17 </td></tr>
+<tr><td class="e">libxslt compiled against libxml Version </td><td class="v">2.6.26 </td></tr>
+<tr><td class="e">EXSLT </td><td class="v">enabled </td></tr>
+<tr><td class="e">libexslt Version </td><td class="v">1.1.17 </td></tr>
+</tbody></table><br>
+<h2><a name="module_zip">zip</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">Zip </td><td class="v">enabled </td></tr>
+<tr><td class="e">Extension Version </td><td class="v">$Id: php_zip.c 308107 2011-02-07 16:20:16Z pajoye $ </td></tr>
+<tr><td class="e">Zip version </td><td class="v">1.9.1 </td></tr>
+<tr><td class="e">Libzip version </td><td class="v">0.9.0 </td></tr>
+</tbody></table><br>
+<h2><a name="module_zlib">zlib</a></h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr><td class="e">ZLib Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">Stream Wrapper support </td><td class="v">compress.zlib:// </td></tr>
+<tr><td class="e">Stream Filter support </td><td class="v">zlib.inflate, zlib.deflate </td></tr>
+<tr><td class="e">Compiled Version </td><td class="v">1.2.3 </td></tr>
+<tr><td class="e">Linked Version </td><td class="v">1.2.3 </td></tr>
+</tbody></table><br>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Directive</th><th>Local Value</th><th>Master Value</th></tr>
+<tr><td class="e">zlib.output_compression</td><td class="v">Off</td><td class="v">Off</td></tr>
+<tr><td class="e">zlib.output_compression_level</td><td class="v">-1</td><td class="v">-1</td></tr>
+<tr><td class="e">zlib.output_handler</td><td class="v"><i>no value</i></td><td class="v"><i>no value</i></td></tr>
+</tbody></table><br>
+<h2>Additional Modules</h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Module Name</th></tr>
+</tbody></table><br>
+<h2>Environment</h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Variable</th><th>Value</th></tr>
+<tr><td class="e">USER </td><td class="v">apache </td></tr>
+<tr><td class="e">HOME </td><td class="v">/var/www </td></tr>
+</tbody></table><br>
+<h2>PHP Variables</h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="h"><th>Variable</th><th>Value</th></tr>
+<tr><td class="e">_COOKIE["PHPSESSID"]</td><td class="v">pdbk46ek756i4a820pfua57073</td></tr>
+<tr><td class="e">_SERVER["USER"]</td><td class="v">apache</td></tr>
+<tr><td class="e">_SERVER["HOME"]</td><td class="v">/var/www</td></tr>
+<tr><td class="e">_SERVER["FCGI_ROLE"]</td><td class="v">RESPONDER</td></tr>
+<tr><td class="e">_SERVER["QUERY_STRING"]</td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">_SERVER["REQUEST_METHOD"]</td><td class="v">GET</td></tr>
+<tr><td class="e">_SERVER["CONTENT_TYPE"]</td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">_SERVER["CONTENT_LENGTH"]</td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">_SERVER["SCRIPT_NAME"]</td><td class="v">/finansia/index.php</td></tr>
+<tr><td class="e">_SERVER["REQUEST_URI"]</td><td class="v">/finansia/index.php/login/info</td></tr>
+<tr><td class="e">_SERVER["DOCUMENT_URI"]</td><td class="v">/finansia/index.php/login/info</td></tr>
+<tr><td class="e">_SERVER["DOCUMENT_ROOT"]</td><td class="v">/var/www/html</td></tr>
+<tr><td class="e">_SERVER["SERVER_PROTOCOL"]</td><td class="v">HTTP/1.1</td></tr>
+<tr><td class="e">_SERVER["GATEWAY_INTERFACE"]</td><td class="v">CGI/1.1</td></tr>
+<tr><td class="e">_SERVER["SERVER_SOFTWARE"]</td><td class="v">nginx/0.8.53</td></tr>
+<tr><td class="e">_SERVER["REMOTE_ADDR"]</td><td class="v">192.168.1.109</td></tr>
+<tr><td class="e">_SERVER["REMOTE_PORT"]</td><td class="v">48975</td></tr>
+<tr><td class="e">_SERVER["SERVER_ADDR"]</td><td class="v">192.168.1.104</td></tr>
+<tr><td class="e">_SERVER["SERVER_PORT"]</td><td class="v">80</td></tr>
+<tr><td class="e">_SERVER["SERVER_NAME"]</td><td class="v">localhost</td></tr>
+<tr><td class="e">_SERVER["REDIRECT_STATUS"]</td><td class="v">200</td></tr>
+<tr><td class="e">_SERVER["SCRIPT_FILENAME"]</td><td class="v">/var/www/html/finansia/index.php</td></tr>
+<tr><td class="e">_SERVER["GEOIP_COUNTRY_CODE"]</td><td class="v"><i>no value</i></td></tr>
+<tr><td class="e">_SERVER["PATH_INFO"]</td><td class="v">/login/info</td></tr>
+<tr><td class="e">_SERVER["HTTP_HOST"]</td><td class="v">192.168.1.104</td></tr>
+<tr><td class="e">_SERVER["HTTP_CONNECTION"]</td><td class="v">keep-alive</td></tr>
+<tr><td class="e">_SERVER["HTTP_CACHE_CONTROL"]</td><td class="v">max-age=0</td></tr>
+<tr><td class="e">_SERVER["HTTP_USER_AGENT"]</td><td class="v">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.50 Safari/534.24</td></tr>
+<tr><td class="e">_SERVER["HTTP_ACCEPT"]</td><td class="v">application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5</td></tr>
+<tr><td class="e">_SERVER["HTTP_ACCEPT_ENCODING"]</td><td class="v">gzip,deflate,sdch</td></tr>
+<tr><td class="e">_SERVER["HTTP_ACCEPT_LANGUAGE"]</td><td class="v">en-US,en;q=0.8</td></tr>
+<tr><td class="e">_SERVER["HTTP_ACCEPT_CHARSET"]</td><td class="v">ISO-8859-1,utf-8;q=0.7,*;q=0.3</td></tr>
+<tr><td class="e">_SERVER["HTTP_COOKIE"]</td><td class="v">PHPSESSID=pdbk46ek756i4a820pfua57073</td></tr>
+<tr><td class="e">_SERVER["PHP_SELF"]</td><td class="v">/finansia/index.php/login/info</td></tr>
+<tr><td class="e">_SERVER["REQUEST_TIME"]</td><td class="v">1303848481</td></tr>
+</tbody></table><br>
+<h2>PHP License</h2>
+<table border="0" cellpadding="3" width="600">
+<tbody><tr class="v"><td>
+<p>
+This program is free software; you can redistribute it and/or modify it under the terms of the PHP License as published by the PHP Group and included in the distribution in the file:  LICENSE
+</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+</p>
+<p>If you did not receive a copy of the PHP license, or have any questions about PHP licensing, please contact license@php.net.
+</p>
+</td></tr>
+</tbody></table><br>
+</div>1</body><style type="text/css">/*This block of style rules is inserted by AdBlock*/#RadAd_Skyscraper,#bbccom_leaderboard,#center_banner,#footer_adcode,#hbBHeaderSpon,#hiddenHeaderSpon,#navbar_adcode,#rightAds,#rightcolumn_adcode,#top-advertising,#topMPU,#tracker_advertorial,.ad-now,.dfpad,.prWrap,[id^="ad_block"],[id^="adbrite"],[id^="dclkAds"],[id^="ew"][id$="_bannerDiv"],[id^="konaLayer"],a.kLink span[id^="preLoadWrap"].preLoadWrap,a[href^="http://ad."][href*=".doubleclick.net/"],a[href^="http://adserver.adpredictive.com"],div#adxLeaderboard,div#dir_ads_site,div#FFN_Banner_Holder,div#FFN_imBox_Container,div#p360-format-box,div#rhs div#rhs_block table#mbEnd,div#rm_container,div#tads table[align="center"][width="100%"],div#tooltipbox[class^="itxt"],div[class^="dms_ad_IDS"],div[id^="adKontekst_"],div[id^="google_ads_div"],div[id^="kona_"][id$="_wrapper"],div[id^="sponsorads"],div[id^="y5_direct"],iframe.chitikaAdBlock,iframe[id^="dapIfM"],iframe[id^="etarget"][id$="banner"],iframe[name^="AdBrite"],iframe[name^="google_ads_"],img[src^="http://cdn.adnxs.com"],ispan#ab_pointer,object#flashad,object#ve_threesixty_swf[name="ve_threesixty_swf"],script[src="http://pagead2.googlesyndication.com/pagead/show_ads.js"] + ins > ins > iframe,table[cellpadding="0"][width="100%"] > * > * > * > div[id^="tpa"],#A9AdsMiddleBoxTop,#A9AdsOutOfStockWidgetTop,#A9AdsServicesWidgetTop,#ADSLOT_1,#ADSLOT_2,#ADSLOT_3,#ADSLOT_4,#AD_CONTROL_22,#ADsmallWrapper,#Ad160x600,#Ad2,#Ad300x250,#Ad3Left,#Ad3Right,#Ad3TextAd,#AdA,#AdArea,#AdBanner_F1,#AdBar,#AdBar1,#AdC,#AdContainer,#AdContainerTop,#AdContentModule_F,#AdDetails_GoogleLinksBottom,#AdDetails_InsureWith,#AdE,#AdF,#AdFrame4,#AdG,#AdH,#AdI,#AdJ,#AdLeaderboardBottom,#AdLeaderboardTop,#AdMiddle,#AdMobileLink,#AdRectangle,#AdSenseDiv,#AdServer,#AdShowcase_F1,#AdSky23,#AdSkyscraper,#AdSponsor_SF,#AdSubsectionShowcase_F1,#AdTargetControl1_iframe,#AdText,#AdTop,#AdTopLeader,#Ad_BelowContent,#Ad_Block,#Ad_Center1,#Ad_Right1,#Ad_RightBottom,#Ad_RightTop,#Ad_Top,#Adrectangle,#Ads,#AdsContent,#AdsRight,#AdsWrap,#Ads_BA_CAD,#Ads_BA_CAD2,#Ads_BA_CAD_box,#Ads_BA_SKY,#Ads_CAD,#Ads_OV_BS,#Ads_Special,#AdvertMPU23b,#AdvertPanel,#Advertorial,#Advertorials,#BannerAd,#BannerAdvert,#BigBoxAd,#BodyAd,#BotAd,#Bottom468x60AD,#ButtonAd,#CompanyDetailsNarrowGoogleAdsPresentationControl,#CompanyDetailsWideGoogleAdsPresentationControl,#ContentAd,#ContentAd1,#ContentAd2,#ContentAdPlaceHolder1,#ContentAdPlaceHolder2,#ContentAdXXL,#ContentPolepositionAds_Result,#DartAd300x250,#DivAdEggHeadCafeTopBanner,#FIN_videoplayer_300x250ad,#FooterAd,#FooterAdContainer,#GoogleAd1,#GoogleAd2,#GoogleAd3,#GoogleAdsPresentationControl,#GoogleAdsense,#Google_Adsense_Main,#HEADERAD,#HOME_TOP_RIGHT_BOXAD,#HeaderAD,#HeaderAdsBlock,#HeaderAdsBlockFront,#HeaderBannerAdSpacer,#HeaderTextAd,#HeroAd,#HomeAd1,#HouseAd,#ID_Ad_Sky,#JobsearchResultsAds,#Journal_Ad_125,#Journal_Ad_300,#KH-contentAd,#LargeRectangleAd,#LeftAd,#LeftAdF1,#LeftAdF2,#LftAd,#LoungeAdsDiv,#LowerContentAd,#MainSponsoredLinks,#Nightly_adContainer,#NormalAdModule,#OverrideAdArea,#PREFOOTER_LEFT_BOXAD,#PREFOOTER_RIGHT_BOXAD,#PageLeaderAd,#RelevantAds,#RgtAd1,#RightAd,#RightBottom300x250AD,#RightNavTopAdSpot,#RightSponsoredAd,#SectionAd300-250,#SectionSponsorAd,#SideAdMpu,#SidebarAdContainer,#SkyAd,#SpecialAds,#SponsoredAd,#SponsoredLinks,#TOP_ADROW,#TOP_RIGHT_BOXAD,#Tadspacefoot,#Tadspacemrec,#Top468x60AD,#TopAdBox,#TopAdContainer,#TopAdDiv,#TopAdPos,#VM-MPU-adspace,#VM-footer-adspace,#VM-header-adspace,#VM-header-adwrap,#XEadLeaderboard,#XEadSkyscraper,#YahooAdParentContainer,#_ads,#about_adsbottom,#abovepostads,#ad-120x600-sidebar,#ad-120x60Div,#ad-160x600,#ad-160x600-sidebar,#ad-250,#ad-250x300,#ad-300,#ad-300x250,#ad-300x250-sidebar,#ad-300x250Div,#ad-300x60-1,#ad-376x280,#ad-728,#ad-728x90-leaderboard-top,#ad-728x90-top0,#ad-ads,#ad-article,#ad-banner,#ad-banner-1,#ad-billboard-bottom,#ad-block-125,#ad-bottom,#ad-bottom-wrapper,#ad-box-first,#ad-box-second,#ad-boxes,#ad-bs,#ad-buttons,#ad-colB-1,#ad-column,#ad-content,#ad-contentad,#ad-flex-first,#ad-footer,#ad-footprint-160x600,#ad-frame,#ad-front-footer,#ad-front-sponsoredlinks,#ad-halfpage,#ad-header-728x90,#ad-horizontal-header,#ad-img,#ad-inner,#ad-label,#ad-leaderboard,#ad-leaderboard-bottom,#ad-leaderboard-container,#ad-leaderboard-spot,#ad-leaderboard-top,#ad-left,#ad-links-content,#ad-list-row,#ad-lrec,#ad-medium,#ad-medium-rectangle,#ad-medrec,#ad-middlethree,#ad-middletwo,#ad-module,#ad-mpu,#ad-mpu1-spot,#ad-mpu2,#ad-mpu2-spot,#ad-north,#ad-one,#ad-placard,#ad-placeholder,#ad-rectangle,#ad-right,#ad-righttop,#ad-row,#ad-side-text,#ad-sidebar,#ad-sky,#ad-skyscraper,#ad-slug-wrapper,#ad-small-banner,#ad-space,#ad-special,#ad-splash,#ad-sponsors,#ad-spot,#ad-squares,#ad-target,#ad-target-Leaderbord,#ad-teaser,#ad-text,#ad-top-banner,#ad-top-text-low,#ad-top-wrap,#ad-tower,#ad-trailerboard-spot,#ad-two,#ad-typ1,#ad-unit,#ad-west,#ad-wrap,#ad-wrap-right,#ad-wrapper1,#ad-yahoo-simple,#ad-zone-1,#ad-zone-2,#ad-zone-inline,#ad01,#ad02,#ad1006,#ad11,#ad125BL,#ad125BR,#ad125TL,#ad125TR,#ad125x125,#ad160x600,#ad160x600right,#ad1Sp,#ad2,#ad2Sp,#ad300,#ad300-250,#ad300X250,#ad300_x_250,#ad300x100Middle,#ad300x150,#ad300x250,#ad300x250Module,#ad300x60,#ad300x600,#ad300x600_callout,#ad336,#ad336x280,#ad375x85,#ad4,#ad468,#ad468x60,#ad468x60_top,#ad526x250,#ad600,#ad7,#ad728,#ad728Mid,#ad728Top,#ad728Wrapper,#ad728top,#ad728x90_1,#ad90,#adBadges,#adBanner120x600,#adBanner160x600,#adBanner336x280,#adBanner728,#adBannerTable,#adBannerTop,#adBar,#adBelt,#adBlock125,#adBlockTop,#adBlocks,#adBox,#adBox350,#adBox390,#adCirc300X200,#adCirc_620_100,#adColumn,#adContainer_1,#adContainer_2,#adContainer_3,#adDiv300,#adDiv728,#adFiller,#adFps,#adFtofrs,#adGallery,#adGoogleText,#adGroup1,#adHeaderTop,#adIsland,#adL,#adLB,#adLabel,#adLayer,#adLeader,#adLeaderTop,#adLeaderboard,#adMPU,#adMediumRectangle,#adMiddle0Frontpage,#adMiniPremiere,#adP,#adPlaceHolderRight,#adPlacer,#adRight,#adSPLITCOLUMNTOPRIGHT,#adSenseModule,#adSenseWrapper,#adServer_marginal,#adSidebar,#adSidebarSq,#adSky,#adSkyscraper,#adSlider,#adSpace,#adSpace3,#adSpace300_ifrMain,#adSpace4,#adSpace5,#adSpace6,#adSpace7,#adSpace_footer,#adSpace_right,#adSpace_top,#adSpacer,#adSpecial,#adSplotlightEm,#adSpot-Leader,#adSpot-banner,#adSpot-island,#adSpot-mrec1,#adSpot-sponsoredlinks,#adSpot-textbox1,#adSpot-widestrip,#adSpotAdvertorial,#adSpotIsland,#adSpotSponsoredLinks,#adSquare,#adStaticA,#adStrip,#adSuperAd,#adSuperPremiere,#adSuperSkyscraper,#adSuperbanner,#adTableCell,#adTag1,#adTag2,#adText,#adTextLink,#adText_container,#adTile,#adTopContent,#adTopboxright,#adTower,#adUnit,#adZoneTop,#ad_1,#ad_130x250_inhouse,#ad_160x160,#ad_160x600,#ad_190x90,#ad_2,#ad_3,#ad_300,#ad_300_250,#ad_300_250_1,#ad_300a,#ad_300b,#ad_300c,#ad_300x250,#ad_300x250_content_column,#ad_300x90,#ad_4,#ad_468_60,#ad_5,#ad_728_foot,#ad_728x90,#ad_728x90_container,#ad_940,#ad_984,#ad_A,#ad_B,#ad_Banner,#ad_C,#ad_C2,#ad_D,#ad_E,#ad_F,#ad_G,#ad_H,#ad_I,#ad_J,#ad_K,#ad_L,#ad_M,#ad_N,#ad_O,#ad_P,#ad_YieldManager-300x250,#ad_YieldManager-728x90,#ad_anchor,#ad_banner,#ad_banner_top,#ad_bar,#ad_bellow_post,#ad_bigsize_wrapper,#ad_block_1,#ad_block_2,#ad_bottom,#ad_box,#ad_box_colspan,#ad_box_top,#ad_branding,#ad_bs_area,#ad_buttons,#ad_center_monster,#ad_cna2,#ad_cont,#ad_container_marginal,#ad_container_side,#ad_container_sidebar,#ad_container_top,#ad_content_top,#ad_content_wrap,#ad_feature,#ad_firstpost,#ad_footer,#ad_front_three,#ad_fullbanner,#ad_global_header,#ad_haha_1,#ad_haha_4,#ad_halfpage,#ad_head,#ad_header,#ad_holder,#ad_horizontal,#ad_horseshoe_left,#ad_horseshoe_right,#ad_horseshoe_spacer,#ad_horseshoe_top,#ad_hotpots,#ad_in_arti,#ad_island,#ad_label,#ad_large_rectangular,#ad_lastpost,#ad_layer2,#ad_leaderBoard,#ad_leaderboard,#ad_leaderboard728x90,#ad_leaderboard_top,#ad_left,#ad_lrec,#ad_lwr_square,#ad_main,#ad_medium_rectangle,#ad_medium_rectangular,#ad_mediumrectangle,#ad_menu_header,#ad_message,#ad_middle,#ad_most_pop_234x60_req_wrapper,#ad_mpu,#ad_mpu300x250,#ad_mpuav,#ad_mrcontent,#ad_overlay,#ad_play_300,#ad_rect,#ad_rect_body,#ad_rect_bottom,#ad_rectangle,#ad_rectangle_medium,#ad_related_links_div,#ad_related_links_div_program,#ad_replace_div_0,#ad_replace_div_1,#ad_report_leaderboard,#ad_report_rectangle,#ad_results,#ad_right,#ad_right_main,#ad_ros_tower,#ad_rr_1,#ad_sec,#ad_sec_div,#ad_sgd,#ad_sidebar,#ad_sidebar1,#ad_sidebar2,#ad_sidebar3,#ad_skyscraper,#ad_skyscraper160x600,#ad_skyscraper_text,#ad_slot_leaderboard,#ad_slot_livesky,#ad_slot_sky_top,#ad_ss,#ad_term_bottom_place,#ad_text:not(textarea),#ad_thread_first_post_content,#ad_top,#ad_top_holder,#ad_tp_banner_1,#ad_tp_banner_2,#ad_unit,#ad_vertical,#ad_wide,#ad_wide_box,#ad_widget,#ad_window,#ad_wrap,#adbForum,#adbanner,#adbig,#adbnr,#adboard,#adbottom,#adbox1,#adbox2,#adbutton,#adclear,#adcode,#adcode1,#adcode2,#adcode3,#adcode4,#adcolumnwrapper,#adcontainer,#adcontainer1,#adcontainerRight,#adcontainsm,#adcontent1,#adcontrolPushSite,#add_ciao2,#addbottomleft,#addiv-bottom,#addiv-top,#adfooter,#adfooter_728x90,#adframe:not(frameset),#adhead,#adhead_g,#adheader,#adhome,#adiframe1_iframe,#adiframe2_iframe,#adiframe3_iframe,#adimg,#adition_content_ad,#adlabel,#adlabelFooter,#adlayerad,#adleaderboard,#adleaderboard_flex,#adleaderboardb,#adleaderboardb_flex,#adleft,#adlinks,#adlinkws,#adlrec,#admid,#admiddle3center,#admiddle3left,#adposition,#adposition-C,#adposition-FPMM,#adposition1,#adposition2,#adposition4,#adrectangle,#adrectanglea,#adrectanglea_flex,#adrectangleb,#adrectangleb_flex,#adrig,#adright,#adright2,#adrighthome,#ads-468,#ads-area,#ads-block,#ads-bot,#ads-bottom,#ads-col,#ads-dell,#ads-horizontal,#ads-indextext,#ads-leaderboard1,#ads-lrec,#ads-menu,#ads-middle,#ads-prices,#ads-rhs,#ads-right,#ads-sponsored-boxes,#ads-top,#ads-vers7,#ads-wrapper,#ads120,#ads160left,#ads2,#ads300,#ads300-250,#ads300Bottom,#ads300Top,#ads336x280,#ads7,#ads728bottom,#ads728top,#ads790,#adsDisplay,#adsID,#ads_160,#ads_300,#ads_728,#ads_banner,#ads_belowforumlist,#ads_belownav,#ads_bottom_inner,#ads_bottom_outer,#ads_box,#ads_button,#ads_catDiv,#ads_footer,#ads_fullsize,#ads_html1,#ads_html2,#ads_medrect,#ads_notice,#ads_right,#ads_right_sidebar,#ads_sidebar_roadblock,#ads_space,#ads_top,#ads_watch_top_square,#ads_zone27,#adsbottom,#adsbox,#adscolumn,#adsd_contentad_r1,#adsd_contentad_r2,#adsd_contentad_r3,#adsd_topbanner,#adsd_txt_sky,#adsdiv,#adsense-2,#adsense-header,#adsense-tag,#adsense-text,#adsense1,#adsenseLeft,#adsenseOne,#adsenseWrap,#adsense_article_left,#adsense_box,#adsense_box_video,#adsense_leaderboard,#adsense_overlay,#adsense_placeholder_2,#adsenseheader,#adsensetopplay,#adsensewidget-3,#adserv,#adsimage,#adsky,#adskyscraper,#adslot,#adsonar,#adspace-300x250,#adspace300x250,#adspaceBox,#adspaceBox300,#adspace_header,#adspot,#adspot-1,#adspot-149x170,#adspot-1x4,#adspot-2,#adspot-295x60,#adspot-2a,#adspot-2b,#adspot-300x250-pos-1,#adspot-300x250-pos-2,#adspot-468x60-pos-2,#adspot-a,#adspot300x250,#adspot_220x90,#adspot_300x250,#adspot_468x60,#adspot_728x90,#adsquare,#adsright,#adst,#adstop,#adt,#adtab,#adtag_right_side,#adtaily-widget-light,#adtech_googleslot_03c,#adtech_takeover,#adtop,#adtophp,#adtxt,#adv-masthead,#adv_google_300,#adv_google_728,#adv_top_banner_wrapper,#adver1,#adver2,#adver3,#adver4,#adver5,#adver6,#adver7,#advert-1,#advert-120,#advert-boomer,#advert-display,#advert-header,#advert-leaderboard,#advert-links-bottom,#advert-skyscraper,#advert-top,#advert1,#advertBanner,#advertContainer,#advertDB,#advertRight,#advert_125x125,#advert_250x250,#advert_box,#advert_home01,#advert_leaderboard,#advert_lrec_format,#advert_mid,#advert_mpu,#advert_mpu_1,#advert_right_skyscraper,#advert_sky,#advertbox,#advertbox2,#advertbox3,#advertbox4,#adverthome,#advertise-here-sidebar,#advertise-now,#advertise1,#advertiseHere,#advertisement160x600,#advertisement728x90,#advertisementLigatus,#advertisementPrio2,#advertisementsarticle,#advertiser-container,#advertiserLinks,#advertisers,#advertising-banner,#advertising-caption,#advertising-container,#advertising-control,#advertising-skyscraper,#advertising2,#advertisingModule160x600,#advertisingModule728x90,#advertisingTopWrapper,#advertising_btm,#advertising_horiz_cont,#advertisment,#advertismentElementInUniversalbox,#advertorial,#adverts-top-container,#adverts-top-left,#adverts-top-middle,#adverts-top-right,#advertsingle,#advt,#adwhitepaperwidget,#adwin_rec,#adwith,#adwords-4-container,#adxBigAd,#adxMiddle5,#adxSponLink,#adxSponLinkA,#adxtop,#adz,#adzbanner,#adzerk,#adzerk1,#adzoneBANNER,#affinityBannerAd,#agi-ad300x250,#agi-ad300x250overlay,#agi-sponsored,#alert_ads,#anchorAd,#annoying_ad,#ap_adframe,#apiBackgroundAd,#apiTopAdWrap,#apmNADiv,#araHealthSponsorAd,#area-adcenter,#area1ads,#article-ad-container,#article-box-ad,#articleAdReplacement,#articleLeftAdColumn,#articleSideAd,#article_ad,#article_ad_container,#article_box_ad,#asinglead,#atlasAdDivGame,#awds-nt1-ad,#babAdTop,#banner-300x250,#banner-ad,#banner-ad-container,#banner-ads,#banner250x250,#banner468x60,#banner728x90,#bannerAd,#bannerAdTop,#bannerAdWrapper,#bannerAd_ctr,#banner_ad,#banner_ad_footer,#banner_ad_module,#banner_admicro,#banner_ads,#banner_content_ad,#banner_topad,#bannerad2,#baseAdvertising,#basket-adContainer,#bbccom_mpu,#bbo_ad1,#bg-footer-ads,#bg-footer-ads2,#bg_YieldManager-160x600,#bg_YieldManager-300x250,#bg_YieldManager-728x90,#bigAd,#bigBoxAd,#bigad300outer,#bigadbox,#bigadframe,#bigadspot,#billboard_ad,#block-ad_cube-1,#block-openads-0,#block-openads-1,#block-openads-2,#block-openads-3,#block-openads-4,#block-openads-5,#block-thewrap_ads_250x300-0,#blog-ad,#blog_ad_content,#blog_ad_opa,#blox-big-ad,#blox-big-ad-bottom,#blox-big-ad-top,#blox-halfpage-ad,#blox-tile-ad,#blox-tower-ad,#body_728_ad,#book-ad,#botad,#bott_ad2,#bott_ad2_300,#bottom-ad,#bottom-ad-container,#bottom-ad-wrapper,#bottom-ads,#bottomAd,#bottomAdCCBucket,#bottomAdContainer,#bottomAdSense,#bottomAdSenseDiv,#bottomAds,#bottomRightAd,#bottomRightAdSpace,#bottom_ad,#bottom_ad_area,#bottom_ad_unit,#bottom_ads,#bottom_banner_ad,#bottom_overture,#bottom_sponsor_ads,#bottom_sponsored_links,#bottom_text_ad,#bottomad,#bottomads,#bottomadsense,#bottomadwrapper,#bottomleaderboardad,#box-content-ad,#box-googleadsense-1,#box-googleadsense-r { visibility:hidden !important; display:none !important; } #box1ad,#boxAd300,#boxAdContainer,#box_ad,#box_advertisment,#box_mod_googleadsense,#boxad1,#boxad2,#boxad3,#boxad4,#boxad5,#bpAd,#bps-header-ad-container,#btr_horiz_ad,#burn_header_ad,#button-ads-horizontal,#button-ads-vertical,#buttonAdWrapper1,#buttonAdWrapper2,#buttonAds,#buttonAdsContainer,#button_ad_container,#button_ad_wrap,#buttonad,#buy-sell-ads,#c4ad-Middle1,#c_ad_sb,#c_ad_sky,#caAdLarger,#catad,#category-ad,#cellAd,#channel_ad,#channel_ads,#ciHomeRHSAdslot,#circ_ad,#closeable-ad,#cnnRR336ad,#cnnTopAd,#cnnVPAd,#col3_advertising,#colAd,#colRightAd,#collapseobj_adsection,#column4-google-ads,#comments-ad-container,#commercial_ads,#common_right_ad_wrapper,#common_right_lower_ad_wrapper,#common_right_lower_adspace,#common_right_lower_player_ad_wrapper,#common_right_lower_player_adspace,#common_right_player_ad_wrapper,#common_right_player_adspace,#common_right_right_adspace,#common_top_adspace,#companion-ad,#companionAdDiv,#companionad,#container-righttopads,#container-topleftads,#containerLocalAds,#containerLocalAdsInner,#containerMrecAd,#containerSqAd,#content-ad-header,#content-header-ad,#content-left-ad,#content-right-ad,#contentBoxad,#contentTopAds2,#content_ad_square,#content_ad_top,#content_ads_content,#content_box_300body_sponsoredoffers,#content_box_adright300_google,#content_mpu,#contentad,#contentad_imtext,#contentad_right,#contentads,#contentinlineAd,#contextad,#contextual-ads,#contextual-ads-block,#contextualad,#coverads,#ctl00_Adspace_Top_Height,#ctl00_BottomAd,#ctl00_ContentMain_BanManAd468_BanManAd,#ctl00_ContentPlaceHolder1_blockAdd_divAdvert,#ctl00_ContentRightColumn_RightColumn_Ad1_BanManAd,#ctl00_ContentRightColumn_RightColumn_Ad2_BanManAd,#ctl00_ContentRightColumn_RightColumn_PremiumAd1_ucBanMan_BanManAd,#ctl00_LHTowerAd,#ctl00_LeftHandAd,#ctl00_MasterHolder_IBanner_adHolder,#ctl00_TopAd,#ctl00_TowerAd,#ctl00_VBanner_adHolder,#ctl00__Content__RepeaterReplies_ctl03__AdReply,#ctl00_abot_bb,#ctl00_adFooter,#ctl00_advert_LargeMPU_div_AdPlaceHolder,#ctl00_atop_bt,#ctl00_cphMain_hlAd1,#ctl00_cphMain_hlAd2,#ctl00_cphMain_hlAd3,#ctl00_ctl00_MainPlaceHolder_itvAdSkyscraper,#ctl00_ctl00_ctl00_Main_Main_PlaceHolderGoogleTopBanner_MPTopBannerAd,#ctl00_ctl00_ctl00_Main_Main_SideBar_MPSideAd,#ctl00_dlTilesAds,#ctl00_m_skinTracker_m_adLBL,#ctl00_phCrackerMain_ucAffiliateAdvertDisplayMiddle_pnlAffiliateAdvert,#ctl00_phCrackerMain_ucAffiliateAdvertDisplayRight_pnlAffiliateAdvert,#ctrlsponsored,#cubeAd,#cube_ads,#cube_ads_inner,#cubead,#cubead-2,#dItemBox_ads,#dart_160x600,#dc-display-right-ad-1,#dcol-sponsored,#defer-adright,#detail_page_vid_topads,#div-gpt-ad-1,#div-gpt-ad-2,#div-gpt-ad-3,#div-gpt-ad-4,#divAdBox,#divAdWrapper,#divBottomad1,#divBottomad2,#divDoubleAd,#divLeftAd12,#divLeftRecAd,#divMenuAds,#divWNAdHeader,#divWrapper_Ad,#div_ad_leaderboard,#div_video_ads,#dlads,#dni-header-ad,#dnn_adLeaderBoard2008,#dnn_ad_banner,#download_ads,#dp_ads1,#ds-mpu,#editorsmpu,#embedded-ad,#evotopTen_advert,#ex-ligatus,#exads,#extra-search-ads,#featured-advertisements,#featuredAdContainer2,#featuredAds,#feed_links_ad_container,#first-300-ad,#first-adlayer,#first_ad_unit,#firstad,#fl_hdrAd,#flash_ads_1,#flexiad,#foot-ad-1,#footad,#footer-ad,#footer-advert,#footer-adverts,#footer-sponsored,#footerAd,#footerAdDiv,#footerAds,#footerAdvertisement,#footerAdverts,#footer_ad_01,#footer_ad_block,#footer_ad_container,#footer_ad_modules,#footer_adspace,#footer_text_ad,#footerad,#footerads,#footeradsbox,#forum_top_ad,#four_ads,#fpad1,#fpad2,#fpv_companionad,#fr_ad_center,#frame_admain,#frnAdSky,#frnBannerAd,#frnContentAd,#front_advert,#front_mpu,#ft-ad,#ft-ad-1,#ft-ad-container,#ft_mpu,#fullsizebanner_468x60,#fusionad,#fw-advertisement,#g_ad,#g_adsense,#ga_300x250,#gad,#gad2,#gad3,#gad5,#galleries-tower-ad,#gallery-ad-m0,#gallery_ads,#game-info-ad,#gamead,#gasense,#gglads,#global_header_ad_area,#gmi-ResourcePageAd,#gmi-ResourcePageLowerAd,#goad1,#gooadtop,#google-ad,#google-ad-art,#google-ad-table-right,#google-ad-tower,#google-ads,#google-ads-bottom,#google-ads-header,#google-ads-left-side,#google-adsense-mpusize,#googleAd,#googleAdArea,#googleAds,#googleAdsSml,#googleAdsense,#googleAdsenseBanner,#googleAdsenseBannerBlog,#googleAdwordsModule,#googleAfcContainer,#googleSearchAds,#googleShoppingAdsRight,#googleShoppingAdsTop,#googleSubAds,#google_ad,#google_ad_container,#google_ad_inline,#google_ad_test,#google_ads,#google_ads_aCol,#google_ads_frame1,#google_ads_frame1_anchor,#google_ads_frame2,#google_ads_frame2_anchor,#google_ads_frame3,#google_ads_frame3_anchor,#google_ads_test,#google_ads_top,#google_adsense_home_468x60_1,#googlead2,#googleadbox,#googleads,#googleadsense,#googlesponsor,#gpt-ad-halfpage,#gpt-ad-rectangle1,#gpt-ad-rectangle2,#gpt-ad-skyscraper,#gpt-ad-story_rectangle3,#grid_ad,#gsyadrectangleload,#gsyadrightload,#gsyadtop,#gsyadtopload,#gtopadvts,#half-page-ad,#halfPageAd,#halfe-page-ad-box,#hd-ads,#hd-banner-ad,#hdtv_ad_ss,#head-ad-1,#headAd,#head_advert,#headad,#header-ad,#header-ad-rectangle-container,#header-ad2010,#header-ads,#header-adspace,#header-advert,#header-advertisement,#header-advertising,#header-adverts,#headerAd,#headerAdBackground,#headerAdContainer,#headerAdWrap,#headerAds,#headerAdsWrapper,#headerTopAd,#header_ad_728_90,#header_ad_container,#header_adcode,#header_ads,#header_advertisement_top,#header_leaderboard_ad_container,#header_publicidad,#headerad,#headeradbox,#headerads,#headeradsbox,#headeradwrap,#headline_ad,#headlinesAdBlock,#hiddenadAC,#hideads,#hl-sponsored-results,#hly_ad_side_bar_tower_left,#home-advert-module,#home-rectangle-ad,#homeMPU,#homeTopRightAd,#home_ad,#home_bottom_ad,#home_contentad,#home_feature_ad,#home_mpu,#home_spensoredlinks,#homepage-ad,#homepageAdsTop,#homepageFooterAd,#homepage_right_ad,#homepage_right_ad_container,#homepage_top_ads,#hometop_234x60ad,#hor_ad,#horizontal-banner-ad,#horizontal_ad,#horizontal_ad_top,#horizontalads,#houseAd,#hp-header-ad,#hp-right-ad,#hp-store-ad,#hpV2_300x250Ad,#hpV2_googAds,#hp_ad300x250,#icePage_SearchLinks_AdRightDiv,#icePage_SearchLinks_DownloadToolbarAdRightDiv,#icePage_SearchResults_ads0_SponsoredLink,#icePage_SearchResults_ads1_SponsoredLink,#icePage_SearchResults_ads2_SponsoredLink,#icePage_SearchResults_ads3_SponsoredLink,#icePage_SearchResults_ads4_SponsoredLink,#imu_ad_module,#in_serp_ad,#inadspace,#indexad,#inline-story-ad,#inlineAd,#inlinead,#inlinegoogleads,#inlist-ad-block,#inner-advert-row,#innerpage-ad,#inside-page-ad,#insider_ad_wrapper,#instoryad,#instoryadtext,#instoryadwrap,#int-ad,#interstitial_ad_wrapper,#islandAd,#j_ad,#ji_medShowAdBox,#jmp-ad-buttons,#joead,#joead2,#ka_adRightSkyscraperWide,#kaufDA-widget,#kdz_ad1,#kdz_ad2,#landing-adserver,#lapho-top-ad-1,#largead,#lateAd,#layerAds_layerDiv,#layerTLDADSERV,#leader-board-ad,#leaderAd,#leaderAdContainer,#leader_board_ad,#leaderad,#leaderad_section,#leaderboard-ad,#leaderboard-bottom-ad,#leaderboard_ad,#left-ad-skin,#left-lower-adverts,#left-lower-adverts-container,#leftAdContainer,#leftAd_rdr,#leftAdvert,#leftSectionAd300-100,#left_ad,#left_adspace,#leftad,#leftads,#leftcolAd,#lg-banner-ad,#ligatus,#linkAds,#linkads,#live-ad,#logoAd,#longAdSpace,#lowerAdvertisementImg,#lowerads,#lowerthirdad,#lowertop-adverts,#lowertop-adverts-container,#lpAdPanel,#lrecad,#lsadvert-left_menu_1,#lsadvert-left_menu_2,#lsadvert-top,#mBannerAd,#main-ad,#main-ad160x600,#main-ad160x600-img,#main-ad728x90,#main-bottom-ad,#mainAdUnit,#mainAdvert,#main_ad,#main_rec_ad,#main_top_ad_container,#marketing-promo,#mastAd,#mastAdvert,#mastad,#mastercardAd,#masthead_ad,#masthead_topad,#medRecAd,#media_ad,#mediaplayer_adburner,#mediumAdvertisement,#medrectad,#menuAds,#mi_story_assets_ad,#mid-ad300x250,#mid-table-ad,#midRightTextAds,#mid_ad_div,#mid_ad_title,#mid_mpu,#midadd,#midadspace,#middle-ad,#middle_body_advertising,#middlead,#midrect_ad,#midstrip_ad,#mini-ad,#mochila-column-right-ad-300x250,#mochila-column-right-ad-300x250-1,#module-google_ads,#module_ad,#module_box_ad,#module_sky_scraper,#monsterAd,#moogleAd,#most_popular_ad,#motionAd,#mpu,#mpu-advert,#mpu-cont,#mpu300250,#mpuAd,#mpuDiv,#mpuSlot,#mpuWrapper,#mpuWrapperAd,#mpu_banner,#mpu_holder,#mpu_text_ad,#mpuad,#mpubox,#mr_banner_topad,#mrecAdContainer,#msAds,#ms_ad,#msad,#multiLinkAdContainer,#multi_ad,#my-ads,#myads_HeaderButton,#n_sponsor_ads,#namecom_ad_hosting_main,#narrow_ad_unit,#natadad300x250,#national_microlink_ads,#nationalad,#navi_banner_ad_780,#nba160PromoAd,#nba300Ad,#nbaGI300ad,#nbaHouseAnd600Ad,#nbaLeft600Ad,#nbaMidAds,#nbaVid300Ad,#nbcAd300x250,#new_topad,#newads,#ng_rtcol_ad,#noresults_ad_container,#noresultsads,#northad,#ns_ad1,#ns_ad2,#ns_ad3,#oanda_ads,#onespot-ads,#online_ad,#p-googleadsense,#page-header-ad,#page-top-ad,#pageAds,#pageAdsDiv,#pageBannerAd,#page_ad,#page_content_top_ad,#pagelet_adbox,#pagelet_netego_ads,#pagelet_search_ads2,#panelAd,#pb_report_ad,#pcworldAdBottom,#pcworldAdTop,#pinball_ad,#player-below-advert,#player_ad,#player_ads,#pod-ad-video-page,#populate_ad_bottom,#populate_ad_left,#portlet-advertisement-left,#portlet-advertisement-right,#post-promo-ad,#post5_adbox,#post_ad,#premium_ad,#priceGrabberAd,#prime-ad-space,#print_ads,#product-adsense,#promoAds,#ps-vertical-ads,#pub468x60,#publicidad,#pushdown_ad,#qm-ad-big-box,#qm-ad-sky,#qm-dvdad,#r1SoftAd,#rail_ad1,#rail_ad2,#realEstateAds,#rectAd,#rect_ad,#rectangle-ad,#rectangle_ad,#refine-300-ad,#region-node-advert,#region-top-ad,#rh-ad-container,#rh_tower_ad,#rhapsodyAd,#rhs_ads,#rhsadvert,#right-ad,#right-ad-skin,#right-ad-title,#right-ad1,#right-ads-3,#right-box-ad,#right-featured-ad,#right-mpu-1-ad-container,#right-uppder-adverts,#right-uppder-adverts-container,#rightAd,#rightAd300x250,#rightAdBar,#rightAdColumn,#rightAd_rdr,#rightAdsDiv,#rightColAd,#rightColumnMpuAd,#rightColumnSkyAd,#right_ad_wrapper,#right_ads,#right_advertisement,#right_advertising,#right_column_ad_container,#right_column_ads,#right_column_internal_ad_container,#right_column_top_ad_unit,#rightad,#rightadContainer,#rightads,#rightadvertbar-doubleclickads,#rightbar-ad,#rightcolumn_300x250ad,#rightgoogleads,#rightside-ads,#rightside_ad,#righttop-adverts,#righttop-adverts-container,#rm_ad_text,#ros_ad,#rotatingads,#row2AdContainer,#rr_MSads,#rt-ad,#rt-ad-top,#rt-ad468,#rtMod_ad,#rtmod_ad,#sAdsBox,#sb-ad-sq,#sb_ad_links,#sb_advert,#search-google-ads,#search-sponsored-links,#search-sponsored-links-top,#searchAdSenseBox,#searchAdSenseBoxAd,#searchAdSkyscraperBox,#search_ads,#search_result_ad,#sec_adspace,#second-adlayer,#secondBoxAdContainer,#secondrowads,#section-ad-1-728,#section-ad-300-250,#section-ad-4-160,#section-blog-ad,#section-container-ddc_ads,#section_advertorial_feature,#servfail-ads,#sew-ad1,#shoppingads,#show-ad,#showAd,#showad,#side-ad,#side-ad-container,#sideAd,#sideAdSub,#sideBarAd,#side_ad,#side_ad_wrapper,#side_ads_by_google,#side_sky_ad,#sidead,#sideads,#sideadtop-to,#sidebar-125x125-ads,#sidebar-125x125-ads-below-index,#sidebar-ad,#sidebar-ad-boxes,#sidebar-ad-space,#sidebar-ad-wrap,#sidebar-ad3,#sidebar2ads,#sidebar_ad,#sidebar_ad_widget,#sidebar_ads_180,#sidebar_sponsoredresult_body,#sidebar_txt_ad_links,#sidebarad,#sidebaradver_advertistxt,#sideline-ad,#single-mpu,#singlead,#site-leaderboard-ads,#site_top_ad,#sitead,#sky-ad,#skyAd,#skyAdContainer,#skyScrapperAd,#skyWrapperAds,#sky_ad,#sky_advert,#skyads,#skyadwrap,#skyline_ad,#skyscraper-ad,#skyscraperAd,#skyscraperAdContainer,#skyscraper_ad,#skyscraper_advert,#skyscraperad,#slide_ad,#sliderAdHolder,#slideshow_ad_300x250,#sm-banner-ad,#small_ad,#small_ad_banners_vertical,#small_ads,#smallerAd,#some-ads,#some-more-ads,#specialAd_one,#specialAd_two,#specialadvertisingreport_container,#specials_ads,#speeds_ads,#speeds_ads_fstitem,#speedtest_mrec_ad,#sphereAd,#sponlink,#sponlinks,#sponsAds,#sponsLinks,#sponseredlinks,#sponsorAd1,#sponsorAd2,#sponsorAdDiv,#sponsorLinks,#sponsorTextLink,#sponsor_banderole,#sponsor_deals,#sponsored-ads,#sponsored-features,#sponsored-links,#sponsored-resources,#sponsored1,#sponsoredBox1,#sponsoredBox2,#sponsoredLinks,#sponsoredList,#sponsoredResults,#sponsoredResultsWide,#sponsoredSiteMainline,#sponsoredSiteSidebar,#sponsored_ads_v4,#sponsored_content,#sponsored_game_row_listing,#sponsored_links,#sponsored_v12,#sponsoredads,#sponsoredlinks,#sponsoredlinks_cntr,#sponsoredlinkslabel,#sponsoredresults_top,#sponsoredwellcontainerbottom,#sponsoredwellcontainertop,#sponsorlink,#spotlightAds,#spotlightad,#sqAd,#squareAd,#squareAdSpace,#squareAds,#square_ad,#start_middle_container_advertisment,#sticky-ad,#stickyBottomAd,#story-90-728-area,#story-ad-a,#story-ad-b,#story-leaderboard-ad,#story-sponsoredlinks,#storyAd,#storyAdWrap,#storyad2,#subpage-ad-right,#subpage-ad-top,#swads,#synch-ad,#systemad_background,#tabAdvertising,#takeoverad,#tblAd,#tbl_googlead,#tcwAd,#td-GblHdrAds,#template_ad_leaderboard,#tertiary_advertising,#test_adunit_160_article,#text-ad,#text-ads,#text-link-ads,#textAd,#textAds,#text_ad,#text_ads,#text_advert,#textad,#textad3,#the-last-ad-standing,#thefooterad,#themis-ads,#tile-ad,#tmglBannerAd,#tmp2_promo_ad,#toolbarSlideUpAd,#top-ad,#top-ad-container,#top-ad-menu,#top-ads,#top-ads-tabs,#top-advertisement,#top-banner-ad,#top-search-ad-wrapper,#topAd728x90,#topAdBanner,#topAdBox,#topAdContainer,#topAdSenseDiv,#topAdcontainer,#topAds,#topAdsContainer,#topAdvert,#topBannerAdContainer,#topContentAdTeaser,#topNavLeaderboardAdHolder,#topOverallAdArea,#topRightBlockAdSense,#top_ad_area,#top_ad_banner,#top_ad_game,#top_ad_unit,#top_ad_wrapper,#top_ad_zone,#top_ads,#top_advertise,#top_advertising,#top_rectangle_ad,#top_right_ad,#top_wide_ad,#topad1,#topad2,#topad_left,#topad_right,#topadbar,#topadblock,#topaddwide,#topadsense,#topadspace,#topadwrap,#topadzone,#topbanner_ad,#topbannerad,#topbar-ad,#topcustomad,#topleaderboardad,#topnav-ad-shell,#topnavad,#toprightAdvert,#toprightad,#topsponsored,#toptextad,#tour300Ad,#tourSponsoredLinksContainer,#towerad,#ts-ad_module,#ttp_ad_slot1,#ttp_ad_slot2,#twogamesAd,#txt_link_ads,#undergameAd,#upperAdvertisementImg,#upperMpu,#upperad,#urban_contentad_1,#urban_contentad_2,#urban_contentad_article,#v_ad,#vert_ad,#vert_ad_placeholder,#vertical_ad,#vertical_ads,#videoAd,#video_ads_overdiv,#video_cnv_ad,#video_overlay_ad,#videoadlogo,#viewportAds,#viewvid_ad300x250,#walltopad,#weblink_ads_container,#welcomeAdsContainer,#welcome_ad_mrec,#welcome_advertisement,#wf_ContentAd,#wf_FrontSingleAd,#wf_SingleAd,#wf_bottomContentAd,#wgtAd,#whatsnews_top_ad,#whitepaper-ad,#whoisRightAdContainer,#wide_ad_unit_top,#wideskyscraper_160x600_left,#wideskyscraper_160x600_right,#widget_advertisement,#widgetwidget_adserve2,#wrapAdRight,#wrapAdTop,#wrapperAdsTopLeft,#wrapperAdsTopRight,#xColAds,#y-ad-units,#y708-ad-expedia,#y708-ad-lrec,#y708-ad-partners,#y708-ad-ysm,#y708-advertorial-marketplace,#yahoo-ads,#yahoo-sponsors,#yahooSponsored,#yahoo_ads,#yahoo_ads_2010,#yahoo_text_ad,#yahooad-tbl,#yan-sponsored,#yatadsky,#ybf-ads,#yfi_fp_ad_mort,#yfi_fp_ad_nns,#yfi_pf_ad_mort,#ygrp-sponsored-links,#ymap_adbanner,#yn-gmy-ad-lrec,#yreSponsoredLinks,#ysm_ad_iframe,#zoneAdserverMrec,#zoneAdserverSuper,.ADBAR,.ADPod,.AD_ALBUM_ITEMLIST,.AD_MOVIE_ITEM,.AD_MOVIE_ITEMLIST,.AD_MOVIE_ITEMROW,.Ad-Header,.Ad-MPU,.Ad1,.Ad120x600,.Ad160x600,.Ad160x600left,.Ad160x600right,.Ad2,.Ad247x90,.Ad300x,.Ad300x250,.Ad300x250L,.Ad728x90,.AdBorder,.AdBox7,.AdContainerBox308,.AdHeader,.AdHere,.AdInline,.AdMedium,.AdPlaceHolder,.AdProduct,.AdRingtone,.AdSenseLeft,.AdSlot,.AdSpace,.AdTextSmallFont,.AdUnit,.AdUnit300,.Ad_C,.Ad_D_Wrapper,.Ad_E_Wrapper,.Ad_Right,.AdsBoxBottom,.AdsBoxSection,.AdsBoxTop,.AdsLinks1,.AdsLinks2,.AdsRec,.AdvertMidPage,.AdvertiseWithUs,.Advertisement,.AdvertisementTextTag,.Advman_Widget,.ArticleAd,.ArticleInlineAd,.BannerAd { visibility:hidden !important; display:none !important; } .BigBoxAd,.BlockAd,.BlueTxtAdvert,.BottomAdContainer,.BottomAffiliate,.BoxAd,.CG_adkit_leaderboard,.CG_details_ad_dropzone,.CWReviewsProdInfoAd,.ComAread,.CommentAd,.ContentAd,.ContentAds,.DAWRadvertisement,.DeptAd,.DisplayAd,.FT_Ad,.FlatAds,.GOOGLE_AD,.GoogleAd,.GoogleAdSenseBottomModule,.GoogleAdSenseRightModule,.HPG_Ad_B,.HPNewAdsBannerDiv,.HPRoundedAd,.HomeContentAd,.IABAdSpace,.InArticleAd,.IndexRightAd,.LazyLoadAd,.LeftAd,.LeftButtonAdSlot,.LeftTowerAd,.M2Advertisement,.MD_adZone,.MOS-ad-hack,.MPU,.MPUHolder,.MPUTitleWrapperClass,.MREC_ads,.MiddleAd,.MiddleAdContainer,.MiddleAdvert,.NewsAds,.OAS,.OpaqueAdBanner,.OpenXad,.PU_DoubleClickAdsContent,.Post5ad,.Post9ad,.RBboxAd,.RW_ad300,.RectangleAd,.RelatedAds,.Right300x250AD,.RightAd1,.RightAdvertiseArea,.RightGoogleAFC,.RightRailTop300x250Ad,.RightSponsoredAdTitle,.RightTowerAd,.STR_AdBlock,.SideAdCol,.SidebarAd,.SidebarAdvert,.SitesGoogleAdsModule,.SkyAdContainer,.SponsoredAdTitle,.SponsoredContent,.SponsoredLinkItemTD,.SponsoredLinks,.SponsoredLinksGrayBox,.SponsoredLinksModule,.SponsoredLinksPadding,.SquareAd,.StandardAdLeft,.StandardAdRight,.TRU-onsite-ads-leaderboard,.TextAd,.TheEagleGoogleAdSense300x250,.TopAd,.TopAdContainer,.TopAdL,.TopAdR,.TopBannerAd,.UIWashFrame_SidebarAds,.UnderAd,.VerticalAd,.Video-Ad,.VideoAd,.WidgetAdvertiser,.a160x600,.a728x90,.ad-120x60,.ad-120x600,.ad-160,.ad-160x600,.ad-250,.ad-300,.ad-300-block,.ad-300-blog,.ad-300x100,.ad-300x250,.ad-300x250-right0,.ad-350,.ad-355x75,.ad-600,.ad-635x40,.ad-728,.ad-728x90,.ad-728x90-1,.ad-728x90-top0,.ad-728x90_forum,.ad-90x600,.ad-above-header,.ad-adlink-bottom,.ad-adlink-side,.ad-area,.ad-background,.ad-banner,.ad-bigsize,.ad-block,.ad-blog2biz,.ad-body,.ad-bottom,.ad-break,.ad-btn,.ad-btn-heading,.ad-cell,.ad-container-300x250,.ad-container-728x90,.ad-context,.ad-disclaimer,.ad-div,.ad-enabled,.ad-feedback,.ad-filler,.ad-flex,.ad-footer,.ad-footer-leaderboard,.ad-forum,.ad-google,.ad-graphic-large,.ad-gray,.ad-hdr,.ad-head,.ad-header,.ad-heading,.ad-homeleaderboard,.ad-img,.ad-in-post,.ad-index-main,.ad-inline,.ad-island,.ad-label,.ad-leaderboard,.ad-lrec,.ad-medium,.ad-medium-two,.ad-mpu,.ad-msn,.ad-note,.ad-notice,.ad-other,.ad-permalink,.ad-placeholder,.ad-postText,.ad-poster,.ad-priority,.ad-rect,.ad-rectangle,.ad-rectangle-text,.ad-related,.ad-rh,.ad-ri,.ad-right,.ad-right-header,.ad-right-txt,.ad-row,.ad-section,.ad-show-label,.ad-side,.ad-sidebar-outer,.ad-sidebar300,.ad-sky,.ad-slot,.ad-slot-234-60,.ad-slot-300-250,.ad-slot-728-90,.ad-space,.ad-space-mpu-box,.ad-space-topbanner,.ad-spot,.ad-square,.ad-square300,.ad-squares,.ad-statement,.ad-story-inject,.ad-tabs,.ad-text-links,.ad-tile,.ad-title,.ad-top,.ad-top-left,.ad-unit,.ad-unit-300,.ad-unit-300-wrapper,.ad-unit-anchor,.ad-vert,.ad-vtu,.ad-widget-list,.ad-with-us,.ad-wrap,.ad-wrapper,.ad-zone-s-q-l,.ad.super,.ad0,.ad08,.ad08sky,.ad10,.ad120,.ad120x240backgroundGray,.ad120x600,.ad125,.ad140,.ad160,.ad160x600,.ad160x600GrayBorder,.ad18,.ad19,.ad21,.ad230,.ad250,.ad250c,.ad3,.ad300,.ad300250,.ad300_250,.ad300x100,.ad300x250,.ad300x250-hp-features,.ad300x250Top,.ad300x250_container,.ad300x250box,.ad300x50-right,.ad300x600,.ad310,.ad336x280,.ad343x290,.ad4,.ad400right,.ad450,.ad468_60,.ad468x60,.ad6,.ad600,.ad620x70,.ad626X35,.ad7,.ad728,.ad728_90,.ad728x90,.ad728x90_container,.ad8,.ad90x780,.adAgate,.adArea674x60,.adBanner,.adBanner300x250,.adBanner728x90,.adBannerTyp1,.adBannerTypSortableList,.adBannerTypW300,.adBar,.adBgBottom,.adBgMId,.adBgTop,.adBlock,.adBottomLink,.adBottomboxright,.adBox230X96,.adBox728X90,.adBoxBody,.adBoxBorder,.adBoxContainer,.adBoxContent,.adBoxInBignews,.adBoxSidebar,.adBoxSingle,.adBwrap,.adCMRight,.adCell,.adColumn,.adCont,.adContTop,.adContour,.adCreative,.adCube,.adFender3,.adFrame,.adFtr,.adFullWidthMiddle,.adGoogle,.adHeader,.adHeadline,.adHome300x250,.adHorisontal,.adInNews,.adLabel,.adLeader,.adLeaderForum,.adLeaderboard,.adLeft,.adLoaded,.adLocal,.adMPU,.adMarker,.adMastheadLeft,.adMastheadRight,.adMegaBoard,.adMkt2Colw,.adModuleAd,.adMpu,.adNewsChannel,.adNoOutline,.adNotice,.adNoticeOut,.adObj,.adPageBorderL,.adPageBorderR,.adPanel,.adPod,.adRect,.adRight,.adSKY,.adSelfServiceAdvertiseLink,.adServer,.adSky,.adSky600,.adSkyscraperHolder,.adSlot,.adSpBelow,.adSpacer,.adSplash,.adSponsor,.adSpot,.adSpot-searchAd,.adSpot-textBox,.adSpot-twin,.adSpotIsland,.adSquare,.adSubColPod,.adSuperboard,.adSupertower,.adTD,.adTab,.adTag,.adTileWrap,.adTiler,.adTopLink,.adTopboxright,.adTout,.adTxt,.adUnit,.adUnitHorz,.adUnitVert,.adUnitVert_noImage,.adWebBoard,.adWidget,.adWithTab,.adWrap,.adWrapper,.ad_0,.ad_1,.ad_120x90,.ad_125,.ad_130x90,.ad_160,.ad_160x600,.ad_2,.ad_200,.ad_200x200,.ad_250x250,.ad_250x250_w,.ad_3,.ad_300,.ad_300_250,.ad_300x250,.ad_300x250_box_right,.ad_336,.ad_336x280,.ad_350x100,.ad_350x250,.ad_400x200,.ad_468,.ad_468x60,.ad_600,.ad_728,.ad_728_90b,.ad_728x90,.ad_Left,.ad_amazon,.ad_banner,.ad_banner_border,.ad_bar,.ad_bg,.ad_bigbox,.ad_biz,.ad_block,.ad_block_338,.ad_body,.ad_border,.ad_botbanner,.ad_bottom,.ad_bottom_leaderboard,.ad_bottom_left,.ad_box,.ad_box2,.ad_box_ad,.ad_box_div,.ad_callout,.ad_caption,.ad_column,.ad_column_box,.ad_column_hl,.ad_contain,.ad_container,.ad_content,.ad_content_wide,.ad_contents,.ad_descriptor,.ad_disclaimer,.ad_eyebrow,.ad_footer,.ad_frame,.ad_framed,.ad_front_promo,.ad_head,.ad_heading,.ad_headline,.ad_hpm,.ad_info_block,.ad_inline,.ad_island,.ad_label,.ad_launchpad,.ad_leader,.ad_leaderboard,.ad_left,.ad_line,.ad_link,.ad_linkunit,.ad_loc,.ad_lrec,.ad_main,.ad_medrec,.ad_medrect,.ad_middle,.ad_mod,.ad_mpu,.ad_mr,.ad_mrec,.ad_mrec_title_article,.ad_mrect,.ad_news,.ad_note,.ad_notice,.ad_one,.ad_p360,.ad_partner,.ad_partners,.ad_plus,.ad_post,.ad_power,.ad_promo,.ad_rectangle,.ad_right_col,.ad_row,.ad_sidebar,.ad_skyscraper,.ad_slug,.ad_slug_table,.ad_space_300_250,.ad_spacer,.ad_sponsor,.ad_sponsoredsection,.ad_spot_b,.ad_spot_c,.ad_square_r,.ad_square_top,.ad_sub,.ad_tag_middle,.ad_text_w,.ad_title,.ad_top,.ad_top_leaderboard,.ad_top_left,.ad_topright,.ad_tower,.ad_unit,.ad_unit_rail,.ad_url,.ad_warning,.ad_wid300,.ad_wide,.ad_wrap,.ad_wrapper,.ad_wrapper_fixed,.ad_wrapper_top,.ad_zone,.adarea,.adarea-long,.adbannerbox,.adbannerright,.adboard,.adborder,.adbot,.adbottom,.adbottomright,.adbox-outer,.adbox-wrapper,.adbox_300x600,.adbox_366x280,.adbox_468X60,.adbox_bottom,.adboxclass,.adbreak,.adbug,.adbutton,.adbuttons,.adcode,.adcolumn,.adcolumn_wrapper,.adcopy,.add_300x250,.adenquire,.adfieldbg,.adfoot,.adfootbox,.adhead,.adhead_h,.adhead_h_wide,.adheader,.adheader100,.adhere,.adhered,.adhi,.adhint,.adhoriz,.adi,.adiframe,.adinside,.adintro,.adjlink,.adkicker,.adkit,.adkit-advert,.adkit-lb-footer,.adlabel-horz,.adlabel-vert,.adleader,.adleaderboard,.adleft1,.adline,.adlinks,.adlnklst,.admarker,.admedrec,.admessage,.admodule,.admpu,.admpu-small,.adnation-banner,.adnotice,.adops,.adp-AdPrefix,.adpadding,.adpane,.adprice,.adproxy,.adrec,.adroot,.adrotate_widget,.adrow,.adrow-post,.adrule,.ads-125,.ads-300,.ads-728x90-wrap,.ads-banner,.ads-below-content,.ads-categories-bsa,.ads-favicon,.ads-links-general,.ads-mpu,.ads-outer,.ads-profile,.ads-right,.ads-sidebar,.ads-sky,.ads-stripe,.ads-text,.ads-top,.ads-widget,.ads-widget-partner-gallery,.ads160,.ads1_250,.ads2,.ads3,.ads300,.ads460,.ads460_home,.ads468,.ads728,.ads728x90,.adsArea,.adsBelowHeadingNormal,.adsBox,.adsCell,.adsCont,.adsDiv,.adsFull,.adsImages,.adsMPU,.adsRight,.adsTextHouse,.adsTop,.adsTower2,.adsTowerWrap,.adsWithUs,.ads_125_square,.ads_180,.ads_300,.ads_300x250,.ads_320,.ads_337x280,.ads_728x90,.ads_big,.ads_big-half,.ads_box,.ads_brace,.ads_catDiv,.ads_container,.ads_disc_anchor,.ads_disc_leader,.ads_disc_lwr_square,.ads_disc_skyscraper,.ads_disc_square,.ads_div,.ads_footer,.ads_header,.ads_leaderboard,.ads_lr_wrapper,.ads_medrect,.ads_mpu,.ads_outer,.ads_rectangle,.ads_right,.ads_sc_bl_i,.ads_sc_tb,.ads_sc_tl_i,.ads_show_if,.ads_side,.ads_sidebar,.ads_singlepost,.ads_spacer,.ads_takeover,.ads_title,.ads_top,.ads_top_promo,.ads_tr,.ads_verticalSpace,.ads_vtlLink,.ads_widesky,.ads_wrapperads_top,.adsbg300,.adsblockvert,.adsborder,.adsbottom,.adsbox,.adsboxitem,.adsbyyahoo,.adsc,.adscaleAdvert,.adsclick,.adscontainer,.adscreen,.adsd_shift100,.adsection_a2,.adsection_c2,.adsense-ad,.adsense-category,.adsense-category-bottom,.adsense-googleAds,.adsense-heading,.adsense-overlay,.adsense-post,.adsense-right,.adsense-title,.adsense3,.adsense300,.adsenseAds,.adsenseBlock,.adsenseContainer,.adsenseGreenBox,.adsenseList,.adsense_bdc_v2,.adsense_mpu,.adsensebig,.adsenseblock,.adsenseblock_bottom,.adsenseblock_top,.adsenselr,.adsensem_widget,.adsensesq,.adsenvelope,.adset,.adsforums,.adsghori,.adsgvert,.adside,.adsidebox,.adsider,.adsingle,.adsleft,.adsleftblock,.adslink,.adslogan,.adsmalltext,.adsmessage,.adsnippet_widget,.adspace-MR,.adspace-widget,.adspace180,.adspace_bottom,.adspace_buysell,.adspace_rotate,.adspace_skyscraper,.adspacer,.adspot,.adspot728x90,.adstextpad,.adstitle,.adstop,.adstory,.adstrip,.adtag,.adtech,.adtext_gray,.adtext_horizontal,.adtext_onwhite,.adtext_vertical,.adtile,.adtips,.adtips1,.adtop,.adtravel,.adtxt,.adtxtlinks,.adunit,.adv-mpu,.adver,.adverTag,.adver_cont_below,.advert-300-side,.advert-300x100-side,.advert-728x90,.advert-article-bottom,.advert-bannerad,.advert-bg-250,.advert-box,.advert-btm,.advert-head,.advert-iab-300-250,.advert-iab-468-60,.advert-mpu,.advert-skyscraper,.advert-text,.advert-txt,.advert300,.advert300x250,.advert300x440,.advert4,.advert5,.advert8,.advertCont,.advertContainer,.advertContent,.advertHeadline,.advertIslandWrapper,.advertRight,.advertSuperBanner,.advertText,.advertTitleSky,.advert_336,.advert_468x60,.advert_box,.advert_cont,.advert_djad,.advert_home_300,.advert_label,.advert_leaderboard,.advert_note,.advert_surr,.advert_top,.advertheader-red,.advertise-here,.advertise-homestrip,.advertise-horz,.advertise-inquiry,.advertise-leaderboard,.advertise-top,.advertise-vert,.advertiseContainer,.advertiseText,.advertise_ads,.advertise_here,.advertise_link,.advertise_link_sidebar,.advertisement-728x90,.advertisement-block,.advertisement-sidebar,.advertisement-space,.advertisement-sponsor,.advertisement-text,.advertisement-top,.advertisement468,.advertisementBox,.advertisementColumnGroup,.advertisementContainer,.advertisementHeader,.advertisementLabel,.advertisementPanel,.advertisement_300x250,.advertisement_btm,.advertisement_caption,.advertisement_g,.advertisement_header,.advertisement_horizontal,.advertisement_top,.advertiser-links,.advertisespace_div,.advertising-banner,.advertising-header,.advertising-local-links,.advertising2,.advertisingTable,.advertising_images,.advertisment_two,.advertize,.advertorial,.advertorial-2,.advertorial-promo-box,.advertorialtitle,.adverts-125,.advt,.advt-banner-3,.advt-block,.advt-sec,.advt300,.advt720,.adwordListings,.adwords,.adwordsHeader,.adwrap,.adwrapper-lrec,.adwrapper948,.adzone-footer,.adzone-sidebar,.affiliate-link,.affiliate-sidebar,.affiliateAdvertText,.affinityAdHeader,.afsAdvertising,.after_ad,.agi-adsaleslinks,.alb-content-ad,.alignads,.alt_ad,.anchorAd,.another_text_ad,.answer_ad_content,.aolSponsoredLinks,.aopsadvert,.apiAdMarkerAbove,.apiAds,.app_advertising_skyscraper,.archive-ads,.art_ads,.article-ads,.articleAd,.articleAds,.articleAdsL,.articleEmbeddedAdBox,.article_adbox,.article_mpu_box,.article_page_ads_bottom,.articleads,.aseadn,.aux-ad-widget-1,.aux-ad-widget-2,.b-astro-sponsored-links_horizontal,.b-astro-sponsored-links_vertical,.banner-468x60,.banner-ad,.banner-ads,.banner-adverts,.banner300x100,.banner300x250,.banner468,.banner728x90,.bannerAd,.bannerAdWrapper300x250,.bannerAdWrapper730x86,.bannerRightAd,.banner_300x250,.banner_ad,.banner_ad_footer,.banner_ad_leaderboard,.bannerad,.barkerAd,.base-ad-mpu,.base_ad,.base_printer_widgets_AdBreak,.bg-ad-link,.bgnavad,.big-ads,.bigAd,.big_ad,.big_ads,.bigad,.bigad2,.bigbox_ad,.bigboxad,.billboard_ad,.blk_advert,.block-ad,.block-ad300,.block-admanager,.block-ads-bottom,.block-ads-top,.block-adsense,.block-google_admanager,.block-openads,.block-openadstream,.block-openx,.block-thirdage-ads,.block-wtg_adtech,.blockAd,.blockAds,.block_ad_sb_text,.block_ad_sponsored_links,.block_ad_sponsored_links-wrapper,.blockad,.blocked-ads,.blog-ad-leader-inner,.blog-ads-container,.blogAd,.blogAdvertisement,.blogArtAd,.blogBigAd,.blog_ad,.blogads,.blox3featuredAd,.body_ad,.body_sponsoredresults_bottom,.body_sponsoredresults_middle,.body_sponsoredresults_top,.bodyads,.bodyads2,.bookseller-header-advt,.bottom-ad,.bottom-ad-fr,.bottomAd,.bottomAds,.bottom_ad,.bottom_ads,.bottom_adsense,.bottomad,.bottomadvert,.bottomrightrailAd,.bottomvidad,.box-ad,.box-ad-grey,.box-ads,.box-adsense,.boxAd,.boxAds,.box_ad,.box_ad_container,.box_ad_content,.box_ad_spacer,.box_ad_wrap,.box_ads,.box_advertising,.box_advertisment_62_border,.box_content_ad,.box_content_ads,.box_textads,.boxad { visibility:hidden !important; display:none !important; } .boxyads,.bps-ad-wrapper,.bps-advertisement,.bps-advertisement-inline-ads,.br-ad,.breakad_container,.brokerad,.bsa_ads,.btm_ad,.btn-ad,.bullet-sponsored-links,.bullet-sponsored-links-gray,.burstContentAdIndex,.busrep_poll_and_ad_container,.buttonAd,.buttonAds,.button_ads,.buttonadbox,.buttonads,.bx_ad,.bx_ad_right,.cA-adStrap,.cColumn-TextAdsBox,.calloutAd,.carbonad,.care2_adspace,.catalog_ads,.category-ad,.categorySponsorAd,.category__big_game_container_body_games_advertising,.cb-ad-container,.cb_ads,.cb_navigation_ad,.cbstv_ad_label,.cbzadvert,.cbzadvert_block,.cdAdTitle,.cdmainlineSearchAdParent,.cdsidebarSearchAdParent,.centerAd,.center_ad,.centerad,.centered-ad,.chitikaAdCopy,.cinemabotad,.classifiedAdThree,.clearerad,.cm_ads,.cms-Advert,.cnbc_badge_banner_ad_area,.cnbc_banner_ad_area,.cnn160AdFooter,.cnnAd,.cnnMosaic160Container,.cnnStoreAd,.cnnStoryElementBoxAd,.cnnWCAdBox,.cnnWireAdLtgBox,.cnn_728adbin,.cnn_adcntr300x100,.cnn_adcntr728x90,.cnn_adspc336cntr,.cnn_adtitle,.cntrad,.column2-ad,.columnRightAdvert,.com-ad-server,.comment-advertisement,.comment_ad_box,.common_advertisement_title,.communityAd,.conTSponsored,.conductor_ad,.confirm_ad_left,.confirm_ad_right,.confirm_leader_ad,.consoleAd,.container-adwords,.containerSqAd,.container_serendipity_plugin_google_adsense,.content-ad,.content-ads,.content-advert,.contentAdFoot,.contentAdsWrapper,.content_ad,.content_ad_728,.content_adsense,.content_adsq,.content_tagsAdTech,.contentad300x250,.contentad_right_col,.contentadcontainer,.contentadfloatl,.contentadleft,.contentads,.contentadstartpage,.contenttextad,.contest_ad,.cp_ad,.cpmstarHeadline,.cpmstarText,.create_ad,.cs-mpu,.cscTextAd,.cse_ads,.cspAd,.ct_ad,.cube-ad,.cubeAd,.cube_ads,.currency_ad,.custom_ads,.cwAdvert,.darla_ad,.dart-ad,.dartAdImage,.dart_ad,.dart_tag,.dartadvert,.dartiframe,.dc-ad,.dcAdvertHeader,.deckAd,.deckads,.detailMpu,.detail_ad,.detail_top_advert,.displayAdSlot,.divAd,.divAdright,.divad1,.divad2,.divad3,.divads,.divider_ad,.dlSponsoredLinks,.dmco_advert_iabrighttitle,.downloadAds,.download_ad,.downloadad,.dualAds,.dynamic-ads,.dynamic_ad,.e-ad,.ec-ads,.ec-ads-remove-if-empty,.em-ad,.embed-ad,.embeddedAd,.entry-body-ad,.entry_sidebar_ads,.entryad,.ez-clientAd,.f_Ads,.feature_ad,.featuredAds,.featuredadvertising,.firstpost_advert_container,.flagads,.flash-advertisement,.flash_ad,.flash_advert,.flashad,.flexiad,.flipbook_v2_sponsor_ad,.floatad,.floated_right_ad,.floatingAds,.fm-badge-ad,.footad,.footer-ad,.footerAd,.footerAdModule,.footerAdslot,.footerTextAd,.footer_ad,.footer_ads,.footer_block_ad,.footer_bottomad,.footer_line_ad,.footer_text_ad,.footerad,.forumtopad,.frn_adbox,.frn_cont_adbox,.frontads,.ft-ad,.ftdAdBar,.ftdContentAd,.full_ad_box,.fullbannerad,.g3rtn-ad-site,.gAdRows,.gAdSky,.gAdvertising,.g_ggl_ad,.ga-ads,.ga-textads-bottom,.ga-textads-top,.gaTeaserAdsBox,.gads,.gads_cb,.gads_container,.gallery_ad,.gam_ad_slot,.gameAd,.gamesPage_ad_content,.gbl_advertisement,.gen_side_ad,.gglAds,.global_banner_ad,.googad,.googads,.google-ad,.google-ad-container,.google-ads,.google-ads-boxout,.google-ads-slim,.google-right-ad,.google-sponsored-ads,.google-sponsored-link,.google468,.google468_60,.googleAd,.googleAd-content,.googleAd-list,.googleAd300x250_wrapper,.googleAdBox,.googleAdSense,.googleAdSenseModule,.googleAd_body,.googleAds,.googleAds_article_page_above_comments,.googleAdsense,.googleContentAds,.googleProfileAd,.googleSearchAd_content,.googleSearchAd_sidebar,.google_ad,.google_ad_wide,.google_add_container,.google_ads,.google_ads_bom_title,.google_ads_content,.googlead,.googleaddiv,.googleaddiv2,.googleads,.googleads_300x250,.googleads_title,.googleadsense,.googleafc,.googley_ads,.gpAdBox,.gpAds,.gradientAd,.grey-ad-line,.group_ad,.gsAd,.gsfAd,.gt_ad,.gt_ad_300x250,.gt_ad_728x90,.gt_adlabel,.gutter-ad-left,.gutter-ad-right,.gx_ad,.h-ad-728x90-bottom,.h_Ads,.h_ad,.half-ad,.half_ad_box,.hcf-ad-rectangle,.hcf-cms-ad,.hd_advert,.hdr-ads,.header-advert,.headerAds,.headerAdvert,.headerTextAd,.header_ad,.header_ad_div,.header_ads,.header_advertisement,.header_advertisment,.headerad,.headerad-720,.hi5-ad,.highlightsAd,.hm_advertisment,.hn-ads,.home-ad-links,.homeAd,.homeAd1,.homeAd2,.homeAdBoxA,.homeAdBoxBetweenBlocks,.homeAdBoxInBignews,.homeAdSection,.homeMediumAdGroup,.home_ad_bottom,.home_advertisement,.home_mrec_ad,.homepage-ad,.homepage300ad,.homepageFlexAdOuter,.homepageMPU,.homepage_middle_right_ad,.homepageinline_adverts,.hor_ad,.horiz_adspace,.horizontalAd,.horizontal_ads,.horizontaltextadbox,.horizsponsoredlinks,.hortad,.houseAd1,.houseAdsStyle,.housead,.hoverad,.hp-col4-ads,.hp2-adtag,.hp_ad_cont,.hp_ad_text,.hp_t_ad,.hp_w_ad,.hpa-ad1,.html-advertisement,.ic-ads,.ico-adv,.idMultiAd,.image-advertisement,.imageAd,.imageads,.imgad,.in-page-ad,.in-story-ads,.in-story-text-ad,.inStoryAd-news2,.indEntrySquareAd,.indie-sidead,.indy_googleads,.inhousead,.inline-ad,.inline-mpu,.inline-mpu-left,.inlineSideAd,.inline_ad,.inline_ad_title,.inlinead,.inlineadsense,.inlineadtitle,.inlist-ad,.inlistAd,.inner-advt-banner-3,.innerAds,.innerad,.inpostad,.insert_advertisement,.insertad,.insideStoryAd,.inteliusAd_image,.interest-based-ad,.internalAdsContainer,.is24-adplace,.isAd,.islandAd,.islandAdvert,.islandad,.jimdoAdDisclaimer,.jp-advertisment-promotional,.js-advert,.kw_advert,.kw_advert_pair,.l_ad_sub,.l_banner.ads_show_if,.labelads,.largeRecAdNewsContainerRight,.largeRectangleAd,.largeUnitAd,.large_ad,.lastRowAd,.lcontentbox_ad,.leaderAdSlot,.leaderAdTop,.leaderAdvert,.leaderBoardAdHolder,.leaderOverallAdArea,.leader_ad,.leaderboardAd,.leaderboardAdContainerInner,.leaderboardad,.leaderboardadtop,.left-ad,.leftAd,.leftAdColumn,.leftAds,.left_ad,.left_ad_box,.left_adlink,.left_ads,.left_adsense,.leftad,.leftadtag,.leftbar_ad_160_600,.leftbarads,.leftbottomads,.leftnavad,.lgRecAd,.lg_ad,.ligatus,.linead,.link_adslider,.link_advertise,.live-search-list-ad-container,.ljad,.local-ads,.log_ads,.logoAds,.logoad,.logoutAd,.longAd,.longAdBox,.lowerAds,.m-ad-tvguide-box,.m4-adsbygoogle,.m_banner_ads,.macAd,.macad,.main-ad,.main-advert,.main-tabs-ad-block,.main_ad,.main_ad_bg_div,.main_adbox,.main_intro_ad,.map_media_banner_ad,.marginadsthin,.marketing-ad,.masthead_topad,.matador_sidebar_ad_600,.mdl-ad,.media-advert,.mediaAd,.mediaAdContainer,.mediaResult_sponsoredSearch,.medium-rectangle-ad,.mediumRectangleAdvert,.medrect_ad,.member-ads,.menuItemBannerAd,.menueadimg,.messageBoardAd,.mf-ad300-container,.micro_ad,.mid_ad,.midad,.middleAds,.min_navi_ad,.mini-ad,.miniad,.mmcAd_Iframe,.mod-ad-lrec,.mod-ad-n,.mod-adopenx,.mod-vertical-ad,.mod_admodule,.module-ad-small,.module-ads,.moduleAdvertContent,.module_ad,.module_box_ad,.modulegad,.moduletable-advert,.moduletable-googleads,.moduletablesquaread,.mpu-ad,.mpu-advert,.mpu-footer,.mpu-fp,.mpu-title,.mpu-top-left,.mpu-top-left-banner,.mpu-top-right,.mpu01,.mpuAd,.mpuAdSlot,.mpuAdvert,.mpuArea,.mpuBox,.mpuContainer,.mpuHolder,.mpuTextAd,.mpu_ad,.mpu_advert,.mpu_container,.mpu_gold,.mpu_holder,.mpu_platinum,.mpu_side,.mpu_text_ad,.mpuad,.mpuholderportalpage,.mrec_advert,.ms-ads-link,.msfg-shopping-mpu,.mvw_onPageAd1,.mwaads,.my-ad250x300,.nSponsoredLcContent,.nSponsoredLcTopic,.nadvt300,.narrow_ad_unit,.narrow_ads,.navAdsBanner,.navBads,.nav_ad,.navadbox,.navi_ad300,.naviad,.nba300Ad,.nbaT3Ad160,.nbaTVPodAd,.nbaTwo130Ads,.nbc_ad_carousel_wrp,.newTopAdContainer,.newad,.newsAd,.news_article_ad_google,.newsviewAdBoxInNews,.nf-adbox,.nn-mpu,.noAdForLead,.normalAds,.nrAds,.nsAdRow,.nu2ad,.oas-ad,.oas-bottom-ads,.offer_sponsoredlinks,.oio-banner-zone,.oio-link-sidebar,.oio-zone-position,.on_single_ad_box,.onethirdadholder,.openads,.openadstext_after,.openx,.openx-ad,.osan-ads,.other_adv2,.outermainadtd1,.ovAdPromo,.ovAdSky,.ovAdartikel,.ov_spns,.pageAds,.pageBottomGoogleAd,.pageGoogleAd,.pageGoogleAdFlat,.pageGoogleAdSubcontent,.pageLeaderAd,.page_content_right_ad,.pagead,.pagenavindexcontentad,.paneladvert,.partner-ads-container,.partnersTextLinks,.pencil_ad,.player_ad_box,.player_hover_ad,.player_page_ad_box,.plista_inimg_box,.pnp_ad,.pod-ad-300,.podRelatedAdLinksWidget,.podSponsoredLink,.portalCenterContentAdBottom,.portalCenterContentAdMiddle,.portalCenterContentAdTop,.portalcontentad,.postAd,.post_ad,.post_ads,.post_sponsor_unit,.postbit_adbit_register,.postbit_adcode,.postgroup-ads,.postgroup-ads-middle,.prebodyads,.premium_ad_container,.promoAd,.promoAds,.promo_ad,.ps-ligatus_placeholder,.publication-ad,.publicidad,.puff-advertorials,.qa_ad_left,.qm-ad-content,.qm-ad-content-news,.quigo-ad,.qzvAdDiv,.r_ad_1,.r_ad_box,.r_ads,.rad_container,.rect_ad_module,.rectad,.rectangle-ad,.rectangleAd,.rectanglead,.redads_cont,.regular_728_ad,.regularad,.relatedAds,.related_post_google_ad,.remads,.resourceImagetAd,.result_ad,.reviewMidAdvertAlign,.rght300x250,.rhads,.rhs-ad,.rhs-ads-panel,.right-ad,.right-ad-holder,.right-ad2,.right-ads,.right-ads2,.right-sidebar-box-ad,.rightAdBox,.rightColAd,.rightColumnRectAd,.rightRailAd,.right_ad,.right_ad_160,.right_ad_box,.right_ad_common_block,.right_ad_text,.right_ad_top,.right_ads,.right_col_ad,.right_hand_advert_column,.right_side-partyad,.rightad_1,.rightad_2,.rightadbox1,.rightads,.rightadunit,.rightcol_boxad,.rightcoladvert,.rightcoltowerad,.rnav_ad,.rngtAd,.roundedCornersAd,.roundingrayboxads,.rt_ad1_300x90,.rt_ad_300x250,.rt_ad_call,.s2k_ad,.savvyad_unit,.sb-ad-sq-bg,.sbAd,.sbAdUnitContainer,.sb_ad_holder,.sb_adsN,.sb_adsNv2,.sb_adsW,.sb_adsWv2,.scanAd,.scc_advert,.sci-ad-main,.sci-ad-sub,.search-ad,.search-results-ad,.search-sponsor,.search-sponsored,.searchAd,.searchAds,.searchSponsoredResultsBox,.searchSponsoredResultsList,.search_column_results_sponsored,.search_results_sponsored_top,.section-ad2,.section_mpu_wrapper,.section_mpu_wrapper_wrapper,.selfServeAds,.sepContentAd,.serp_sponsored,.servsponserLinks,.shoppingGoogleAdSense,.showAd_No,.showAd_Yes,.showcaseAd,.sidbaread,.side-ad,.side-ads,.side-sky-banner-160,.sideAd,.sideBoxAd,.side_ad,.side_ad2,.side_ad_1,.side_ad_2,.side_ad_3,.sidead,.sideads,.sideadsbox,.sideadvert,.sidebar-ad,.sidebar-ads,.sidebar-text-ad,.sidebarAd,.sidebarAdUnit,.sidebarAdvert,.sidebar_ad,.sidebar_ad_300_250,.sidebar_ads,.sidebar_ads_336,.sidebar_adsense,.sidebar_box_ad,.sidebarad,.sidebarad_bottom,.sidebaradbox,.sidebarads,.sidebarboxad,.sideheadnarrowad,.sideheadsponsorsad,.singleAd,.singleAdsContainer,.singlead,.singleadstopcstm2,.site_ad_120_600,.site_ad_300x250,.sitesponsor,.skinAd,.skin_ad_638,.sky-ad,.skyAd,.skyAdd,.skyAdvert,.sky_scraper_ad,.skyad,.skyjobsadtext,.skyscraper-ad,.skyscraper_ad,.skyscraper_bannerAdHome,.sleekadbubble,.slideshow-ad,.slpBigSlimAdUnit,.slpSquareAdUnit,.sm_ad,.smallSkyAd1,.smallSkyAd2,.small_ad,.small_ads,.smallad-left,.smallads,.smallsponsorad,.smart_ads_bom_title,.specialAd175x90,.speedyads,.sphereAdContainer,.spl-ads,.spl_ad,.spl_ad2,.spl_ad_plus,.splitAd,.sponlinkbox,.spons-link,.spons_links,.sponslink,.sponsor-ad,.sponsor-link,.sponsor-links,.sponsor-services,.sponsorPanel,.sponsorPost,.sponsorPostWrap,.sponsorStrip,.sponsor_ad_area,.sponsor_columns,.sponsor_footer,.sponsor_line,.sponsor_links,.sponsor_logo,.sponsoradtitle,.sponsored-ads,.sponsored-chunk,.sponsored-editorial,.sponsored-features,.sponsored-links,.sponsored-links-alt-b,.sponsored-links-holder,.sponsored-links-right,.sponsored-post,.sponsored-post_ad,.sponsored-results,.sponsored-right-border,.sponsored-text,.sponsoredBox,.sponsoredInfo,.sponsoredInner,.sponsoredLabel,.sponsoredLink,.sponsoredLinks,.sponsoredLinks2,.sponsoredLinksHeader,.sponsoredProduct,.sponsoredResults,.sponsoredSideInner,.sponsored_ads,.sponsored_box,.sponsored_box_search,.sponsored_by,.sponsored_links,.sponsored_links_title_container,.sponsored_links_title_container_top,.sponsored_links_top,.sponsored_result,.sponsored_results,.sponsored_well,.sponsoredibbox,.sponsoredlink,.sponsoredlinks,.sponsoredlinkscontainer,.sponsoredresults,.sponsoredtextlink_container_ovt,.sponsoring_link,.sponsorlink,.sponsorlink2,.sponsormsg,.sport-mpu-box,.spotlightAd,.squareAd,.square_ad,.square_banner_ad,.squared_ad,.ss-ad-mpu,.standard-ad,.start__newest__big_game_container_body_games_advertising,.staticAd,.stickyAdLink,.stock-ticker-ad-tag,.stocks-ad-tag,.store-ads,.story_AD,.story_ad_div,.story_right_adv,.storyad,.subad,.subcontent-ad,.subtitle-ad-container,.sugarad,.super-ad,.supercommentad_left,.supercommentad_right,.supp-ads,.supportAdItem,.surveyad,.t10ad,.tab_ad,.tab_ad_area,.tablebordersponsor,.tadsanzeige,.tadsbanner,.tadselement,.tallad,.tblTopAds,.tbl_ad,.tbox_ad,.td-Adholder,.teaser-sponsor,.teaserAdContainer,.teaser_adtiles,.text-ad,.text-ad-links,.text-ads,.text-advertisement,.text-g-advertisement,.text-g-group-short-rec-ad,.text-g-net-grp-google-ads-article-page,.textAd,.textAdBox,.textAds,.text_ad,.text_ads,.textad,.textadContainer,.textad_headline,.textadbox,.textadheadline,.textadlink,.textadsds,.textadsfoot,.textadtext,.textlink-ads,.tf_page_ad_search,.thisIsAd,.thisIsAnAd,.ticket-ad,.tileAds,.tips_advertisement,.title-ad,.title_adbig,.tncms-region-ads,.toolad,.toolbar-ad,.top-ad-space,.top-ads,.top-banner-ad,.top-menu-ads,.topAdWrap,.topAdvertisement,.topBannerAd,.topLeaderboardAd,.top_Ad,.top_ad,.top_ad_728,.top_ad_728_90,.top_ad_disclaimer,.top_ad_div,.top_ad_post,.top_ad_wrapper,.top_advert,.top_advertising_lb,.top_container_ad,.topad-bar,.topadbox,.topadspot,.topadvertisementsegment,.topboardads,.topcontentadvertisement,.topic_inad,.topstoriesad,.toptenAdBoxA,.tourFeatureAd,.tower-ad,.towerAd,.towerAdLeft,.towerAds,.tower_ad,.tower_ad_disclaimer,.towerad,.tr-ad-adtech-placement,.tribal-ad,.ts-ad_unit_bigbox,.ts-banner_ad,.ttlAdsensel,.tto-sponsored-element,.tucadtext,.tvs-mpu,.twoColumnAd,.twoadcoll,.twoadcolr,.tx_smartadserver_pi1,.txt-ads,.txtAd,.txtAds,.txt_ads,.txtadvertise,.type_adscontainer,.type_miniad,.type_promoads,.ukAds,.undertimyads,.unit-ad,.universalboxADVBOX01,.universalboxADVBOX03,.universalboxADVBOX04a,.usenext,.v5rc_336x280ad,.vertad,.vertical-adsense,.videoAd,.videoBoxAd,.video_ad,.view-promo-mpu-right,.view_rig_ad,.virgin-mpu,.wa_adsbottom,.wantads,.wide-ad,.wide-skyscraper-ad,.wideAdTable,.wide_ad,.wide_ad_unit_top,.wide_ads,.wide_google_ads,.widget-ad,.widget-ad300x250,.widget-entry-ads-160,.widgetYahooAds,.widget_ad,.widget_ad_rotator,.widget_island_ad,.widget_sdac_bottom_ad_widget,.widget_sdac_footer_ads_widget { visibility:hidden !important; display:none !important; } .widget_sdac_skyscraper_ad_widget,.wikia-ad,.wikia_ad_placeholder,.wingadblock,.withAds,.wl-ad,.wnMultiAd,.wp125_write_ads_widget,.wp125ad,.wp125ad_2,.wpn_ad_content,.wrap-ads,.wrapper-ad,.wrapper-ad-sidecol,.wsSponsoredLinksRight,.wsTopSposoredLinks,.x03-adunit,.x04-adunit,.xads-blk2,.xads-ojedn,.y-ads,.y-ads-wide,.y7-advertisement,.yahoo-sponsored,.yahoo-sponsored-links,.yahooAds,.yahoo_ads,.yan-sponsored,.ygrp-ad,.youradhere,.yrail_ad_wrap,.yrail_ads,.ysmsponsor,.ysponsor,.yw-ad,a[href^="http://ad.doubleclick.net/"],a[href^="http://adserving.liveuniversenetwork.com/"],a[href^="http://galleries.pinballpublishernetwork.com/"],a[href^="http://galleries.securewebsiteaccess.com/"],a[href^="http://install.securewebsiteaccess.com/"],a[href^="http://latestdownloads.net/download.php?"],a[href^="http://secure.signup-page.com/"],a[href^="http://secure.signup-way.com/"],a[href^="http://www.FriendlyDuck.com/AF_"],a[href^="http://www.adbrite.com/mb/commerce/purchase_form.php?"],a[href^="http://www.firstload.de/affiliate/"],a[href^="http://www.friendlyduck.com/AF_"],a[href^="http://www.google.com/aclk?"],a[href^="http://www.liutilities.com/aff"],a[href^="http://www.liutilities.com/products/campaigns/adv/"],a[href^="http://www.my-dirty-hobby.com/?sub="],a[href^="http://www.ringtonematcher.com/"],#mclip_container:last-child,#ssmiwdiv[jsdisplay],#tads.c,#tadsb.c,.ch[onclick="ga(this,event)"],.ra[align="left"][width="30%"],.ra[align="right"][width="30%"],[src*="sixsigmatraffic.com"],embed[flashvars*="AdID"],#Ad1,#AdHeader,#Adbanner,#AdvertiseFrame,#Advertisement,#Advertisements,#Tadspacehead,#TopAd,#ad-container,#ad-header,#ad-top,#ad-wrapper,#ad1,#ad3,#ad728x90,#adBanner,#adComponentWrapper,#adContainer,#adDiv,#adHeader,#adTop,#adWrapper,#ad_area,#ad_container,#ad_leader,#ad_space,#ad_square,#ad_table,#ad_wrapper,#adbar,#adbody,#adbox,#adcontent,#adposition3,#adsense,#adsense_inline,#adspace,#advert,#advertise,#advertising,#adverts,#adwrapper,#bannerad,#block_advert,#contentAd,#content_ad,#divAd,#featuread,#footer_ad,#footer_ads,#goads,#googlead,#head-ad,#header_ad,#mainAd,#middleads,#printads,#promo-ad,#right_ad,#sidebar-ads,#sidebar_ads,#sponsored,#topAd,#topBannerAd,#top_ad,#topad,#topads,.AdBox,.AdInfo,.AdSense,.AdTitle,.Ads,.Advert,.ad-box,.ad-button,.ad-container,.ad-content,.ad-display,.ad-holder,.ad-links,.ad-sidebar,.ad-text,.ad-vertical-container,.ad1,.ad2,.ad468,.adBox,.adContainer,.adDiv,.adElement,.adHolder,.adModule,.adSpace,.adSummary,.adText,.adTitle,.ad_Right,.ad_header,.ad_links,.ad_right,.ad_space,.ad_text,.adbanner,.adbar,.adcol1,.adcol2,.adcont,.addiv,.adframe,.adholder,.adinfo,.adlink,.adlist,.adpic,.adright,.ads-section,.adsBlock,.adspace,.adtable,.adtext,.advert-horizontal,.advertColumn,.advert_list,.advertise,.advertisement,.advertiser,.advertising,.advertising_block,.advertisment,.adverts,.adwrapper,.affiliate,.article_ad,.banner_728x90,.block_ad,.bottom_ad_block,.contentAd,.contentad,.detail-ads,.header-ad,.headerAd,.header_ad_center,.homead,.horizontal_ad,.middleads,.module-ad,.mpu,.post-ad,.rightAd,.right_ads_column,.rightad,.sky_ad,.sponsored,.textads,.top-ad,.topAd,.topAds,.top_ads,.topad,.topads,.wideAd,a[href^="http://ad-emea.doubleclick.net/"] { visibility:hidden !important; display:none !important; }</style></html>

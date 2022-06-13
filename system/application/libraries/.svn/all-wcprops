@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/finansia_collection/!svn/ver/1/system/application/libraries
+END
+memcached_library.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/memcached_library.php
+END
+cezpdf.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/cezpdf.php
+END
+class.pdf.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/class.pdf.php
+END
+flexigrid.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/flexigrid.php
+END
+Multicache.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/Multicache.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/finansia_collection/!svn/ver/1/system/application/libraries/index.html
+END

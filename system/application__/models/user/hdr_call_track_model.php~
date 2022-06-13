@@ -1,0 +1,622 @@
+<?php
+class Hdr_call_track_model extends Model{
+	private $hdr_debtor_main;
+	private $tb_debtor_details;
+	private $hdr_debtor_field_name;
+	private $hdr_payment;
+	private $hdr_calltrack;
+	private $hdr_action_call_track;
+	private $hdr_reschedule;
+	private $hdr_agen_monitor;
+	
+	public function __construct(){
+		parent::Model();	
+		$this->CI =& get_instance();
+		$this->hdr_debtor_main = 'hdr_debtor_main';
+		$this->hdr_payment = 'hdr_payment';
+		$this->hdr_calltrack = 'hdr_calltrack';
+		$this->hdr_action_call_track = 'hdr_action_call_track';
+		$this->hdr_debtor_details = 'hdr_tmp_log';
+		$this->hdr_debtor_field_name = 'hdr_debtor_field_name';
+		$this->hdr_reschedule = 'hdr_reschedule';
+		$this->hdr_agen_monitor = 'hdr_agen_monitor';
+	}
+	public function action_call_track(){
+		/*$this->db->group_by('code_call_track');
+		$this->db->order_by('code_call_track','asc');
+		$this->db->order_by('id_call_cat','asc');*/
+		$sql = "SELECT * FROM hdr_action_call_track ORDER BY sequence,id_call_cat,code_call_track";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+	public function get_tc_filter($id_tc){
+			$now = date('Y-m-d');
+			$yesterday = mktime(0,0,0,date("m"),date("d")-1,date("Y"));
+			/*$sql=  " SELECT hdm.primary_1  FROM hdr_debtor_main AS hdm ".
+			$_SESSION['filter_debtor']."   AND  hdm.call_status ='1' AND hdm.in_use ='0' AND hdm.primary_1 NOT IN(SELECT primary_1 FROM hdr_calltrack  ) ORDER BY hdm.debt_amount DESC  LIMIT 1";*/
+
+// 			$sql=  " SELECT hdm.primary_1  FROM hdr_debtor_main AS hdm ".
+// 			$_SESSION['filter_debtor']."   AND  hdm.call_status ='1' AND hdm.in_use ='0' AND hdm.primary_1 NOT IN(SELECT primary_1 FROM hdr_calltrack  WHERE id_call_cat ='1' AND call_date <='".date('Y-m-d',$yesterday)."'  ) ORDER BY hdm.debt_amount DESC  LIMIT 1";
+			
+			$sql=  " SELECT hdm.primary_1  FROM hdr_debtor_main AS hdm ".
+			$_SESSION['filter_debtor']."   AND  hdm.call_status ='1' AND hdm.in_use ='0' AND hdm.primary_1 NOT IN(SELECT primary_1 FROM hdr_calltrack ) ORDER BY hdm.debt_amount DESC  LIMIT 1";
+			
+// 		        die($sql);
+			$query = $this->db->query($sql);
+			$data = $query->row();
+			if($query->num_rows() > 0){
+				return $data->primary_1;
+			} else {
+				$bad = '0';
+				return $bad ;	
+			}
+	} 
+	public function check_use_again($primary_1){
+	      //$sql
+	      
+		$id_user =  $_SESSION['bid_user_s'];
+	      $sql = "SELECT in_use from hdr_debtor_main WHERE primary_1 = '$primary_1'
+		      and id_user ='$id_user' ";
+		     // die($sql);
+	      $query = $this->db->query($sql);
+	      $data = $query->row();
+	      if($query->num_rows() > 0){
+				return $data->in_use;
+			} else {
+				$bad = '0';
+				return $bad ;	
+			}
+	}
+	public function action_codes($type){
+		$query = $this->db->get_where('hdr_contact_code',array('type'=>$type));
+		return $query;
+	}
+	public function action_agen_track(){
+		$query = $this->db->get('hdr_action_agen_track');
+		return $query;
+	}
+	public function get_active_agen($primary_1){
+		$this->db->order_by('id_active_agency','asc');
+		$query = $this->db->get_where('hdr_active_agency',array('primary_1'=>$primary_1),1);
+		if($query->num_rows() > 0){
+			return  $data = $query->row();
+		}else {
+			return '0';
+		}
+	}
+	public function get_reschedule($primary_1){
+		$this->db->order_by('id_reschedule','asc');
+		$query = $this->db->get_where('hdr_reschedule',array('primary_1'=>$primary_1),1);
+		if($query->num_rows() > 0){
+			return  $data = $query->row();
+		}else {
+			return '0';
+		}
+	}
+	public function get_reminder($primary_1){
+		$this->db->order_by('due_date','asc');
+		$query = $this->db->get_where('hdr_calltrack',array('primary_1'=>$primary_1, 'is_current'=>1, 'id_action_call_track'=>4),1);
+		if($query->num_rows() > 0){
+			return  $data = $query->row();
+		}else {
+			return '0';
+		}
+	}
+	public function insert_phone_no($data){
+		$sql = $this->db->insert_string('hdr_debtor_phone_no', $data);
+			$query = $this->db->query($sql);
+			return $this->db->insert_id();
+	}
+	public function edit_phone_no($id_phone,$data){
+			$where = "id_phone = $id_phone";
+			$sql = $this->db->update_string('hdr_debtor_phone_no', $data, $where);
+			$query = $this->db->query($sql);
+			return $this->db->insert_id();
+	}
+	public function get_phone($primary_1){
+		$sql = "SELECT  * FROM 
+					hdr_debtor_phone_no WHERE primary_1= '$primary_1' ";
+		//$this->db->order_by('id_phone','desc');
+		//$query = $this->db->get_where('hdr_debtor_phone_no',array('primary_1'=>$primary_1));
+			$query = $this->db->query($sql);
+			return  $data = $query;
+	}
+	public function get_one_phone($id_phone){
+			$results = array();
+			  $query = $this->db->query("SELECT * FROM hdr_debtor_phone_no WHERE id_phone = '$id_phone' LIMIT 1");
+
+			  if ($query->num_rows() > 0) {
+					$row = $query->row_array();
+					$query_results['id_phone']		 = $row['id_phone'];
+					$query_results['phone_type']		 = $row['phone_type'];
+					$query_results['phone_no']		 = $row['phone_no'];
+					$results		 = $query_results;
+			  } else {
+				$results = false;
+			  }
+		
+			  return $results;	
+	}
+	public function delete_phone($id_phone){
+			$this->db->delete('hdr_debtor_phone_no',array('id_phone'=>$id_phone));	
+	}
+	public function insert_info($data){
+		$sql = $this->db->insert_string('hdr_debtor_info', $data);
+			$query = $this->db->query($sql);
+			return $this->db->insert_id();
+	}
+	public function edit_info($data){
+			$where = "primary_1 = ".$data['primary_1']."";
+			$sql = $this->db->update_string('hdr_debtor_info', $data, $where);
+			$query = $this->db->query($sql);	
+			return $this->db->insert_id();
+	}
+	public function get_info($primary_1){
+		$this->db->order_by('id_debtor_info','desc');
+		$query = $this->db->get_where('hdr_debtor_info',array('primary_1'=>$primary_1));
+			return  $data = $query;
+	}
+	public function get_one_info($id_debtor_info){
+			$results = array();
+			  $query = $this->db->query("SELECT * FROM hdr_debtor_info WHERE id_debtor_info = '$id_debtor_info' LIMIT 1");
+
+			  if ($query->num_rows() > 0) {
+					$row = $query->row_array();
+					$query_results['id_debtor_info']	 = $row['id_debtor_info'];
+					$query_results['info']		 = $row['info'];
+					$results		 = $query_results;
+					//print_r($results);
+			  } else {
+				$results = false;
+			  }
+		
+			  return $results;	
+		}
+	public function check_use($id_user){
+		$query = $this->db->get_where('hdr_debtor_main', array('in_use'=>'0'));
+		if($query->num_rows() >0){
+				//delete use
+				//return $this->delete_nouse($id_user);
+				return $query;
+		}else {
+			return false;
+		}
+	}
+	public function in_use_debtor($primary_1,$id_user){
+		$sql = "UPDATE hdr_debtor_main SET in_use ='1', id_user='$id_user' WHERE primary_1 = '$primary_1'";
+		$query = $this->db->query($sql);
+		return $query;
+		//echo $this->db->last_query();
+	}
+	public function skip_debtor($primary_1,$id_user){
+		$sql = "UPDATE hdr_debtor_main SET skip ='1', id_user='$id_user' WHERE primary_1 = '$primary_1'";
+		$query = $this->db->query($sql);
+		return $query;
+		//echo $this->db->last_query();
+	}
+	public function delete_nouse($id_user){
+		$sql = "DELETE FROM hdr_calltrack WHERE primary_1 != '' 
+					AND id_user = '$id_user' AND in_use ='1'";
+		return $query=$this->db->query($sql);
+	}
+	public function delete_unuse($primary_1,$id_user){
+		$sql = "DELETE FROM hdr_calltrack WHERE primary_1 != '$primary_1' 
+					AND id_user = '$id_user' AND in_use ='1'";
+		return $query=$this->db->query($sql);
+	}
+	public function get_latest_use($primary_1,$id_user,$in_use){
+		$get_tag_condition = $in_use?get_tag_condition($in_use,' AND '):'';	
+		$sql = "SELECT *, id_action_call_track FROM hdr_calltrack WHERE primary_1 = '$primary_1' 
+					$get_tag_condition  LIMIT 1";
+		$query = $this->db->query($sql);
+		//echo $sql;
+		$data = $query->row();
+		if($query->num_rows() >=1){
+			return $data;
+		}else{
+			return '0';
+		}
+	}
+	public function update_current($primary_1,$id_user){
+		$sql = "UPDATE hdr_calltrack SET is_current = '0' WHERE primary_1 = '$primary_1' AND id_user = '$id_user' ";
+		$query = $this->db->query($sql);
+		return $query;
+	  }
+	  
+	public function insert_call_track($data,$insert){
+			$primary_1 = $data['primary_1'];
+			$id_user = $data['id_user'];
+			$id_action_call_track = $data['id_action_call_track'];
+			$data['is_current'] = '1';
+			$data['in_use'] = '0';
+			$data['cycling'] = '1';
+			if(!empty($data['ptp_fu'])){
+			  if($data['ptp_fu']=='1')
+			  $this->update_ptp_fu($primary_1);
+			}elseif(!empty($data['fu'])){
+			  if($data['fu']=='1')
+			  $this->update_fu($primary_1);
+			}
+			$this->update_current($primary_1,$id_user);
+			$sql = $this->db->insert_string('hdr_calltrack', $data);
+			$query = $this->db->query($sql);
+			return $this->db->insert_id();
+	}
+	public function update_in_user($primary){
+	   // $sql = "UPDATE hdr_debtor_main SET in_use = '0'"
+	}
+	public function update_ptp_fu($primary_1){
+	      $sql = "UPDATE hdr_calltrack SET ptp_fu ='1' WHERE primary_1 = '$primary_1'";
+	      $query = $this->db->query($sql);
+	      return $query;
+	}
+	public function update_fu($primary_1){
+	      $sql = "UPDATE hdr_calltrack SET fu ='1' WHERE primary_1 = '$primary_1'";
+	      $query = $this->db->query($sql);
+	      return $query;
+	}
+	public function get_call_track_info($primary_1){
+// 	     $sql = "SELECT hdc.* FROM hdr_calltrack hdc 
+// 		      INNER JOIN hdr_debtor_main hdm ON hdc.primary_1 = hdc.primary_1
+// 		      WHERE hdc.primary_1='".$primary_1."' AND hdc.id_action_call_track='28' LIMIT 1";
+	      $sql = $this->db->get_where('hdr_calltrack',array('primary_1'=>$primary_1,'id_action_call_track'=>'28'));
+	      //$query = $this->db->query($sql);
+	      //echo $this->db->last_query();
+	      return $sql;
+	}
+	public function get_payment_via($code){
+	    $query = $this->db->get_where('hdr_payment_via',array('code'=>$code));
+	    return $query;
+	}
+	public function insert_contact_code($data){
+			
+			//$this->update_current($primary_1,$id_user);
+			$sql = $this->db->insert_string('hdr_contact_code', $data);
+			$query = $this->db->query($sql);
+			return $this->db->insert_id();
+	}
+	
+	public function insert_agen_track($data){
+			$sql = $this->db->insert_string('hdr_agen_monitor', $data);
+			$query = $this->db->query($sql);
+			return $this->db->insert_id();
+	}
+	
+	public function insert_stat_call($id_user,$status){
+			$now = date('Y-m-d');
+			$record->id_user = $id_user;
+			$record->$status = $status;
+			$record->createdate = $now;
+			return $this->db->insert('hdr_stat_call',$record);
+	}
+	
+	public function update_stat_call($id_user,$status){
+			//$status;
+			$sql = "UPDATE hdr_stat_call SET $status = $status+1 WHERE id_user = '$id_user' AND createdate = CURDATE( ) ";
+			return $this->db->query($sql);
+	}
+	
+	public function get_field_name($id_field_name){
+		$query = $this->db->get_where('hdr_debtor_field_name',array('id_file_field'=>$id_field_name));
+		return $query->row();
+	}
+	
+	public function get_ptp($id_tc){
+			$today = date('Y-m-d');
+			$now = date('Y-m-d 00:00:00');
+			$sql=  " SELECT hdm.primary_1  FROM ".$this->hdr_debtor_main." AS hdm
+			       INNER JOIN hdr_calltrack hdc ON hdc.primary_1 = hdm.primary_1
+			       WHERE hdc.id_action_call_track ='28' AND  hdm.call_status ='1' AND hdc.ptp_fu ='0' AND hdc.id_user = '".$id_tc."'
+			       AND hdc.call_date !='".$today."'
+			       LIMIT 1";
+						
+			//die($sql);
+			$query = $this->db->query($sql);
+			$data = $query->row();
+			if($query->num_rows() < 1){
+				$bad = '0';
+				return $bad ;	
+			} else {
+				return $data->primary_1;
+			}
+	}
+	public function get_no_contact_fu($id_tc){
+			$today = date('Y-m-d');
+			$now = date('Y-m-d 00:00:00');
+			$sql=  " SELECT hda.id_call_cat,hda.id_action_call_track, hdm.primary_1, hdc.*  FROM hdr_debtor_main hdm
+			       INNER JOIN hdr_calltrack hdc ON hdc.primary_1 = hdm.primary_1
+			       INNER JOIN hdr_action_call_track hda ON hdc.id_action_call_track = hda.id_action_call_track
+			       WHERE hda.id_call_cat ='2' AND   hdm.call_status ='1' AND hdc.fu ='0' AND hdm.skip='0' AND hdc.id_user = '".$id_tc."'  LIMIT 1";	
+			//die($sql);
+			$query = $this->db->query($sql);
+			$data = $query->row();
+			if($query->num_rows() < 1){
+				$bad = '0';
+				return $bad ;	
+			} else {
+				return $data->primary_1;
+			}
+	}
+	public function get_contact_fu($id_tc){
+			$today = date('Y-m-d');
+			$now = date('Y-m-d 00:00:00');
+			$sql=  " SELECT hda.id_call_cat,hda.id_action_call_track, hdm.primary_1, hdc.*  FROM hdr_debtor_main hdm
+			       INNER JOIN hdr_calltrack hdc ON hdc.primary_1 = hdm.primary_1
+			       INNER JOIN hdr_action_call_track hda ON hdc.id_action_call_track = hda.id_action_call_track
+			       WHERE hda.id_call_cat ='1' AND   hdm.call_status ='1' AND hdc.id_action_call_track !='28'  AND hdc.fu ='0' AND hdc.id_user = '".$id_tc."'
+			       AND hdc.call_date !='".$today."' LIMIT 1";		
+			//die($sql);
+			$query = $this->db->query($sql);
+			$data = $query->row();
+			if($query->num_rows() < 1){
+				$bad = '0';
+				return $bad ;	
+			} else {
+				return $data->primary_1;
+			}
+	}
+	public function get_broken($id_user){
+	
+	}
+	public function get_keep($id_user){
+	
+	}
+	
+	public function reset_uncall(){
+		$sql = "UPDATE hdr_debtor_main hdm
+			SET hdm.in_use = '0', hdm.id_user='0'
+			WHERE hdm.primary_1 NOT IN (SELECT primary_1 FROM hdr_calltrack)";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+	
+	public function check_cycling($id_tc){
+			$sql=  " SELECT COUNT(hdm.primary_1) AS cycling  FROM ".$this->hdr_debtor_main." AS hdm 
+						".$_SESSION['filter_debtor']." 
+						AND hdm.primary_1 NOT IN (SELECT hct.primary_1 FROM hdr_calltrack AS hct WHERE hct.in_use ='0' AND hct.cycling ='1' ) ";
+						//echo $sql;
+			$query = $this->db->query($sql);
+			$data = $query->row();
+			if($query->num_rows() > 0){
+				return $data->cycling;
+			} else {
+				$bad = '0';
+				return $bad ;	
+			}
+	
+	}
+	public function update_cycling($id_tc){
+			$sql = "UPDATE hdr_calltrack SET cycling = '0', call_attempt = call_attempt +1 WHERE cycling =1 AND id_action_call_track !='1'";
+			//echo 'masuk cy';
+			$query = $this->db->query($sql);
+			return $query;
+	}
+	public function call_attempt_debtor($primary_1){
+		$sql = "SELECT COUNT( hdc.primary_1) AS total
+		    FROM hdr_calltrack  AS hdc WHERE primary_1 = '$primary_1' AND id_action_call_track !=0";
+		$query = $this->db->query($sql);
+		$data = $query->row();
+		if($query->num_rows() <1){
+			$never = 'never call';
+			return $never;
+		} else {
+			return $data->total;
+		}
+	}
+	public function count_assign_debtor_tc($id_tc){
+		if($_SESSION['filter_debtor']==''){
+			return 'Not Filtered';
+		} else {
+			$sql = " SELECT COUNT(DISTINCT hdm.primary_1) AS total_debtor  FROM ".$this->hdr_debtor_main." AS hdm  ".$_SESSION['filter_debtor']." ";
+			//echo $sql;
+			//echo $id_tc;
+			$query = $this->db->query($sql);
+				$data = $query->row();
+				if($query->num_rows() < 1){
+					$bad = ' "No Debtor" ';
+					return $bad ;	
+				} else {
+					return $data->total_debtor;
+				}
+		}
+	}
+	
+	public function count_notcontacted_debtor_tc($id_tc){
+		$sql = " SELECT COUNT(DISTINCT hdm.primary_1) AS total_not_contact_debtor  FROM ".$this->hdr_debtor_main." AS hdm  ".$_SESSION['filter_debtor']." AND hdm.primary_1 NOT IN (SELECT hct.primary_1 FROM hdr_calltrack AS hct WHERE hct.cycling ='1' AND hct.id_action_call_track !='4' AND hct.id_action_call_track ='1'  )";
+		$query = $this->db->query($sql);
+			$data = $query->row();
+			if($query->num_rows() < 1){
+				$bad = ' "No Debtor" ';
+				return $bad ;	
+			} else {
+				return $data->total_not_contact_debtor;
+			}
+	}
+	public function count_nottouch_debtor_tc($id_tc){
+		$sql = " SELECT COUNT(DISTINCT hdm.primary_1) AS total_not_contact_debtor  FROM ".$this->hdr_debtor_main." AS hdm  ".$_SESSION['filter_debtor']."  AND hdm.primary_1 NOT IN (SELECT hct.primary_1 FROM hdr_calltrack AS hct   )";
+		$query = $this->db->query($sql);
+			$data = $query->row();
+			if($query->num_rows() < 1){
+				$bad = ' "No Debtor" ';
+				return $bad ;	
+			} else {
+				return $data->total_not_contact_debtor;
+			}
+	}
+	public function status_call($id_user,$status,$begindate,$enddate){
+		$group_bys = 'hdc.primary_1';
+		$query_ptp = "";
+		if($begindate!= ""  ){
+			$bg = " AND hdc.call_date>='$begindate ' ";
+		}else{
+			$bg = " ";
+		}
+		if($enddate!=""){
+			$ed = " AND hdc.call_date<='$enddate ' ";
+		}else{
+			$ed = " ";
+		}
+		
+		//die($status);
+		if($status == '1'){
+			$status = " WHERE hdc.id_action_call_track ='1' ";	
+// 			$bg = " AND hdc.ptp_date>='$begindate' ";
+// 			$ed = "   AND hdc.ptp_date<='$enddate' ";
+		} elseif($status == '2'){
+			$status = "WHERE hac.id_call_cat ='2' ";
+		} elseif($status == '3'){
+			
+			$status = " WHERE hac.id_call_cat ='1' ";
+		}  elseif($status == 'no_ptp'){
+			$group_bys ='  hdc.primary_1 ';
+			$status = "WHERE hac.id_call_cat ='1' AND hdc.id_action_call_track != '28' ";
+		} elseif($status == 'acct_worked'){
+			$status = "WHERE hdc.is_current ='1'";
+			$group_bys ='DISTINCT  hdc.primary_1 ';
+		} elseif($status == 'ptp'){
+			
+			$group_bys ='DISTINCT  hdc.primary_1 ';
+			//echo "<h1>ptp</h1>";
+			$status = " WHERE hdc.id_action_call_track='28' ";
+		} elseif($status == 'all'){
+			$group_bys =' hdc.primary_1 ';
+			$status = 'WHERE hdc.id_action_call_track !="0" ';
+			//echo "<h1>ptp</h1>";
+		} else {
+			//echo "<h1>CALL</h1>";
+			$status = 'WHERE hdc.id_action_call_track !="0"   ';
+			
+		}
+		$user = $id_user!='all'?' AND hdc.id_user ="'.$id_user.'"   ':'';
+		// WHERE hac.id_call_cat ='1' AND hdc.id_action_call_track NOT IN (4,1) 
+		$sql =" SELECT COUNT($group_bys) AS total, hdc.id_user,  hdc.id_action_call_track, hdc.remarks, 	hdc.id_calltrack 
+					FROM hdr_calltrack  AS hdc 
+					INNER JOIN hdr_action_call_track AS hac ON hdc.id_action_call_track = hac.id_action_call_track
+					LEFT JOIN hdr_user AS hdu ON hdc.username = hdu.username
+					".$query_ptp."
+					$status   	$user 
+					$bg $ed ";		
+		
+// 		echo $sql.'</br>';
+		
+		$query = $this->db->query($sql);
+		$data = $query->row();
+		return $count = $data->total;
+	}
+    public function status_ptp($id_user,$status,$begindate,$enddate){
+		$group_bys = 'DISTINCT hdc.primary_1';
+		$query_ptp = "";
+		if($begindate!= ""  ){
+			$bg = " AND hdc.call_date>='$begindate ' ";
+		}else{
+			$bg = " ";
+		}
+		if($enddate!=""){
+			$ed = " AND hdc.call_date<='$enddate ' ";
+		}else{
+			$ed = " ";
+		}
+		
+		//die($status);
+		if($status == 'keep'){
+		  if($begindate!=""  ){
+			$bg = " AND hdp.trx_date>='$begindate ' ";
+			}else{
+				$bg = " ";
+			}
+			if($enddate!=""){
+				$ed = " AND hdp.trx_date<='$enddate' ";
+			}else{
+				$ed = " ";
+			}
+			$status_p = " WHERE hdc.ptp_status ='2' ";
+			
+		} elseif($status == 'broken'){
+		  if($begindate!=""  ){
+			$bg = " AND hdc.broken_date>='$begindate ' ";
+			}else{
+				$bg = " ";
+			}
+			if($enddate!=""){
+				$ed = " AND hdc.broken_date<='$enddate' ";
+			}else{
+				$ed = " ";
+			}
+			$status_p = " WHERE hdc.ptp_status ='1' ";
+		}
+		$user = $id_user!='all'?' AND hdc.id_user ="'.$id_user.'"   ':'';
+		// WHERE hac.id_call_cat ='1' AND hdc.id_action_call_track NOT IN (4,1) 
+		$sql =" SELECT COUNT($group_bys) AS total
+					FROM hdr_calltrack  AS hdc 
+					LEFT JOIN hdr_payment AS hdp ON hdp.primary_1 = hdc.primary_1
+					
+					$status_p   	$user 
+					$bg $ed ";		
+		
+		//echo $sql.'</br>';
+// 		$sql =" SELECT COUNT( $group_bys) AS total_call
+// 					FROM hdr_calltrack	  AS hdc 
+// 					INNER JOIN hdr_debtor_main AS hdm ON hdm.primary_1 = hdc.primary_1
+// 					WHERE hdc.ptp_status ='2'
+// 					$bg $ed
+// 					 $user ";
+		$query = $this->db->query($sql);
+		$data = $query->row();
+		return $count = $data->total;
+	}
+    function get_last_ten_calltrack($primary_1){
+	$sql = "SELECT hco.username,hco.code_call_track,hco.remarks,hco.call_date,hco.call_time,hco.ptp_date, hco.ptp_amount  FROM hdr_calltrack hco
+					WHERE hco.primary_1 = '".$primary_1."' 
+					AND hco.remarks !=''  order by call_date DESC,call_time DESC
+					  limit 10 ";
+		
+		//echo $sql;
+	$query = $this->db->query($sql);
+	return $query;  
+    }
+	public function export_calltrack($primary_1){
+		$this->load->helper('csv');
+		$sql = "SELECT hco.username,hco.code_call_track,hco.remarks,hco.call_date,hco.call_time FROM hdr_calltrack hco
+					WHERE hco.primary_1 = '".$primary_1."' 
+					AND hco.remarks !='' AND hco.username !='' order by call_date DESC
+					  ";
+	$query = $this->db->query($sql);	
+		$fileName = 'calltrack_'.$primary_1.date('Y_m_d_h_i_s').'.csv';
+		query_to_csv($query, TRUE, $fileName);
+	}
+	public function export_payment($primary_1){
+		$this->load->helper('csv');
+		$sql = "SELECT hp.trx_date,hp.posting_date,hp.amount,hp.description FROM hdr_payment hp 
+					WHERE hp.primary_1 = '".$primary_1."' 
+					order by posting_date DESC
+					  ";
+	$query = $this->db->query($sql);	
+		$fileName = 'payment_'.$primary_1.date('Y_m_d_h_i_s').'.csv';
+		query_to_csv($query, TRUE, $fileName);
+	}
+	public function export_monitor_agen($primary_1){
+		$this->load->helper('csv');
+		$sql = "SELECT ham.primary_1, ham.date_in, ham.time, ham.visit_date,ham.action_code,ham.ptp_date, ham.ptp_amount, ham.remark,ham.username,ham.agency,ham.coll_agency FROM hdr_agen_monitor ham 
+					WHERE ham.primary_1 = '".$primary_1."' 
+					order by ham.date_in DESC
+					  ";
+	$query = $this->db->query($sql);	
+		$fileName = 'monitor_agen_'.$primary_1.date('Y_m_d_h_i_s').'.csv';
+		query_to_csv($query, TRUE, $fileName);
+	}
+	function get_action_code_wom($primary_1){
+	$sql = "SELECT  region_desc, nama_kolektor,activity_date, action_desc FROM hdr_action_code where primary_1 = '".$primary_1."' LIMIT 10";
+	
+	//echo $sql;
+	$hasil = $this->db->query($sql);
+	return $hasil;  
+    }
+    public function get_motor_brand($item_no){
+	$sql = "SELECT * FROM  hdr_motor_type 
+		WHERE item_no = '$item_no' ";
+	$query = $this->db->query($sql);
+	return $query;
+    
+    }
+}
+?>

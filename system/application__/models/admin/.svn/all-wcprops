@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/finansia_collection/!svn/ver/1/system/application/models/admin
+END
+hdr_user_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/finansia_collection/!svn/ver/1/system/application/models/admin/hdr_user_model.php
+END
+hdr_setup_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/finansia_collection/!svn/ver/1/system/application/models/admin/hdr_setup_model.php
+END
+hdr_upload_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/finansia_collection/!svn/ver/1/system/application/models/admin/hdr_upload_model.php
+END
+hdr_download_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/finansia_collection/!svn/ver/1/system/application/models/admin/hdr_download_model.php
+END

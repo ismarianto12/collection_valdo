@@ -1,0 +1,204 @@
+/*
+name: Wallboard BFI
+developer: nudi.sanjaya@valdoinc.com
+*/
+/* basic page elements */
+
+html
+{
+	margin: 0;
+	/* setting border: 0 hoses ie6 win window inner well border */
+	padding: 0;
+}
+
+body
+{
+	margin: 0;
+	/* setting border: 0 hoses ie5 win window inner well border */
+	padding: 0;
+	font:12px Arial, Verdana, Helvetica, sans-serif;
+  line-height: 1.3em;
+	background: #CBDCF0;
+}
+
+#container{
+	position: relative;
+	margin: 10px; /* center on everything else */
+	text-align: left;
+	color:#655f5f;
+}
+
+#container-inner { position: static; width: auto; }
+
+#container {
+	width: 1200px;
+}
+
+#container-inner {
+	margin: 10px 0 0px 0;
+}
+
+#pagebody{
+	text-align: center;
+}
+
+
+/* standard helper classes */
+
+.clr
+{
+	clear: both;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: 0 -1px -1px 0;
+	border: 0;
+	padding: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+/* .pkg class wraps enclosing block element around inner floated elements */
+.pkg:after
+{
+	content: " ";
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;
+}
+* html .pkg { display: inline-block; }
+/* no ie mac \*/
+* html .pkg { height: 1%; }
+.pkg { display: block; }
+/* */
+
+#alpha{
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 600px;
+}
+
+#beta{
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 600px;
+}
+
+#monitor-title,
+#inbound-title,
+#outbound-title{
+	font-size: 25px;
+	font-weight: bold;
+	color: #008000;
+	text-align: left;
+	font-family: "arial black";
+}
+
+#monitor-title{
+	float: left;
+	width: 600px;
+}
+
+#inbound-title-time{
+	float: left;
+	margin: 40px 0 10px 10px;
+	padding: 10px;
+	background: #4F81BD;
+	text-align: center;
+	width: 200px;	
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	font-family: "arial black";
+}
+
+#tbl-list{
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+#tbl-list th{
+	background: #4F81BD;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+#tbl-list tr.odd{
+	background: #D0D8E8;
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#tbl-list tr.even{
+	background: #E9EDF4;
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#tbl-list td{
+	border-right: 1px solid #fff;
+}
+
+#outbound-body-inner{
+	padding-top: 0px;
+	margin: 0;
+}
+
+#inbound-body-inner{
+	padding: 10px;
+	margin: 0;
+}
+
+#tbl-list-w{
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+#tbl-list-w th{
+	background: #4F81BD;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+#tbl-list-w tr.odd{
+	background: #fcc7c0;
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#tbl-list-w tr.even{
+	background: #f74931;
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#tbl-list-w td{
+	border-right: 1px solid #fff;
+}

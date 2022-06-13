@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/finansia_collection/!svn/ver/1/essential/backup
+END
+CentOS-Base.repo
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/finansia_collection/!svn/ver/1/essential/backup/CentOS-Base.repo
+END
+my.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/finansia_collection/!svn/ver/1/essential/backup/my.cnf
+END
+CentOS-Media.repo
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/finansia_collection/!svn/ver/1/essential/backup/CentOS-Media.repo
+END

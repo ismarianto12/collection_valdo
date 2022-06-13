@@ -1,0 +1,231 @@
+/*css author:Nda
+  20010
+  Contribution by haidar Marie
+  contact = coder5@ymail.com*/
+
+/*========================================================================*/
+/*		MAIN ELEMENTS													  */
+/*========================================================================*/
+*{margin:0px; padding:0px;}
+
+.cnfull { float:left; padding:0; width:948px; }
+.boxfull_top { display:block; width:948px; height:21px; background:url(../images/boxfull_top.png) bottom; }
+.boxfull_box p { line-height:28px; padding:10px; }
+.boxfull_box { display:block; padding:0 20px; width:908px; height:auto; font:normal 13px arial; color:#000; background:url(../images/boxfull_box.png) repeat-y; }
+.boxfull_bot { display:block; width:948px; height:21px; background:url(../images/boxfull_bot.png) top; }
+label.filter { float:left; padding:0px 5px 0px 0px;  font:normal 13px/1em arial; color:#000; text-align:left; }
+.sideleft { float:left; width:210px; }
+.boxsideleft_top { display:block; width:210px; height:21px; background:url(../images/boxsideleft_top.png) bottom; }
+.boxsideleft_box { display:block; padding:0 20px; width:170px; height:auto;font:normal 13px arial; color:#000; background:url(../images/boxsideleft_box.png) repeat-y; }
+.inside_boxleft { display:block; width:165px; height:auto;height:375px; overflow:scroll; }
+.boxsideleft_bot { display:block; width:210px; height:21px; background:url(../images/boxsideleft_bot.png) top; }
+
+.contright { float:left; width:715px; }
+.viewCenter { width:715px; margin:auto;}
+.boxcontright_top { display:block; width:715px; height:21px; background:url(../images/boxcontright_top.png) bottom; }
+.boxcontright_box { display:block; padding:0 20px; width:675px; height:auto; font:normal 13px arial; color:#000;  background:url(../images/boxcontright_box.png) repeat-y;   }
+.inside_boxright { display:block; width:670px; height:600px; overflow:scroll; }
+.inside_boxright_reg { display:block; width:670px; height:auto; }
+.inside_boxright_center { display:block; width:670px; margin:auto;height:auto; }
+.center_inside { width:500px; margin:auto; }
+.boxcontright_bot { display:block; width:715px; height:21px;  background:url(../images/boxcontright_bot.png) top; }
+
+
+body{ margin:0px; padding:0px; background:#fff; font: normal 13px/1.5em ; font-family: verdana, arial, helvetica, sans-serif;
+ color:#000; }
+
+.clear { clear:both; margin:0px; padding:0px; height:0px; line-height:0; }
+.space { clear:both; display:block; margin:0px; padding:0px; height:10px; border:none; font:normal 1px arial; }
+
+h1,h2,h3 {margin:0px; padding:0px; color:#222; }
+h1 { font:bold 18px/1em Arial; }
+h2 { font:bold 17px/1em Arial; }
+h3 { font:bold 15px/1em Arial; }
+.max_ptp  { font:bold 15px/1em Arial; color:#F55555; }
+h4 { font:bold 14px/1em Arial; }
+
+
+a { border:none; text-decoration: underline; color:#000; cursor:pointer;}
+a:hover { border:none; text-decoration: none; color:#000;}
+#no_under {  text-decoration:none; }
+img { margin:0px; padding:0px; border:none; }
+img.iconside { margin:5px 10px -7px 0px; padding:0px; }
+
+img.float-right { float:right; margin: 5px 0px 10px 10px; }
+img.float-left { float:left; margin: 5px 10px 5px 0px; }
+.float_left { float:left; width:auto; border:none; }
+.float_right { float:right; }
+
+a img { border:none; }
+a:hover img { border:none; }
+
+
+/*========================================================================*/
+/*		HEADER														      */
+/*========================================================================*/
+#wrap_header { clear:both; margin:0px; padding:0px; width:100%;
+	/*background:url(../images/wrap_header.gif) repeat-x top; */
+	background: #808080;
+	text-align:left; border:none; }
+	
+#wrap_header_syariah { clear:both; margin:0px; padding:0px; width:100%;
+	/*background:url(../images/wrap_header.gif) repeat-x top; */
+	background-image: linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -o-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -moz-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -webkit-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -ms-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	text-align:left; border:none; }
+	
+#header { margin:0px auto; padding:0px; width:950px; height:100px;
+	background:url(../images/front_adira.png) no-repeat left ; */
+	background: #808080;
+	border:none; }
+.head_logo { float:left; padding:20px 0 0 20px; width:300px; height:auto; border:none; }
+
+.head_right { float:right; width:500px; height:auto; border:none; }
+.head_welcome { float:right; padding:50px 20px 0 0; width:400px; height:30px; color:#000000; border:none; }
+.head_welcome p { float:right; margin:0 10px 0 0; }
+a.signout { float:right; display:inline-block; margin:-10px 0 0 0; padding:0; width:96px; height:33px; background:url(../images/signout.png); color:#f29132; text-decoration:none; text-indent:-999999px ; }
+a:hover.signout { display:inline-block; margin:-10px 0 0 0; padding:0; width:96px; height:33px; background:url(../images/signout.png); color:#f29132; text-decoration:none; text-indent:-999999px }
+
+#head_menu_wrap { margin:0px auto;  width:100%; height:auto; background:url(../images/bg_menuwrap.gif) repeat-x bottom; }
+.head_menu { margin:0 auto; clear:both; padding:0;  width:1000px; height:37px; border:none; }
+.head_menu ul { margin:0px; list-style:none; font: normal 13px Arial, Sans-serif; }
+.head_menu li { display:inline; margin:0; padding:0; }
+.head_menu a { float:left; margin:0px; padding:0px 0px 0px 24px; background: url(../images/tableft.png) no-repeat left top; text-decoration:none; border:none; }
+.head_menu a span { float:left; display:block; margin:0px; padding:14px 30px 8px 6px; background: url(../images/tabright.png) no-repeat right top;  color:#272727; font-weight:bold; }
+.head_menu a span p { clear:both; margin:0px; padding:0px; font:normal 11px/1.5em Arial, sans-serif; color:#FFF; }
+
+.head_menu #current a span	{ color:#fff; font-weight:bold; }
+.head_menu #current a span p	{ clear:both; margin:0px; padding:0px; font:normal 11px/1.5em Arial, sans-serif; color:#000; }
+.head_menu a span {float:none; }
+.head_menu a:hover span {color:#0a80be; font-weight:bold;}
+.head_menu a:hover span p {color:#000;}
+
+.head_menu a:hover { background-position:0% 0px; }
+.head_menu a:hover span { background-position:100% 0px; }
+.head_menu #current a { background-position:0% -37px; }
+.head_menu #current a span { background-position:100% -37px; }
+
+/*========================================================================*/
+/*		SUB MENU													      */
+/*========================================================================*/
+.submenu_wrap { margin:0px auto;  width:100%; height:auto; background:#0a80be url(../images/bg_submenu.png) repeat-x; }
+.submenu { margin:0 auto; padding:10px 10px 0 10px;  width:950px; height:30px; background:transparent; }
+.submenu  ul { list-style:none; }
+.submenu ul li { float:left; display:inline; }
+.submenu #current_sub a{ display:inline-block; padding:0 10px; height:20px; background:transparent; color:#fff; font:bold 12px/1.7em arial; text-decoration:none; border:none; }
+.submenu ul li a { display:inline-block; padding:0 10px; height:20px; background:transparent; color:#aee5ff; font:bold 12px/1.7em arial; text-decoration:none; border:none; }
+.submenu ul li a:hover { display:inline-block; padding:0 10px; height:20px; background:transparent; color:#fff; font:bold 12px/1.7em arial; text-decoration:none; border:none; }
+.submenu ul li a.active { display:inline-block; padding:0 10px; height:20px; background:transparent; color:#fff; font:bold 12px/1.7em arial; text-decoration:none; border:none; }
+
+/*========================================================================*/
+/*		CONTENTS													      */
+/*========================================================================*/
+#wrap_content { clear:both; margin:0px; padding:0px; width:100%; background:url(../images/wrap_content.gif) repeat-x top; border:none; }
+.content { margin:0px auto; padding:0px; width:950px; height:auto; background:transparent; border:none; }
+
+.cmidleft { float:left; padding:10px 0; width:475px; }
+.boxmid_top { display:block; width:474px; height:26px; background:url(../images/boxmid_top.png) bottom; }
+.boxmid_box { display:block; padding:0 20px; width:434px; height:auto; font:normal 11px arial; color:#000; background:url(../images/boxmid_box.png) repeat-y; }
+.boxmid_bot { display:block; width:474px; height:26px; background:url(../images/boxmid_bot.png) top; }
+
+
+/*========================================================================*/
+/*		FOOTER														      */
+/*========================================================================*/
+#wrap_footer { clear:both; padding:0px; margin:0px auto; width:100%; height:70px; background:#808080; }
+#wrap_footer_syariah { clear:both; padding:0px; margin:0px auto; width:100%; height:70px; 
+	background-image: linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -o-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -moz-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -webkit-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+	background-image: -ms-linear-gradient(bottom, rgb(45,255,56) 12%, rgb(90,255,101) 36%, rgb(171,255,44) 83%);
+}
+.footer { clear:both; padding:20px 0 0 0; margin:0px auto; width:950px; height:50px; background:transparent; font:normal 12px/1.3em Arial; color:#fff; text-align:center; }
+.footer a{ margin:32px 3px 20px 3px; padding:10px 3px; color:#4e4e4e; text-decoration:none; }
+.footer a:hover{ text-decoration:underline; }
+
+/*========================================================================*/
+/*		FORM GLOBAL														  */
+/*========================================================================*/
+form { margin:0px; padding:0; }
+
+input.txt { float:left; margin:0px; padding:2px 5px 0px 5px; width:210px; height:20px; background:#fff; font: normal 13px/1em Arial; color:#464646; border:1px solid #c0c0c0; }
+input.txt_acode { float:left; margin:5px 0px; padding:3px 5px 0px 5px; width:100px; height:20px; background:#fff; font: normal 12px/1em Arial; color:#464646; border:1px solid #c0c0c0; }
+input.txt_date { float:left; margin:5px 5px 5px 0; padding:3px 5px 0px 5px; width:70px; height:20px; background:#fff; font:normal 12px/1em Arial; color:#464646; border:1px solid #c0c0c0; }
+
+
+input.button { margin:0; padding:0px 10px 3px 10px; width:80px; height:25px; background:url(../images/bg_menu.gif); font:bold 13px/1em Arial; color:#fff; border:none; cursor:pointer; }
+input.but_htcall { margin:0; padding:0px 10px 3px 10px; width:212px; height:40px; background:url(../images/but_htcall.png); border:none; cursor:pointer; }
+input.but_htagen { margin:0; padding:0px 10px 3px 10px; width:212px; height:40px; background:url(../images/but_htagen.png); border:none; cursor:pointer; }
+input.but_reschedule { margin:0; padding:0px 10px 3px 10px; width:212px; height:40px; background:url(../images/but_reschedule.png); border:none; cursor:pointer; }
+input.but_histptp { margin:0; padding:0px 10px 3px 10px; width:212px; height:40px; background:url(../images/but_histptp.png); border:none; cursor:pointer; }
+input.but_sp { margin:0; padding:0px 10px 3px 10px; width:140px; height:33px; background:url(../images/but_sp.png); font:bold 12px arial; color:#fff; border:none; cursor:pointer; }
+input.but_reg { margin:0; padding:0px 10px 3px 10px; width:140px; height:33px; background:url(../images/but_sp.png); font:bold 12px arial; color:#fff; border:none; cursor:pointer; }
+input.but_sta { margin:0; padding:0px 10px 3px 10px; width:109px; height:37px; background:url(../images/but_sta.png); border:none; cursor:pointer; }
+input.but_proced { margin:0; padding:0px 10px 3px 10px; width:109px; height:37px; background:url(../images/but_proced.png); border:none; cursor:pointer; }
+input.but_proceed { margin:0; padding:0px 10px 3px 10px; width:109px; height:37px; background:url(../images/but_proceed.png); border:none; cursor:pointer; }
+input.but_histpayment { margin:0; padding:0px 10px 3px 10px; width:429px; height:41px; background:url(../images/but_histpayment.png); font:bold 12px arial; color:#fff; border:none; cursor:pointer; }
+
+select.fbsx { float:left; margin:5px; padding:2px; width:110px; height:25px; }
+
+textarea.fbtx { float:left; margin:5px 0; padding:5px; width:420px; height:70px; font:normal 12px/1em Arial;  border:1px solid #c0c0c0; }
+
+/*========================================================================*/
+/*		DTD STYLE FORM													  */
+/*========================================================================*/
+dl { clear:both; margin:0; padding:5px 0; }
+dl.control { margin:5px; padding:0px; width:500px; }
+
+dt { clear: both; display:block; height:24px; margin:5px 0; }
+dt.autoheight { display:block; height:auto; margin:5px 0; padding:5px 0; }
+
+dt label.lblfl { float:left; padding:10px 10px 0px 0px; width:150px; font:bold 12px/1em arial; color:#024769; text-align:left; }
+dt label.autoheight { display:block; height:auto; margin:5px 0; padding:5px 0; border:1px solid; }
+
+dt p {  display:inline-block; float:left; line-height:22px; }
+dt p.desc_reg { margin:0px 0 5px 0; width:400px; line-height:15px; }
+
+dt input.txt { margin:0px; padding:2px 5px 0px 5px; width:250px; height:19px; background:#fff; font: normal 13px/1em Arial; color:#464646; border:1px solid #c0c0c0; }
+
+dt input.button { margin:1px 0px; padding:0px 15px 3px 15px; width:106px; height:30px; background:url(../images/bg_but2.png); font:bold 15px/1em Arial; color:#024769; border:none; cursor:pointer; }
+
+dt select { float:left; padding:2px; width:262px; }
+dt textarea.basic { float:left; padding:5px; width:400px; height:150px; border:1px solid #c0c0c0; }
+
+/*========================================================================*/
+/*		TABLE ELEMENTS
+v4Ld01ntL
+Palalupitak5
+										  */
+/*========================================================================*/
+table.contLeft { margin:0px; width:auto; font: normal 12px/1.2em Arial; color:#272727; border-collapse:collapse; border:none; }
+table.midleft { clear:both; margin:0px; font: normal 11px Verdana; width:433px; border-collapse:collapse; border:none; }
+td.upload { height:auto; text-align:left; padding:5px 5px; border:none; }
+td.currency {  text-align:right; padding-right:70px; }
+td.call { padding-right:70px; }
+tr.listA {margin:0px; padding:0px; width:auto; height:auto; background:#dbf3ff; border:none;  font-weight:bold; }
+tr.listB {margin:0px; padding:0px; width:auto; height:auto; background:#fff; border:none; font-weight:bold; }
+tr.listBnp {margin:0px; padding:0px; width:250px; height:auto; background:#fff; border:none; font-weight:bold; }
+
+th.noline { padding:0px 3px; height:26px; background:none; color:#272727; text-align:left; border:none; }
+
+
+td.tit { width:150px; font-weight:normal; height:auto; text-align:left; padding:5px 5px; border:none; }
+td.add_new_phone { width:250px;  font-weight:normal; height:auto; text-align:left; padding:5px 5px; border:none; }
+td.mon { font-weight:normal; height:auto; text-align:center; padding:5px; border:none; }
+td.mon a { font-weight:bold;  }
+td.userlist { font-weight:bold; height:auto; text-align:left; padding:7px; border:none; }
+td.status {  font-weight:bold; height:auto; text-align:left; padding:3px; border:none; }
+td.noline { height:auto; text-align:left; padding:5px 5px; border:none;}
+td.dpd_reala {   border:none;  font-weight:bold;color:#B51A1A;}
+td.dpd_realb {   border:none;  font-weight:bold;color:#B51A1A; background-color: #CCCCCC;}
+
+/*========================================================================*/
+/*		BUTTON ELEMENTS													  */
+/*========================================================================*/
+
+
+

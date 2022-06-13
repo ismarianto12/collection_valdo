@@ -1,0 +1,46 @@
+<?php
+/*
+ * Valdo Inc
+ * (C) 20011 Valdo
+ * @author Nudi Sanjaya
+ */
+
+if(!defined("BASEPATH")) exit("No direct script access allowed");
+
+class Json extends Controller
+{
+  /**
+   * Constructs the controller.
+   */
+  public function __construct()
+  {
+  	parent::Controller();
+	}
+
+  public function get_allbranch($region_val)
+  {
+  	$where = array(
+  		"region_id" => $region_val
+  	);
+  	$this->db->orderby("branch_name", "asc");
+  	$q = $this->db->get_where("hdr_branches", $where);
+  	if($q->num_rows() > 0)
+  	{
+  		$st_bag = '{"items":[';
+			foreach($q->result_array() as $row)
+			{
+				//$data["items"][] = $row;
+				$st_bag_arr[] = '{"branch_id":"'.$row['code'].'","branch_name":"'.trim($row['branch_name']).'"}';
+			}
+			$st_temp = $st_bag . implode(",",$st_bag_arr) . "]}";
+
+			//var_dump($st_temp);
+  	}
+  	$q->free_result();
+
+		//var_dump($data);
+		echo $st_temp;
+		die();
+  }
+
+}
