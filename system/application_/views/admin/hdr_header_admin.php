@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <!-- <link rel="shortcut icon" href="<?php echo base_url() ?>/assets/images/favicon.ico" type="image/x-icon" /> -->
 <title> Valdo Management - <?php echo @$title ?></title>
 <link href="<?php echo base_url() ?>assets/css/hdr_style.css" rel="stylesheet" type="text/css" />

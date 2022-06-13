@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>Valdo Inc | Wallboard</title>
 <link rel="icon" type="image/x-icon" href="<?php echo base_url() ?>component/images/favicon.ico">
 <script type="text/javascript" src="<?php echo base_url() ?>/component/js/jquery-1.5.1.min.js"></script>
