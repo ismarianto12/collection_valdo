@@ -33,8 +33,7 @@ class Login extends Controller
 	}
 	public function logg()
 	{
-		//die("Maaf, tidak bisa login. Harap login <a href='https://www.google.com/' target='_tab'>disini</a>");
-		//$this->output->enable_profiler("TRUE");
+
 		if (isset($_POST['post'])) {
 			$data['username'] = strtolower($this->input->post('username', TRUE));
 			$data['password']  = strtolower($this->input->post('password', TRUE));
@@ -49,6 +48,7 @@ class Login extends Controller
 				]);
 			} else {
 				http_response_code(403);
+				$this->user_model->set_login_failed($data['username'], 1);
 				echo "Please type the correct username and password";
 			}
 		}

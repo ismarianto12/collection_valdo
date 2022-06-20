@@ -534,8 +534,8 @@ class Hdr_call_track_model extends Model
         $this->db->simple_query($sql_lock);
         $q = $this->db->query($sql);
         //echo $sql;
-        echo $this->db->last_query();
-        die($sql);
+        // echo $this->db->last_query();
+        // die($sql);
         //var_dump($sql);
 
         if ($q->num_rows() > 0) {

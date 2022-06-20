@@ -60,4 +60,3 @@ class Hdr_view_debtor_cont extends Controller{
 	
 	
 }
-?>

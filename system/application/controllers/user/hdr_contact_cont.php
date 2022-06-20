@@ -97,8 +97,8 @@ class Hdr_contact_cont extends Controller
                     if ($type_calling == 'call') {
 
                         $no_loan = $this->call_track_model->get_dpds(0);
-                        var_dump($no_loan);
-                        die();
+                        // var_dump($no_loan);
+                        // die();
                         $get_last = base64_encode($no_loan . "_" . DATE("i"));
 
                         $dtnow = date("Y-m-d");
