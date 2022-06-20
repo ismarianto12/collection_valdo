@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Deb Collection Manangement</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
