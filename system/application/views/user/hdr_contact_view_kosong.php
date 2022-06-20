@@ -58,7 +58,7 @@
 <!-- End Progress Bar -->
 
 <br/>
-       <h1><center>NO DATA</center></h1>
+       <h1><center>NO DATA .</center></h1>
 <br/>		
 
 </div>

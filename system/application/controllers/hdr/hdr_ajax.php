@@ -25,7 +25,7 @@
 
       function get_data($filter_for) {
 
-					//die("d");
+					die("d");
           //$this->output->enable_profiler(TRUE);
 
           $valid_fields = array('name', 'dpd', 'kode_cabang', 'debt_amount', 'due_date', 'area', 'id_card', 'dob', 'en_primary1', 'primary_1', 'due_date', 'home_address1', 'city', 'office_address1', 'company_name', 'billing_address', 'home_zip_code1', 'last_paid_date', 'last_paid_amount', 'last_trx_date', 'last_trx_amount', 'last_cast_adv_amount', 'email', 'date_in','category','product','product_flag','bucket_coll');

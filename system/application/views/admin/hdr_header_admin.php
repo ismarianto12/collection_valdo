@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<!-- <link rel="shortcut icon" href="<?php echo base_url() ?>/assets/images/favicon.ico" type="image/x-icon" /> -->
 	<title> Valdo Management - <?php echo @$title ?></title>
 	<link href="<?php echo base_url() ?>assets/css/hdr_style.css" rel="stylesheet" type="text/css" />
@@ -23,6 +23,7 @@
 	<script language="javascript" src="<?php echo base_url() ?>assets/js/jquery.cluetip.js" type="text/javascript"></script>
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/js/hdr_ajax.js"></script>
 	<script language="javascript" src="<?php echo base_url() ?>assets/js/jquery.price_format.1.3.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 	<!--END Datepicker-->
 	<script type="text/javascript">

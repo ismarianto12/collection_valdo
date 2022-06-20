@@ -29,6 +29,8 @@ class Hdr_contact_cont extends Controller {
 
     public function contact() {
 		
+
+        // var_dump($_POST);die;
 		//echo '<center><img src="'. base_url() . 'assets/images/loader.gif">'; echo "<br/>";
         //die("<br/>Mohon Maaf, Aplikasi sedang diupdate, Refresh (tekan F5) lagi setelah 3 Menit <br/><br/> -- <br/>Hery Yulianto <br/> IT Developer <br/> Valdo International</center>");
         //$this->load->library('Multicache');
@@ -1048,4 +1050,3 @@ class Hdr_contact_cont extends Controller {
 
 
 }
-?>

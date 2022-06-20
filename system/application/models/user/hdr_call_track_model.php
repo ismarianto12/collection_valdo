@@ -8,7 +8,8 @@
   e-mail = coder5@ymail.com
  */
 
-class Hdr_call_track_model extends Model {
+class Hdr_call_track_model extends Model
+{
 
     private $hdr_debtor_main;
     private $hdr_debtor_field_name;
@@ -18,9 +19,10 @@ class Hdr_call_track_model extends Model {
     private $hdr_reschedule;
     private $hdr_agen_monitor;
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::Model();
-        $this->CI = & get_instance();
+        $this->CI = &get_instance();
         $this->hdr_debtor_main = 'hdr_debtor_main';
         $this->hdr_payment = 'hdr_payment';
         $this->hdr_calltrack = 'hdr_calltrack';
@@ -31,17 +33,19 @@ class Hdr_call_track_model extends Model {
         $this->hdr_agen_monitor = 'hdr_agen_monitor';
     }
 
-    public function action_call_track($ptp_status) {
+    public function action_call_track($ptp_status)
+    {
         $not_ptp = $ptp_status == 1 ? "WHERE id_action_call_track !='28' " : "";
         $sql = "SELECT * FROM hdr_action_call_track $not_ptp ORDER BY sequence,id_call_cat,code_call_track";
-		//$sql = "SELECT * FROM hdr_action_call_track WHERE id_action_call_track in (8,9,11,12,13,28,29,30) ORDER BY sequence,id_call_cat,code_call_track";
+        //$sql = "SELECT * FROM hdr_action_call_track WHERE id_action_call_track in (8,9,11,12,13,28,29,30) ORDER BY sequence,id_call_cat,code_call_track";
         $query = $this->db->query($sql);
         return $query;
     }
 
-    public function find_session() {
+    public function find_session()
+    {
 
-    		/*
+        /*
     		//patch martin untuk pembayaran
 				$sql2 = "UPDATE hdr_debtor_main hdm, hdr_payment hdp
 					SET hdm.is_paid=1
@@ -58,7 +62,7 @@ class Hdr_call_track_model extends Model {
             $_SESSION['finansia_dpd'] = $dpd_minus_array[0];
             //die();
             return $_SESSION['finansia_dpd'];
-           	//die();
+            //die();
         } else {
             if ($this->dpd_sql($dpd_minus_array[0])) {
                 $_SESSION['finansia_dpd'] = $dpd_minus_array[0];
@@ -75,9 +79,10 @@ class Hdr_call_track_model extends Model {
         }
     }
 
-    public function dpd_sql($dpd) {
+    public function dpd_sql($dpd)
+    {
 
-    		$id = $_SESSION['bid_user_s'];
+        $id = $_SESSION['bid_user_s'];
         $get_due_date = get_dpd_date($dpd);
         //echo $get_due_date;
 
@@ -93,30 +98,31 @@ class Hdr_call_track_model extends Model {
                     AND called = '0'
                     " . $due_date . "
                      LIMIT 1 ";
-		//die($sql);
+        //die($sql);
         //echo($due_date);
         $query = $this->db->query($sql);
-				//$num_rows = 0;
-				//$a = $this->db->last_query();
-				//die($a);
-				//if($query)
-        	$num_rows = $query->num_rows();
-        	//echo $num_rows ;
-        	//die();
+        //$num_rows = 0;
+        //$a = $this->db->last_query();
+        //die($a);
+        //if($query)
+        $num_rows = $query->num_rows();
+        //echo $num_rows ;
+        //die();
 
         //die('s'.$num_rows);
         return $num_rows;
     }
 
-    public function get_dpds($dpd) {
-    	//die("dpd");
+    public function get_dpds($dpd)
+    {
+        //die("dpd");
         $get_due_date = get_dpd_date($dpd);
         $id_user = $_SESSION['bid_user_s'];
         //die($id_user);
         $get_last = "";
 
 
-				/*
+        /*
         $sql = "SET @update_id = 0;
                     UPDATE hdr_debtor_main SET in_use = '1',
                     id_user = ' $id_user',
@@ -145,48 +151,48 @@ class Hdr_call_track_model extends Model {
         }
         */
 
-				$where = array(
-					"id_user" => $id_user
-				);
-				$q = $this->db->get_where("hdr_user", $where);
-				$row = $q->row_array();
-				//var_dump($row);
-				//die();
+        $where = array(
+            "id_user" => $id_user
+        );
+        $q = $this->db->get_where("hdr_user", $where);
+        $row = $q->row_array();
+        //var_dump($row);
+        //die();
 
-				$product = $row['product'];
-				$priority = $row['priority'];
-				$branch_area = $row['branch_area'];
-				$over_days = $row['over_days'];
-				$fin_type = $row['fin_type'];
-				$bucket_od = $row['bucket_od'];
-				$bucket_coll = $row['bucket_coll'];
-				$score_result = $row['score_result'];
-				$ai = $row['ai'];
-				$id_leader = $row['id_leader'];
+        $product = $row['product'];
+        $priority = $row['priority'];
+        $branch_area = $row['branch_area'];
+        $over_days = $row['over_days'];
+        $fin_type = $row['fin_type'];
+        $bucket_od = $row['bucket_od'];
+        $bucket_coll = $row['bucket_coll'];
+        $score_result = $row['score_result'];
+        $ai = $row['ai'];
+        $id_leader = $row['id_leader'];
 
-				### Martin-> escaping value branch ###
-				if($branch_area != ''){
-					$tmp_arr = explode(",",$branch_area);
-					$index = 0;
-					foreach($tmp_arr as $row) {
-						$tmp_arr[$index] = $this->db->escape($row);
-						$index++;
-					}
+        ### Martin-> escaping value branch ###
+        if ($branch_area != '') {
+            $tmp_arr = explode(",", $branch_area);
+            $index = 0;
+            foreach ($tmp_arr as $row) {
+                $tmp_arr[$index] = $this->db->escape($row);
+                $index++;
+            }
 
-					$branch_area = implode(",",$tmp_arr);
-				}
-				### end escaping value branch ###
+            $branch_area = implode(",", $tmp_arr);
+        }
+        ### end escaping value branch ###
 
-				$where =  " where id_debtor > 0 ";
-				$where .= " and in_use = 0 ";
-				//$where .= " and not_ptp = '0' ";
-				$where .= " and called = 0 ";
-				$where .= " and skip = 0 ";
-				$where .= " and (is_paid IS NULL or is_paid = 0)";
-				$where .= " and (id_user = 0 or id_user=$id_user) ";
-				$where .= " and valdo_cc = '01' "; //JAKARTA FLAG
-				//$where .= " and due_date = '$get_due_date' ";
-				/*if($score_result == 1)
+        $where =  " where id_debtor > 0 ";
+        $where .= " and in_use = 0 ";
+        //$where .= " and not_ptp = '0' ";
+        $where .= " and called = 0 ";
+        $where .= " and skip = 0 ";
+        $where .= " and (is_paid IS NULL or is_paid = 0)";
+        $where .= " and (id_user = 0 or id_user=$id_user) ";
+        $where .= " and valdo_cc = '01' "; //JAKARTA FLAG
+        //$where .= " and due_date = '$get_due_date' ";
+        /*if($score_result == 1)
 					{
 						$where .= " and score_result in('HIGH')";
 					}else if($score_result == 2)
@@ -195,47 +201,42 @@ class Hdr_call_track_model extends Model {
 					}else{
 						$where .= " and score_result in('MEDIUM','LOW')";
 					}*/
-				//dpd 1 diskip
-				//$where .= " and dpd != '1'";
-				
+        //dpd 1 diskip
+        //$where .= " and dpd != '1'";
 
-				$where .= $branch_area != "" ? " and kode_cabang IN ($branch_area) " : "";
 
-				switch($bucket_coll)
-				{
-					case "1":
-					//$where .= " and kode_cabang IN ('0641','0216','0104','0628','0109','0118','0110','0125','0101','0656','0607','0622','0657','0680','0604','0624','0681','0220','0128','0602','0648','0122','0512','0510','0105','0430') ";
-					break;
-					default:
-					//$where .= " and kode_cabang not in ('0641','0216','0104','0628','0109','0118','0110','0125','0101','0656','0607','0622','0657','0680','0604','0624','0681','0220','0128','0602','0648','0122','0512','0510','0105','0430') ";
-					break;
-				}
+        $where .= $branch_area != "" ? " and kode_cabang IN ($branch_area) " : "";
 
-				if($product != "ALL")
-				{
-					$arr_temp = array();
-					$where .= " and (";
-					$arrdata = explode(",", $product);
-					$arrdata2 = explode(",", $product);
-					for($i=0;$i<count($arrdata);$i++)
-					{
-						$arr_temp[] .= " object_group_code = (".$arrdata[$i].") ";
-					}
-					$where .= implode("or",$arr_temp) . ")";
-				}
+        switch ($bucket_coll) {
+            case "1":
+                //$where .= " and kode_cabang IN ('0641','0216','0104','0628','0109','0118','0110','0125','0101','0656','0607','0622','0657','0680','0604','0624','0681','0220','0128','0602','0648','0122','0512','0510','0105','0430') ";
+                break;
+            default:
+                //$where .= " and kode_cabang not in ('0641','0216','0104','0628','0109','0118','0110','0125','0101','0656','0607','0622','0657','0680','0604','0624','0681','0220','0128','0602','0648','0122','0512','0510','0105','0430') ";
+                break;
+        }
 
-					if($over_days != "")
-					{
-						$arr_temp = "";
-						$where .= " and (";
-						$arrdata = explode(",", $over_days);
+        if ($product != "ALL") {
+            $arr_temp = array();
+            $where .= " and (";
+            $arrdata = explode(",", $product);
+            $arrdata2 = explode(",", $product);
+            for ($i = 0; $i < count($arrdata); $i++) {
+                $arr_temp[] .= " object_group_code = (" . $arrdata[$i] . ") ";
+            }
+            $where .= implode("or", $arr_temp) . ")";
+        }
 
-						for($i=0;$i<count($arrdata);$i++)
-						{
-							
-//die('hehehehe'.$arrdata[$i]);
-//remark 4 agust 2016
-/*
+        if ($over_days != "") {
+            $arr_temp = "";
+            $where .= " and (";
+            $arrdata = explode(",", $over_days);
+
+            for ($i = 0; $i < count($arrdata); $i++) {
+
+                //die('hehehehe'.$arrdata[$i]);
+                //remark 4 agust 2016
+                /*
 							if($arrdata[$i] != '10plus'
 								&& $arrdata[$i] != '180plus'
 								&& $arrdata[$i] != '120plus'
@@ -257,28 +258,24 @@ class Hdr_call_track_model extends Model {
 							} else {
 								$arr_temp[] .= " datediff(now(),due_date) >= ('10') ";
 							}
-*/					
-							$stovd = $arrdata[$i];
-							switch($stovd)
-							{
-								case "15plus":
-									$arr_temp[] .= " dpd > 15 ";
-									break;
-								default:
-									$arr_temp[] .= " dpd = '$stovd' ";
-									break;
-							}
-							
-						}
-						$where .= implode("or",$arr_temp) . ")";
-					}
-					else
-					{
-						$where .= " and dpd >= -3 ";
-					}
-//die($where);
+*/
+                $stovd = $arrdata[$i];
+                switch ($stovd) {
+                    case "15plus":
+                        $arr_temp[] .= " dpd > 15 ";
+                        break;
+                    default:
+                        $arr_temp[] .= " dpd = '$stovd' ";
+                        break;
+                }
+            }
+            $where .= implode("or", $arr_temp) . ")";
+        } else {
+            $where .= " and dpd >= -3 ";
+        }
+        //die($where);
 
-/*
+        /*
 				if($over_days != "")
 				{
 					$arr_temp = "";
@@ -305,32 +302,29 @@ class Hdr_call_track_model extends Model {
 						$where .= "and (datediff(now(),due_date) >= -6)";
 					}
 */
-				//die($where);
+        //die($where);
 
-				if($priority != "")
-				{
-					$arrdata_prod = explode(",", $priority);
-					for($i=0;$i<count($arrdata_prod);$i++)
-					{
-						switch($arrdata_prod[$i])
-						{
-							case "PTP":
-							$where .= " and ptp_date is not null and id_user = '$id_user' and month(ptp_date)=month(now()) and year(ptp_date)=year(now())";
-							//die($where);
-							break;
+        if ($priority != "") {
+            $arrdata_prod = explode(",", $priority);
+            for ($i = 0; $i < count($arrdata_prod); $i++) {
+                switch ($arrdata_prod[$i]) {
+                    case "PTP":
+                        $where .= " and ptp_date is not null and id_user = '$id_user' and month(ptp_date)=month(now()) and year(ptp_date)=year(now())";
+                        //die($where);
+                        break;
 
-							case "UNTOUCH":
-								$where .= " and is_new = 1 ";
-								$where .= " and last_handling_date='0000-00-00' ";
-							break;
+                    case "UNTOUCH":
+                        $where .= " and is_new = 1 ";
+                        $where .= " and last_handling_date='0000-00-00' ";
+                        break;
 
-							case "RETOUCH":
-								$where .= " and is_new = 2 ";
-							break;
-						}
-					}
-				}
-/*
+                    case "RETOUCH":
+                        $where .= " and is_new = 2 ";
+                        break;
+                }
+            }
+        }
+        /*
 				if($angs_ke != "")
 				{					
 					for($i=0;$i<count($angs_ke);$i++)
@@ -372,56 +366,51 @@ class Hdr_call_track_model extends Model {
 					}
 				}
 				*/
-				if($bucket_od != "")
-				{
-					//od 1-7
-					if($bucket_od == 1)
-					{
-						$where .= "and (datediff(now(),due_date) between 1 and 7)";
-					}
+        if ($bucket_od != "") {
+            //od 1-7
+            if ($bucket_od == 1) {
+                $where .= "and (datediff(now(),due_date) between 1 and 7)";
+            }
 
-					//od 8-14
-					if($bucket_od == 2)
-					{
-						$where .= "and (datediff(now(),due_date) between 8 and 14)";
-					}
+            //od 8-14
+            if ($bucket_od == 2) {
+                $where .= "and (datediff(now(),due_date) between 8 and 14)";
+            }
+        }
 
-				}
+        ### Data Type ###
 
-					### Data Type ###
-
-					$find_me = ",";
-					$pos_flag = strpos($fin_type,$find_me); //IF FALSE THEN THERE IS ONLY 1 OPTION SELECTED
+        $find_me = ",";
+        $pos_flag = strpos($fin_type, $find_me); //IF FALSE THEN THERE IS ONLY 1 OPTION SELECTED
 
 
 
-					if(!$pos_flag){
-						$fin_type_arr = $fin_type;
-						if($fin_type_arr != '0'){
-							$where .= " AND ( fin_type IN (";
-							$where .= $fin_type_arr;
-							$where .= ")) ";
-						} else {
-							$where .= "";
-						}
-					}
-					else{
-						$fin_type_arr = explode($find_me,$fin_type);
-						$where .= " AND ( fin_type IN(";
-						foreach($fin_type_arr as $fin_type_row){
-								$where .= $fin_type_row.",";
-						}
-						$where = substr_replace($where,"",-1,1);
-						$where .= ")) ";
-					}
+        if (!$pos_flag) {
+            $fin_type_arr = $fin_type;
+            if ($fin_type_arr != '0') {
+                $where .= " AND ( fin_type IN (";
+                $where .= $fin_type_arr;
+                $where .= ")) ";
+            } else {
+                $where .= "";
+            }
+        } else {
+            $fin_type_arr = explode($find_me, $fin_type);
+            $where .= " AND ( fin_type IN(";
+            foreach ($fin_type_arr as $fin_type_row) {
+                $where .= $fin_type_row . ",";
+            }
+            $where = substr_replace($where, "", -1, 1);
+            $where .= ")) ";
+        }
 
-				#################
+        #################
 
-//die("d" . $over_days);
+        //die("d" . $over_days);
 
-				$orderby = "";
-				$arr_temp1 = array();
-				/*if($priority != "")
+        $orderby = "";
+        $arr_temp1 = array();
+        /*if($priority != "")
 				{
 					$orderby = " order by ";
 					$arrdata1 = explode(",",$priority);
@@ -444,17 +433,17 @@ class Hdr_call_track_model extends Model {
 					//die($orderby);
 				}*/
 
-				//update payment
-				$sql = "update hdr_debtor_main hdm, hdr_payment hdp
+        //update payment
+        $sql = "update hdr_debtor_main hdm, hdr_payment hdp
 					set hdm.is_paid=1
 					where hdm.primary_1=hdp.primary_1
 					and hdm.angsuran_ke=hdp.angsuran_ke
 					and month(hdp.trx_date)=month(now()) and year(hdp.trx_date)=year(now())					
 					and (hdm.is_paid=0 OR hdm.is_paid is null)";
-				//$this->db->query($sql);
+        //$this->db->query($sql);
 
 
-		/*
+        /*
 			$sql_time = "SELECT MINUTE(NOW()) AS menit;";
 			$result = $this->db->query($sql_time);
 
@@ -478,99 +467,94 @@ class Hdr_call_track_model extends Model {
 				#################################################
 			*/
 
-				//jika fungsi aktif
-				$modechecksql = "select is_excluded from hdr_user where id_user="."'".$id_user."' LIMIT 1";
-				$mode = $this->db->query($modechecksql);
-				$rowmode = $mode->row();
-				$is_active = $rowmode->is_excluded;
-				if($is_active == "true")
-				{
-					$sql = "update hdr_debtor_main hdm, hdr_payment hdp
+        //jika fungsi aktif
+        $modechecksql = "select is_excluded from hdr_user where id_user=" . "'" . $id_user . "' LIMIT 1";
+        $mode = $this->db->query($modechecksql);
+        $rowmode = $mode->row();
+        $is_active = $rowmode->is_excluded;
+        if ($is_active == "true") {
+            $sql = "update hdr_debtor_main hdm, hdr_payment hdp
 						set hdm.is_paid=0
 						where hdm.primary_1=hdp.primary_1
 						and hdm.angsuran_ke=hdp.angsuran_ke
 						and hdp.angsuran_ke=1 and hdm.product='KMB'
 						and hdm.is_paid=1 ";
-					//$this->db->query($sql);
+            //$this->db->query($sql);  
+        }
 
 
-				}
+        ## setting priority order ##
 
+        $priority = "ORDER BY ";
+        //$priority .= " TIME(available_contact_call) ASC ";
+        //$priority .= " `score_result` ASC";
 
-						## setting priority order ##
+        //$priority .= " `dpd` DESC";
 
-							$priority = "ORDER BY ";
-							//$priority .= " TIME(available_contact_call) ASC ";
-							//$priority .= " `score_result` ASC";
+        if ($ai == '1') {
+            $where .= " and (hour_contact_call = hour(NOW()) or hour_contact_call is null) ";
+            //$where .= " AND TIME(available_contact_call) >= TIME(NOW()) AND TIME(available_contact_call) <= TIME(DATE_ADD(NOW(), INTERVAL 15 MINUTE)) ";
+            $priority .= " flag DESC, RAND() ";
+        } else {
+            $priority .= " flag ASC, RAND()";
+        }
 
-							//$priority .= " `dpd` DESC";
-							
-						if($ai == '1'){
-							$where .= " and (hour_contact_call = hour(NOW()) or hour_contact_call is null) ";
-							//$where .= " AND TIME(available_contact_call) >= TIME(NOW()) AND TIME(available_contact_call) <= TIME(DATE_ADD(NOW(), INTERVAL 15 MINUTE)) ";
-							$priority .= " flag DESC, RAND() ";
-						}else{
-							$priority .= " flag ASC, RAND()";
-						}
-
-						############################
-						$sql_lock = "LOCK TABLES hdr_debtor_main AS lock".$id_user." WRITE";
-						/*$sql = "select primary_1, case when available_contact_call is null then 0 else 1 end as flag from hdr_debtor_main AS lock".$id_user.
+        ############################
+        $sql_lock = "LOCK TABLES hdr_debtor_main AS lock" . $id_user . " WRITE";
+        /*$sql = "select primary_1, case when available_contact_call is null then 0 else 1 end as flag from hdr_debtor_main AS lock".$id_user.
 						" $where and (is_paid is null or is_paid='0') $orderby $priority limit 1";*/
-						//$priority_data = "ORDER BY createdate ASC";
-						
-						$where_leader = "";
-						if($id_leader == 772 || $id_leader == 825 || $id_leader == 902 || $id_leader == 901  || $id_leader == 923  || $id_leader == 880  || $id_leader == 1145  || $id_leader == 1144 || $id_leader == 2124){
-							$where_leader = " and object_group_code in ('001','002','003') and dpd < 8 and valdo_cc in (01,02)"; 
-						}else if($id_leader == 1842){
-							$where_leader = " and object_group_code in ('001','002','003') and dpd < 8 and valdo_cc='02'"; 
-						}else if($id_leader == 815){
-							if($bucket_od == 2 ){
-							$where_leader = " and dpd > 7 and valdo_cc in ('01','02')"; 
-							}else if($bucket_od == 1 ){
-							$where_leader = " and object_group_code in ('001','002','003') and dpd in (-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7) and valdo_cc='01'"; 
-							}else if($bucket_od == 3 ){
-							$where_leader = " and object_group_code in ('001','002','003') and dpd in (1,2,3,4,5,6,7) and valdo_cc='01'"; 
-							}
-						}
-						
-						$priority_data = " order by RAND()";
-						$sql = "select primary_1 from hdr_debtor_main AS lock".$id_user.
-								" where in_use =0 and called = 0 and skip = 0 and date(createdate) = date(now()) and (id_user = 0) $where_leader $priority_data limit 1";
-						//var_dump($sql);
-						$toupdate = array(
-							"id_user" => $id_user,
-							"in_use" => "1"
-						);
-						$sql_unlock = "UNLOCK TABLE";
+        //$priority_data = "ORDER BY createdate ASC";
+
+        $where_leader = "";
+        if ($id_leader == 772 || $id_leader == 825 || $id_leader == 902 || $id_leader == 901  || $id_leader == 923  || $id_leader == 880  || $id_leader == 1145  || $id_leader == 1144 || $id_leader == 2124) {
+            $where_leader = " and object_group_code in ('001','002','003') and dpd < 8 and valdo_cc in (01,02)";
+        } else if ($id_leader == 1842) {
+            $where_leader = " and object_group_code in ('001','002','003') and dpd < 8 and valdo_cc='02'";
+        } else if ($id_leader == 815) {
+            if ($bucket_od == 2) {
+                $where_leader = " and dpd > 7 and valdo_cc in ('01','02')";
+            } else if ($bucket_od == 1) {
+                $where_leader = " and object_group_code in ('001','002','003') and dpd in (-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7) and valdo_cc='01'";
+            } else if ($bucket_od == 3) {
+                $where_leader = " and object_group_code in ('001','002','003') and dpd in (1,2,3,4,5,6,7) and valdo_cc='01'";
+            }
+        }
+
+        $priority_data = " order by RAND()";
+        $sql = "select primary_1 from hdr_debtor_main AS lock" . $id_user .
+            " where in_use =0 and called = 0 and skip = 0 and date(createdate) = date(now()) and (id_user = 0) $where_leader $priority_data limit 1";
+        //var_dump($sql);
+        $toupdate = array(
+            "id_user" => $id_user,
+            "in_use" => "1"
+        );
+        $sql_unlock = "UNLOCK TABLE";
 
 
-					$this->db->simple_query($sql_lock);
-					$q = $this->db->query($sql);
-					//echo $sql;
-					//echo $this->db->last_query();
-					//die($sql);
-					//var_dump($sql);
+        $this->db->simple_query($sql_lock);
+        $q = $this->db->query($sql);
+        //echo $sql;
+        echo $this->db->last_query();
+        die($sql);
+        //var_dump($sql);
 
-					if($q->num_rows() > 0)
-					{
-						$row_main = $q->row_array();
-						$get_last = $row_main['primary_1'];
-						//die($get_last);
-					}
-					else {
-						$get_last = 0;
-					}
+        if ($q->num_rows() > 0) {
+            $row_main = $q->row_array();
+            $get_last = $row_main['primary_1'];
+            //die($get_last);
+        } else {
+            $get_last = 0;
+        }
 
-				$where_lock = array(
-							"primary_1" => $get_last
-				);
-				$this->db->update("hdr_debtor_main AS lock".$id_user."", $toupdate, $where_lock);
-				//echo $this->db->last_query();
-				$this->db->simple_query($sql_unlock);
-				//die();
-				//die();
-				$this->release_uncalled($id_user,$get_last);
+        $where_lock = array(
+            "primary_1" => $get_last
+        );
+        $this->db->update("hdr_debtor_main AS lock" . $id_user . "", $toupdate, $where_lock);
+        //echo $this->db->last_query();
+        $this->db->simple_query($sql_unlock);
+        //die();
+        //die();
+        $this->release_uncalled($id_user, $get_last);
 
         //die($get_last);;
         //echo $sql;
@@ -578,12 +562,14 @@ class Hdr_call_track_model extends Model {
         return $get_last;
     }
 
-    public function get_main_info($primary_1) {
+    public function get_main_info($primary_1)
+    {
         $query = $this->db->get_where('hdr_debtor_main', array('primary_1' => $primary_1));
         return $query->row();
     }
 
-    public function debtor_details($primary_1) {
+    public function debtor_details($primary_1)
+    {
         $sql =  "SELECT a.value AS en_value
 FROM hdr_tmp_log a, hdr_debtor_main s
 WHERE a.primary_1 = s.primary_1 and a.primary_1 = '$primary_1'
@@ -597,7 +583,8 @@ AND called =0";
         }
     }
 
-    public function insert_call_track($data, $insert) {
+    public function insert_call_track($data, $insert)
+    {
         $primary_1 = $data['primary_1'];
         $id_user = $data['id_user'];
         $id_action_call_track = $data['id_action_call_track'];
@@ -611,30 +598,30 @@ AND called =0";
         if (!empty($data['ptp_fu'])) {
             if ($data['ptp_fu'] == '1')
                 $this->update_ptp_fu($primary_1);
-        }elseif (!empty($data['fu'])) {
+        } elseif (!empty($data['fu'])) {
             if ($data['fu'] == '1')
                 $this->update_fu($primary_1);
         }
         //echo $data['id_ptp'];
         $this->in_use_debtor($primary_1, $id_user, $not_ptp);
-		//update last call and call date to debtor main, added by Hery
-		$code_call_track = $data['code_call_track'];
-		$this->update_last_call($primary_1, $id_user, $code_call_track);
+        //update last call and call date to debtor main, added by Hery
+        $code_call_track = $data['code_call_track'];
+        $this->update_last_call($primary_1, $id_user, $code_call_track);
         $this->db->insert('hdr_calltrack', $data);
-		//die($this->db->last_query());
+        //die($this->db->last_query());
         $sql = "INSERT IGNORE INTO data_sequence_log (`id_user`,`primary_1`,`type`,`log`) VALUES ($id_user,'$primary_1','Insert Calltrack','Inserting Calltrack for $primary_1')";
-      	$this->db->simple_query($sql);
+        $this->db->simple_query($sql);
         $id_calltrack = $this->db->insert_id();
         $a = $this->db->last_query();
-		//echo $id_calltrack;
+        //echo $id_calltrack;
         //die();
 
         $acc_work = @$_SESSION['primary_1'] == $data['primary_1'] ? 0 : 1;
         if (empty($id_calltrack)) {
             //echo "Maaf Tidak bisa input double \n"; 
-		}
+        }
         if (!empty($id_calltrack)) {
-						$this->producivity($call = 0, $work = 0, $contact = 0, $no_contact = 0, $ptp = 0);
+            $this->producivity($call = 0, $work = 0, $contact = 0, $no_contact = 0, $ptp = 0);
             if ($data['id_call_cat'] == 1 && $data['id_ptp'] != 1)
                 $this->producivity($call = 1, $work = $acc_work, $contact = 1, $no_contact = 0, $ptp = 0);
             elseif ($data['id_call_cat'] == 2)
@@ -649,7 +636,8 @@ AND called =0";
         return $id_calltrack;
     }
 
-    public function producivity($call, $work, $contact, $no_contact, $ptp) {
+    public function producivity($call, $work, $contact, $no_contact, $ptp)
+    {
         $month = date('n');
         $day = date('j');
         $id_user = $_SESSION['bid_user_s'];
@@ -673,7 +661,8 @@ AND called =0";
         }
     }
 
-    function insert_prod() {
+    function insert_prod()
+    {
         $sql = "INSERT INTO hdr_call_productivity
                         (id_user , username, date)
                        VALUES ('" . id_user() . "','" . user_name() . "','" . date_now() . "')";
@@ -683,7 +672,8 @@ AND called =0";
         return $this->db->insert_id();
     }
 
-    function summary_prod() {
+    function summary_prod()
+    {
         $id_user = $_SESSION['bid_user_s'];
         //$sql = "SELECT * from hdr_call_productivity WHERE date = '" . date_now() . "' AND id_user='" . $id_user . "';";
 
@@ -698,14 +688,15 @@ AND called =0";
         from hdr_calltrack
         where call_date=CURDATE()
         and id_user=$id_user		
-        group by username";        
+        group by username";
 
         $query = $this->db->query($sql);
         return $query;
     }
 
-    function summary_compatitor() {
-	$id_user = $_SESSION['bid_user_s'];
+    function summary_compatitor()
+    {
+        $id_user = $_SESSION['bid_user_s'];
         $sql = "SELECT hcp.*,hu.username from hdr_call_productivity hcp
                     INNER JOIN hdr_user hu ON hu.id_user = hcp.id_user
                     WHERE date = '" . date_now() . "'
@@ -715,7 +706,8 @@ AND called =0";
         return $query;
     }
 
-    function clear_ptp_status() {
+    function clear_ptp_status()
+    {
         $id_user = $_SESSION['bid_user_s'];
         $sql_check = "SELECT * FROM hdr_call_productivity WHERE id_user='" . $id_user . "' AND date='" . date_now() . "';";
         $query = $this->db->query($sql_check);
@@ -742,14 +734,16 @@ AND called =0";
         }
     }
 
-    public function get_reminder_now() {
+    public function get_reminder_now()
+    {
         $sql = "SELECT primary_1 FROM hdr_calltrack WHERE";
     }
 
-    public function get_signout_option(){
+    public function get_signout_option()
+    {
         $this->db->where('is_active', 1);
         $qObj = $this->db->get('tb_logoutreason');
-        if($qObj->num_rows() > 0){
+        if ($qObj->num_rows() > 0) {
             $rArr = $qObj->result_array();
             return $rArr;
         } else {
@@ -760,17 +754,17 @@ AND called =0";
     //patch by Nudi 23 mei
     public function set_in_use($primary_1)
     {
-    	$where = array(
-    		"primary_1" => $primary_1
-    	);
-    	$data_toupdate = array(
-    		"in_use" => "1",
+        $where = array(
+            "primary_1" => $primary_1
+        );
+        $data_toupdate = array(
+            "in_use" => "1",
 
-    		"id_user" => id_user()
-    	);
-    	$this->db->update("hdr_debtor_main", $data_toupdate, $where);
+            "id_user" => id_user()
+        );
+        $this->db->update("hdr_debtor_main", $data_toupdate, $where);
     }
-/*
+    /*
     public function reset_uncall($id_user) {
         $sql = "UPDATE hdr_debtor_main hdm
 			SET hdm.in_use = '0'
@@ -791,20 +785,22 @@ AND called =0";
         return $query;
     }*/
 
-    public function in_use_debtor($primary_1, $id_user, $not_ptp) {
+    public function in_use_debtor($primary_1, $id_user, $not_ptp)
+    {
         $sql = "UPDATE hdr_debtor_main SET in_use ='1', id_user='$id_user', called='1' WHERE primary_1 = '$primary_1'  ";
-	//$sql = "UPDATE hdr_debtor_main SET in_use ='1' WHERE primary_1 = '$primary_1'  ";
+        //$sql = "UPDATE hdr_debtor_main SET in_use ='1' WHERE primary_1 = '$primary_1'  ";
 
         $query = $this->db->query($sql);
 
         //$sql = "INSERT IGNORE INTO data_sequence_log (`id_user`,`primary_1`,`type`,`log`) VALUES ($id_user,'$primary_1','Set Called','Setting Called for $primary_1')";
-      	//$this->db->simple_query($sql);
+        //$this->db->simple_query($sql);
 
         return $query;
         //echo $this->db->last_query();
     }
 
-    public function reset_uncall_spv() {
+    public function reset_uncall_spv()
+    {
         $sql = "UPDATE hdr_debtor_main hdm
 			SET hdm.in_use = '0', hdm.id_user='0'
 			WHERE hdm.called='0'   ";
@@ -812,7 +808,8 @@ AND called =0";
         return $query;
     }
 
-    public function get_ptp() {
+    public function get_ptp()
+    {
         $get_day_4 = strtotime(date("Y-m-d", strtotime(date_now())) . " -4 days");
         $last_day = date('Y-m-d', $get_day_4);
         $sql = " SELECT hdm.primary_1  FROM " . $this->hdr_debtor_main . " AS hdm
@@ -831,7 +828,8 @@ AND called =0";
         }
     }
 
-    public function get_no_contact_fu() {
+    public function get_no_contact_fu()
+    {
         $today = date('Y-m-d');
         $now = date('Y-m-d 00:00:00');
         $sql = " SELECT  hdm.primary_1 FROM hdr_debtor_main hdm
@@ -849,7 +847,8 @@ AND called =0";
         }
     }
 
-    public function get_contact_fu() {
+    public function get_contact_fu()
+    {
         $today = date('Y-m-d');
         $now = date('Y-m-d 00:00:00');
         $sql = " SELECT hdm.primary_1  FROM hdr_debtor_main hdm
@@ -868,25 +867,29 @@ AND called =0";
         }
     }
 
-    public function call_catagory() {
+    public function call_catagory()
+    {
         //$query = $this->db->get('hdr_call_catagory');
         $sql = "SELECT * FROM hdr_call_catagory WHERE type !='P' ";
         $query = $this->db->query($sql);
         return $query;
     }
-    public function ptp_catagory() {
-       //$query = $this->db->get_where('hdr_call_catagory', array('type' => 'P'));
-	   $sql = "select * from hdr_call_catagory where `type` = 'P' ";
-	   $query = $this->db->query($sql);
-       return $query;
+    public function ptp_catagory()
+    {
+        //$query = $this->db->get_where('hdr_call_catagory', array('type' => 'P'));
+        $sql = "select * from hdr_call_catagory where `type` = 'P' ";
+        $query = $this->db->query($sql);
+        return $query;
     }
 
-    public function action_agen_track() {
+    public function action_agen_track()
+    {
         $query = $this->db->get('hdr_action_agen_track');
         return $query;
     }
 
-    public function get_active_agen($primary_1) {
+    public function get_active_agen($primary_1)
+    {
         $this->db->order_by('id_active_agency', 'asc');
         $query = $this->db->get_where('hdr_active_agency', array('primary_1' => $primary_1), 1);
         if ($query->num_rows() > 0) {
@@ -896,7 +899,8 @@ AND called =0";
         }
     }
 
-    public function get_reschedule($primary_1) {
+    public function get_reschedule($primary_1)
+    {
         $this->db->order_by('id_reschedule', 'asc');
         $query = $this->db->get_where('hdr_reschedule', array('primary_1' => $primary_1), 1);
         if ($query->num_rows() > 0) {
@@ -906,7 +910,8 @@ AND called =0";
         }
     }
 
-    public function get_reminder($primary_1) {
+    public function get_reminder($primary_1)
+    {
         $this->db->order_by('due_date', 'asc');
         $query = $this->db->get_where('hdr_calltrack', array('primary_1' => $primary_1, 'is_current' => 1, 'id_action_call_track' => 4), 1);
         if ($query->num_rows() > 0) {
@@ -916,20 +921,23 @@ AND called =0";
         }
     }
 
-    public function insert_phone_no($data) {
+    public function insert_phone_no($data)
+    {
         $sql = $this->db->insert_string('hdr_debtor_phone_no', $data);
         $query = $this->db->query($sql);
         return $this->db->insert_id();
     }
 
-    public function edit_phone_no($id_phone, $data) {
+    public function edit_phone_no($id_phone, $data)
+    {
         $where = "id_phone = $id_phone";
         $sql = $this->db->update_string('hdr_debtor_phone_no', $data, $where);
         $query = $this->db->query($sql);
         return $id_phone;
     }
 
-    public function get_phone($primary_1) {
+    public function get_phone($primary_1)
+    {
         $sql = "SELECT  * FROM hdr_debtor_phone_no WHERE primary_1= '$primary_1' ";
         //$this->db->order_by('id_phone','desc');
         //$query = $this->db->get_where('hdr_debtor_phone_no',array('primary_1'=>$primary_1));
@@ -937,7 +945,8 @@ AND called =0";
         return $data = $query;
     }
 
-    public function get_one_phone($id_phone) {
+    public function get_one_phone($id_phone)
+    {
         $results = array();
         $query = $this->db->query("SELECT * FROM hdr_debtor_phone_no WHERE id_phone = '$id_phone' LIMIT 1");
 
@@ -954,30 +963,35 @@ AND called =0";
         return $results;
     }
 
-    public function delete_phone($id_phone) {
+    public function delete_phone($id_phone)
+    {
         $this->db->delete('hdr_debtor_phone_no', array('id_phone' => $id_phone));
     }
 
-    public function insert_info($data) {
+    public function insert_info($data)
+    {
         $sql = $this->db->insert_string('hdr_debtor_info', $data);
         $query = $this->db->query($sql);
         return $this->db->insert_id();
     }
 
-    public function edit_info($data) {
+    public function edit_info($data)
+    {
         $where = "primary_1 = " . $data['primary_1'] . "";
         $sql = $this->db->update_string('hdr_debtor_info', $data, $where);
         $query = $this->db->query($sql);
         return $this->db->insert_id();
     }
 
-    public function get_info($primary_1) {
+    public function get_info($primary_1)
+    {
         $this->db->order_by('id_debtor_info', 'desc');
         $query = $this->db->get_where('hdr_debtor_info', array('primary_1' => $primary_1));
         return $data = $query;
     }
 
-    public function get_one_info($id_debtor_info) {
+    public function get_one_info($id_debtor_info)
+    {
         $results = array();
         $query = $this->db->query("SELECT * FROM hdr_debtor_info WHERE id_debtor_info = '$id_debtor_info' LIMIT 1");
 
@@ -994,14 +1008,16 @@ AND called =0";
         return $results;
     }
 
-    public function skip_debtor($primary_1, $id_user) {
+    public function skip_debtor($primary_1, $id_user)
+    {
         $sql = "UPDATE hdr_debtor_main SET skip ='1', id_user='$id_user' WHERE primary_1 = '$primary_1'";
         $query = $this->db->query($sql);
         return $query;
         //echo $this->db->last_query();
     }
 
-    public function get_latest_use($primary_1, $id_user, $in_use) {
+    public function get_latest_use($primary_1, $id_user, $in_use)
+    {
         $get_tag_condition = $in_use ? get_tag_condition($in_use, ' AND ') : '';
         $sql = "SELECT *, id_action_call_track FROM hdr_calltrack WHERE primary_1 = '$primary_1'
                 $get_tag_condition  LIMIT 1";
@@ -1015,14 +1031,16 @@ AND called =0";
         }
     }
 
-    public function update_current($primary_1, $id_user) {
+    public function update_current($primary_1, $id_user)
+    {
         $date = date('Y-m-d');
         $sql = "UPDATE hdr_calltrack SET is_current = '0' WHERE primary_1 = '$primary_1' AND call_date ='$date' AND id_user = '$id_user' ";
         $query = $this->db->query($sql);
         return $query;
     }
 
-    function absen($id_user, $type) {
+    function absen($id_user, $type)
+    {
         $last_attend = @$_SESSION['last_attend_id'];
         $month = date('n');
         $day = date('j');
@@ -1049,33 +1067,37 @@ AND called =0";
         }
     }
 
-    public function update_called($primary, $id_user) {
+    public function update_called($primary, $id_user)
+    {
         $sql = "UPDATE hdr_debtor_main SET called = '1' WHERE primary_1='$primary'  AND id_user ='$id_user' ";
         $query = $this->db->query($sql);
         return $query;
         // $sql = "UPDATE hdr_debtor_main SET in_use = '0'"
     }
 
-    public function update_ptp_fu($primary_1) {
+    public function update_ptp_fu($primary_1)
+    {
         $sql = "UPDATE hdr_calltrack SET ptp_fu ='1' WHERE primary_1 = '$primary_1'";
         $query = $this->db->query($sql);
         return $query;
     }
 
-    public function update_fu($primary_1) {
+    public function update_fu($primary_1)
+    {
         $sql = "UPDATE hdr_calltrack SET fu ='1' WHERE primary_1 = '$primary_1'";
         $query = $this->db->query($sql);
         return $query;
     }
 
-    public function get_call_track_info($primary_1) {
-$tgl_1=date('Y-m-d');
-$tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
+    public function get_call_track_info($primary_1)
+    {
+        $tgl_1 = date('Y-m-d');
+        $tgl_3 = date('Y-m-d', strtotime('-1 days', strtotime($tgl_1)));
         $sql = "SELECT DISTINCT a.ptp_status, a.call_date, a.username, s.score_result, s.dpd, a.ptp_date FROM hdr_calltrack a, hdr_debtor_main s
             WHERE a.primary_1=s.primary_1 and a.primary_1='" . $primary_1 . "' AND a.id_handling_code='02' 
                 GROUP BY a.call_date
                 ORDER BY a.call_date DESC";
- /*	//senen
+        /*	//senen
   $sql = "SELECT DISTINCT a.ptp_status, a.call_date, a.username, s.score_result, s.dpd FROM hdr_calltrack a, hdr_debtor_main s
             WHERE a.primary_1=s.primary_1 and s.dpd not in (9) and a.primary_1='" . $primary_1 . "' AND a.id_handling_code='02' 
                 GROUP BY a.call_date
@@ -1087,12 +1109,14 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $query;
     }
 
-    public function get_payment_via($code) {
+    public function get_payment_via($code)
+    {
         $query = $this->db->get_where('hdr_payment_via', array('code' => $code));
         return $query;
     }
 
-    public function insert_contact_code($data) {
+    public function insert_contact_code($data)
+    {
 
         //$this->update_current($primary_1,$id_user);
         $sql = $this->db->insert_string('hdr_contact_code', $data);
@@ -1100,13 +1124,15 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $this->db->insert_id();
     }
 
-    public function insert_agen_track($data) {
+    public function insert_agen_track($data)
+    {
         $sql = $this->db->insert_string('hdr_agen_monitor', $data);
         $query = $this->db->query($sql);
         return $this->db->insert_id();
     }
 
-    public function insert_stat_call($id_user, $status) {
+    public function insert_stat_call($id_user, $status)
+    {
         $now = date('Y-m-d');
         $record->id_user = $id_user;
         $record->$status = $status;
@@ -1114,26 +1140,29 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $this->db->insert('hdr_stat_call', $record);
     }
 
-    public function update_stat_call($id_user, $status) {
+    public function update_stat_call($id_user, $status)
+    {
         //$status;
         $sql = "UPDATE hdr_stat_call SET $status = $status+1 WHERE id_user = '$id_user' AND createdate = CURDATE( ) ";
         return $this->db->query($sql);
     }
 
-    public function get_field_name($id_field_name) {
+    public function get_field_name($id_field_name)
+    {
         $query = $this->db->get_where('hdr_debtor_field_name', array('id_file_field' => $id_field_name));
         return $query->row();
     }
 
-    public function get_broken($id_user) {
-
+    public function get_broken($id_user)
+    {
     }
 
-    public function get_keep($id_user) {
-
+    public function get_keep($id_user)
+    {
     }
 
-    public function call_attempt_debtor($primary_1) {
+    public function call_attempt_debtor($primary_1)
+    {
         $sql = "SELECT COUNT( hdc.primary_1) AS total
 		    FROM hdr_calltrack  AS hdc WHERE primary_1 = '$primary_1' AND id_action_call_track !=0";
         $query = $this->db->query($sql);
@@ -1146,7 +1175,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         }
     }
 
-    public function count_assign_debtor_tc($id_tc) {
+    public function count_assign_debtor_tc($id_tc)
+    {
         if ($_SESSION['filter_debtor'] == '') {
             return 'Not Filtered';
         } else {
@@ -1164,7 +1194,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         }
     }
 
-    public function count_notcontacted_debtor_tc($id_tc) {
+    public function count_notcontacted_debtor_tc($id_tc)
+    {
         $sql = " SELECT COUNT(DISTINCT hdm.primary_1) AS total_not_contact_debtor  FROM " . $this->hdr_debtor_main . " AS hdm  " . $_SESSION['filter_debtor'] . " AND hdm.primary_1 NOT IN (SELECT hct.primary_1 FROM hdr_calltrack AS hct WHERE hct.cycling ='1' AND hct.id_action_call_track !='4' AND hct.id_action_call_track ='1'  )";
         $query = $this->db->query($sql);
         $data = $query->row();
@@ -1176,7 +1207,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         }
     }
 
-    public function count_nottouch_debtor_tc($id_tc) {
+    public function count_nottouch_debtor_tc($id_tc)
+    {
         $sql = " SELECT COUNT(DISTINCT hdm.primary_1) AS total_not_contact_debtor  FROM " . $this->hdr_debtor_main . " AS hdm  " . $_SESSION['filter_debtor'] . "  AND hdm.primary_1 NOT IN (SELECT hct.primary_1 FROM hdr_calltrack AS hct   )";
         $query = $this->db->query($sql);
         $data = $query->row();
@@ -1188,7 +1220,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         }
     }
 
-    public function status_call($id_user, $status="", $begindate, $enddate) {
+    public function status_call($id_user, $status = "", $begindate, $enddate)
+    {
         $group_bys = 'hdc.primary_1';
         $query_ptp = "";
         $month_now = $sum = date("n", strtotime(date_now()));
@@ -1231,7 +1264,7 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         }
         $user = $id_user != 'all' ? '  hc.id_user ="' . $id_user . '"   ' : '';
         $month =
-                $sql = "SELECT
+            $sql = "SELECT
                       hc.username,hc.id_user,
                       COUNT( CASE WHEN hc.id_call_cat = '1' THEN  hc.id_calltrack  END ) AS 'contact',
                       COUNT( CASE WHEN hc.id_call_cat = '2' THEN hc.id_calltrack  END ) AS 'no_contact',
@@ -1246,7 +1279,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $query;
     }
 
-    public function compatitor_dashboard() {
+    public function compatitor_dashboard()
+    {
         $month_now = $sum = date("n", strtotime(date_now()));
         $remove = " -- COUNT(DISTINCT id_calltrack) as total_call, COUNT(DISTINCT hc.primary_1,hc.call_date) as acct_work, SUM(DISTINCT CASE WHEN hc.ptp_status = '2' AND call_month='" . $month_now . "'  THEN hc.ptp_amount  END ) AS 'amount_collected'";
         $sql = " SELECT
@@ -1269,7 +1303,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $query;
     }
 
-    public function status_ptp($id_user, $status, $begindate, $enddate) {
+    public function status_ptp($id_user, $status, $begindate, $enddate)
+    {
         $group_bys = 'DISTINCT hdc.primary_1';
         $query_ptp = "";
         if ($begindate != "") {
@@ -1329,7 +1364,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $count = $data->total;
     }
 
-    function get_last_ten_calltrack($primary_1) {
+    function get_last_ten_calltrack($primary_1)
+    {
         $sql = "SELECT  hco.username,hco.code_call_track,hco.remarks,hco.call_date,hco.call_time,hco.ptp_date,hco.no_contacted, hco.ptp_amount,hco.dpd  FROM hdr_calltrack hco
 					WHERE hco.primary_1 = '" . $primary_1 . "'
 					AND hco.remarks !='' GROUP BY id_action_call_track,call_date,createdate,no_contacted order by call_date DESC,call_time DESC
@@ -1340,7 +1376,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $query;
     }
 
-    public function export_calltrack($primary_1) {
+    public function export_calltrack($primary_1)
+    {
         $this->load->helper('csv');
         $sql = "SELECT hco.username,hco.code_call_track,hco.remarks,hco.call_date,hco.call_time FROM hdr_calltrack hco
 					WHERE hco.primary_1 = '" . $primary_1 . "'
@@ -1351,7 +1388,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         query_to_csv($query, TRUE, $fileName);
     }
 
-    public function export_payment($primary_1) {
+    public function export_payment($primary_1)
+    {
         $this->load->helper('csv');
         $sql = "SELECT hp.trx_date,hp.posting_date,hp.amount,hp.description FROM hdr_payment hp
 					WHERE hp.primary_1 = '" . $primary_1 . "'
@@ -1362,7 +1400,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         query_to_csv($query, TRUE, $fileName);
     }
 
-    public function export_monitor_agen($primary_1) {
+    public function export_monitor_agen($primary_1)
+    {
         $this->load->helper('csv');
         $sql = "SELECT ham.primary_1, ham.date_in, ham.time, ham.visit_date,ham.action_code,ham.ptp_date, ham.ptp_amount, ham.remark,ham.username,ham.agency,ham.coll_agency FROM hdr_agen_monitor ham
 					WHERE ham.primary_1 = '" . $primary_1 . "'
@@ -1373,7 +1412,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         query_to_csv($query, TRUE, $fileName);
     }
 
-    function get_action_code_wom($primary_1) {
+    function get_action_code_wom($primary_1)
+    {
         $sql = "SELECT  region_desc, nama_kolektor,activity_date, action_desc FROM hdr_action_code where primary_1 = '" . $primary_1 . "' LIMIT 10";
 
         //echo $sql;
@@ -1381,26 +1421,30 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $hasil;
     }
 
-    public function get_motor_brand($item_no) {
+    public function get_motor_brand($item_no)
+    {
         $sql = "SELECT * FROM  hdr_motor_type
 		WHERE item_no = '$item_no' ";
         $query = $this->db->query($sql);
         return $query;
     }
 
-    public function insert_address($data) {
+    public function insert_address($data)
+    {
         $sql = $this->db->insert_string('hdr_address', $data);
         $query = $this->db->query($sql);
         return $this->db->insert_id();
     }
 
-    public function get_address_all($primary_1) {
+    public function get_address_all($primary_1)
+    {
         $SQL = "SELECT * FROM hdr_address WHERE  primary_1='$primary_1' ORDER BY id_address ASC";
         $query = $this->db->query($SQL);
         return $query;
     }
 
-    public function delete_address($id_address) {
+    public function delete_address($id_address)
+    {
         $this->db->delete('hdr_address', array('id_address' => $id_address));
     }
 
@@ -1411,7 +1455,8 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
       }
      */
 
-    public function get_one_address($id_address) {
+    public function get_one_address($id_address)
+    {
         $results = array();
         $query = $this->db->query("SELECT * FROM hdr_address WHERE id_address = '$id_address' LIMIT 1");
 
@@ -1432,40 +1477,43 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         return $results;
     }
 
-    public function edit_address($id_address, $data) {
+    public function edit_address($id_address, $data)
+    {
         $where = "id_address = $id_address";
         $sql = $this->db->update_string('hdr_address', $data, $where);
         $query = $this->db->query($sql);
         return $id_address;
     }
 
-    public function release_uncalled($id_user,$get_last){
-    	$sql = "UPDATE hdr_debtor_main SET in_use = 0, id_user = 0
+    public function release_uncalled($id_user, $get_last)
+    {
+        $sql = "UPDATE hdr_debtor_main SET in_use = 0, id_user = 0
     					WHERE called = 0 AND id_user = '$id_user' AND primary_1 != '$get_last' AND not_ptp = 0;
     	";
-    	$this->db->simple_query($sql);
+        $this->db->simple_query($sql);
 
-    	$sql = "INSERT IGNORE INTO data_sequence_log (`id_user`,`primary_1`,`type`,`log`) VALUES ($id_user,'$get_last','unlock_inuse','Unlocking All Uncalled except $get_last')";
-      $this->db->simple_query($sql);
-
+        $sql = "INSERT IGNORE INTO data_sequence_log (`id_user`,`primary_1`,`type`,`log`) VALUES ($id_user,'$get_last','unlock_inuse','Unlocking All Uncalled except $get_last')";
+        $this->db->simple_query($sql);
     }
 
-    public function checkUserLock($primary_1,$id_user){
-    	$sql_lock = "LOCK TABLES hdr_debtor_main AS lock".$id_user." WRITE;";
-    	$sql_main = "SELECT primary_1 FROM hdr_debtor_main AS lock".$id_user." WHERE primary_1 = ? AND in_use = 1 AND id_user = ? AND called = 0";
-    	$sql_unlock = "UNLOCK TABLES;";
-    	$is_allow = 0;
-    	$this->db->simple_query($sql_lock);
-    	$query = $this->db->query($sql_main,array($primary_1,$id_user));
-    	$this->db->simple_query($sql_unlock);
+    public function checkUserLock($primary_1, $id_user)
+    {
+        $sql_lock = "LOCK TABLES hdr_debtor_main AS lock" . $id_user . " WRITE;";
+        $sql_main = "SELECT primary_1 FROM hdr_debtor_main AS lock" . $id_user . " WHERE primary_1 = ? AND in_use = 1 AND id_user = ? AND called = 0";
+        $sql_unlock = "UNLOCK TABLES;";
+        $is_allow = 0;
+        $this->db->simple_query($sql_lock);
+        $query = $this->db->query($sql_main, array($primary_1, $id_user));
+        $this->db->simple_query($sql_unlock);
 
-    	$flag = intval($query->num_rows()) > 0 ? $is_allow = 1 : $is_allow = 0;
+        $flag = intval($query->num_rows()) > 0 ? $is_allow = 1 : $is_allow = 0;
 
-    	return $is_allow;
+        return $is_allow;
     }
 
-    public function get_reminder_new($primary_1,$id_user){
-    	$sql = "
+    public function get_reminder_new($primary_1, $id_user)
+    {
+        $sql = "
     	SELECT *,TIMESTAMPDIFF(MINUTE,remind_at,NOW()) AS 'diff',
 						TIME(remind_at) AS 'remind_at_fix'
 						FROM reminder_history a
@@ -1478,50 +1526,48 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
 						AND TIMESTAMPDIFF(MINUTE,remind_at,NOW()) >= -5
 						LIMIT 3
     	";
-			$query = $this->db->query($sql);
-			$return = 0;
+        $query = $this->db->query($sql);
+        $return = 0;
 
-			if($query){
-				$return = $query->result_array();
-			}
+        if ($query) {
+            $return = $query->result_array();
+        }
 
-			return $return;
+        return $return;
     }
 
 
-		public function chk_status_phone($primary_1, $phone_no)
-		{
-			$wh = 0;
-			$flag = 0;
-			$where = "";
+    public function chk_status_phone($primary_1, $phone_no)
+    {
+        $wh = 0;
+        $flag = 0;
+        $where = "";
 
-			//cek 1
-			$where = " and code_call_track in ('OCAA','OCAB','OFAA','OFAB','OCAC','OFAC') ";
-			$wh = $this->chk_status_phone_2($primary_1, $phone_no, $where);
-			if($wh)
-				$flag = 1;
-			else
-			{
-				$where = " and code_call_track in ('OCLB') ";
-				$wh2 = $this->chk_status_phone_2($primary_1, $phone_no, $where);
-				if($wh2)
-					$flag = 2;
-				else
-				{
-					$where = " and code_call_track in ('OCNA','OCIN') ";
-					$wh3 = $this->chk_status_phone_2($primary_1, $phone_no, $where);
-					if($wh3)
-						$flag = 0;
-				}
-			}
+        //cek 1
+        $where = " and code_call_track in ('OCAA','OCAB','OFAA','OFAB','OCAC','OFAC') ";
+        $wh = $this->chk_status_phone_2($primary_1, $phone_no, $where);
+        if ($wh)
+            $flag = 1;
+        else {
+            $where = " and code_call_track in ('OCLB') ";
+            $wh2 = $this->chk_status_phone_2($primary_1, $phone_no, $where);
+            if ($wh2)
+                $flag = 2;
+            else {
+                $where = " and code_call_track in ('OCNA','OCIN') ";
+                $wh3 = $this->chk_status_phone_2($primary_1, $phone_no, $where);
+                if ($wh3)
+                    $flag = 0;
+            }
+        }
 
-			return $flag;
-		}
+        return $flag;
+    }
 
-		public function chk_status_phone_2($primary_1, $phone_no, $where)
-		{
-			//check status bulan lalu
-			$sql = "select id_calltrack,primary_1,call_date,code_call_track as action_code,no_contacted
+    public function chk_status_phone_2($primary_1, $phone_no, $where)
+    {
+        //check status bulan lalu
+        $sql = "select id_calltrack,primary_1,call_date,code_call_track as action_code,no_contacted
 				from hdr_calltrack
 				where primary_1='$primary_1'
 				and no_contacted='$phone_no'
@@ -1529,21 +1575,21 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
 				and call_date between CONCAT(LEFT(NOW() - INTERVAL 1 MONTH,7),'-01')
 				and date(now())
 				order by primary_1,call_date limit 1";
-			//echo($sql);
-			//die();
-			//echo '<p>';
-			$q_status = $this->db->query($sql);
+        //echo($sql);
+        //die();
+        //echo '<p>';
+        $q_status = $this->db->query($sql);
 
-			$is_status = false;
-			if($q_status->num_rows() > 0)
-			{
-				$is_status = true;
-			}
+        $is_status = false;
+        if ($q_status->num_rows() > 0) {
+            $is_status = true;
+        }
 
-			return $is_status;
-		}
+        return $is_status;
+    }
 
-    public function insert_call_track_rep($data, $insert) {
+    public function insert_call_track_rep($data, $insert)
+    {
         $primary_1 = $data['primary_1'];
         $id_user = $data['id_user'];
         $id_action_call_track = $data['id_action_call_track'];
@@ -1557,7 +1603,7 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         if (!empty($data['ptp_fu'])) {
             if ($data['ptp_fu'] == '1')
                 $this->update_ptp_fu($primary_1);
-        }elseif (!empty($data['fu'])) {
+        } elseif (!empty($data['fu'])) {
             if ($data['fu'] == '1')
                 $this->update_fu($primary_1);
         }
@@ -1565,14 +1611,15 @@ $tgl_3=date('Y-m-d', strtotime('-1 days',strtotime($tgl_1)));
         $this->in_use_debtor($primary_1, $id_user, $not_ptp);
         $this->db->insert('hdr_calltrack_rep', $data);
         $sql = "INSERT IGNORE INTO data_sequence_log (`id_user`,`primary_1`,`type`,`log`) VALUES ($id_user,'$primary_1','Insert Calltrack','Inserting Calltrack for $primary_1')";
-      	$this->db->simple_query($sql);
+        $this->db->simple_query($sql);
         $id_calltrack = $this->db->insert_id();
         $a = $this->db->last_query();
     }
-function check_ptp($primary_1){
-		$range = date("Y-m-d",mktime(0,0,0,date("m"),date("d"),date("Y")));
-//var_dump($range);
-		/*die($range);
+    function check_ptp($primary_1)
+    {
+        $range = date("Y-m-d", mktime(0, 0, 0, date("m"), date("d"), date("Y")));
+        //var_dump($range);
+        /*die($range);
 		$sql = "SELECT primary_1, code_call_track, call_date, ptp_date
 					FROM hdr_calltrack
 					WHERE code_call_track = 'PT'
@@ -1580,88 +1627,86 @@ function check_ptp($primary_1){
 					AND YEAR( ptp_date ) = YEAR( NOW( ) )
 					AND primary_1 = '$primary_1'
 					ORDER BY ptp_date DESC LIMIT 1";*/
-				$sql = "SELECT primary_1, code_call_track, call_date, ptp_date
+        $sql = "SELECT primary_1, code_call_track, call_date, ptp_date
 					FROM hdr_calltrack where
 					 YEAR( ptp_date ) = YEAR( NOW( ) )
 					AND primary_1 = '$primary_1'
 					ORDER BY ptp_date DESC LIMIT 1";
-		$q = $this->db->query($sql);
-		$row = $q->row_array();
-		if($q->num_rows() > 0){
-			$ptpdate = $row['ptp_date'];
-			
-			//rules tertentu
-			if($row['call_date']=='2017-12-23' && date('Y-m-d') == '2017-12-27'){
-				$range = date("Y-m-d",mktime(0,0,0,date("m"),date("d")-4,date("Y")));
-			}else if($row['call_date']=='2018-06-08'){
-				$range = date("Y-m-d",mktime(0,0,0,date("m"),date("d")-13,date("Y")));
-			}else if($row['call_date']=='2018-06-09'){
-				$range = date("Y-m-d",mktime(0,0,0,date("m"),date("d")-12,date("Y")));
-			}else{
-				$a = $row['call_date'];
-				$b = strtotime($a);
-				$date = date('D',$b);
-				if($date=='Fri' || $date=='Sat'){
-					$range = date("Y-m-d",mktime(0,0,0,date("m"),date("d")-3,date("Y")));
-				}
-			}
-			
-			if($ptpdate > $range){
-				return 'tidak_boleh_ptp_lagi';
-			}else{
-				return 'masih_boleh_ptp_lagi';
-			}
-		}else{
-			return 'masih_boleh_ptp_lagi';
-		}
-	}
+        $q = $this->db->query($sql);
+        $row = $q->row_array();
+        if ($q->num_rows() > 0) {
+            $ptpdate = $row['ptp_date'];
 
-	public function update_last_call($primary_1, $id_user, $code_call_track){
-		$sql = "update hdr_debtor_main set last_call_code = '$code_call_track', call_date = now() where primary_1 = '$primary_1'";
-		$this->db->query($sql);
-	}
-	public function get_call_noans(){
+            //rules tertentu
+            if ($row['call_date'] == '2017-12-23' && date('Y-m-d') == '2017-12-27') {
+                $range = date("Y-m-d", mktime(0, 0, 0, date("m"), date("d") - 4, date("Y")));
+            } else if ($row['call_date'] == '2018-06-08') {
+                $range = date("Y-m-d", mktime(0, 0, 0, date("m"), date("d") - 13, date("Y")));
+            } else if ($row['call_date'] == '2018-06-09') {
+                $range = date("Y-m-d", mktime(0, 0, 0, date("m"), date("d") - 12, date("Y")));
+            } else {
+                $a = $row['call_date'];
+                $b = strtotime($a);
+                $date = date('D', $b);
+                if ($date == 'Fri' || $date == 'Sat') {
+                    $range = date("Y-m-d", mktime(0, 0, 0, date("m"), date("d") - 3, date("Y")));
+                }
+            }
+
+            if ($ptpdate > $range) {
+                return 'tidak_boleh_ptp_lagi';
+            } else {
+                return 'masih_boleh_ptp_lagi';
+            }
+        } else {
+            return 'masih_boleh_ptp_lagi';
+        }
+    }
+
+    public function update_last_call($primary_1, $id_user, $code_call_track)
+    {
+        $sql = "update hdr_debtor_main set last_call_code = '$code_call_track', call_date = now() where primary_1 = '$primary_1'";
+        $this->db->query($sql);
+    }
+    public function get_call_noans()
+    {
         $id_user = $_SESSION['bid_user_s'];
-		
-		## setting priority order ##
-		$priority = "ORDER BY ";
-		$priority .= " RAND()";
-		
-		$where = " where id_debtor > 0 ";
-		$where .= " and id_user = '$id_user' and date(call_date) = date(now()) and last_call_code = 'OCNA' ";
 
-		############################
-		$sql_lock = "LOCK TABLES hdr_debtor_main AS lock".$id_user." WRITE";
-		$sql = "select primary_1 from hdr_debtor_main AS lock".$id_user.
-		" $where and (is_paid is null or is_paid='0') $priority limit 1";
-		$toupdate = array(
-			"id_user" => $id_user,
-			"in_use" => "1"
-		);
-		$sql_unlock = "UNLOCK TABLE";
+        ## setting priority order ##
+        $priority = "ORDER BY ";
+        $priority .= " RAND()";
 
-		$this->db->simple_query($sql_lock);
-		$q = $this->db->query($sql);
+        $where = " where id_debtor > 0 ";
+        $where .= " and id_user = '$id_user' and date(call_date) = date(now()) and last_call_code = 'OCNA' ";
 
-		if($q->num_rows() > 0)
-		{
-			$row_main = $q->row_array();
-			$get_last = $row_main['primary_1'];
-			//die($get_last);
-		}
-		else {
-			$get_last = 0;
-		}
+        ############################
+        $sql_lock = "LOCK TABLES hdr_debtor_main AS lock" . $id_user . " WRITE";
+        $sql = "select primary_1 from hdr_debtor_main AS lock" . $id_user .
+            " $where and (is_paid is null or is_paid='0') $priority limit 1";
+        $toupdate = array(
+            "id_user" => $id_user,
+            "in_use" => "1"
+        );
+        $sql_unlock = "UNLOCK TABLE";
 
-		$where_lock = array(
-			"primary_1" => $get_last
-		);
-		$this->db->update("hdr_debtor_main AS lock".$id_user."", $toupdate, $where_lock);
-		//echo $this->db->last_query();
-		$this->db->simple_query($sql_unlock);
-		$this->release_uncalled($id_user,$get_last);
+        $this->db->simple_query($sql_lock);
+        $q = $this->db->query($sql);
+
+        if ($q->num_rows() > 0) {
+            $row_main = $q->row_array();
+            $get_last = $row_main['primary_1'];
+            //die($get_last);
+        } else {
+            $get_last = 0;
+        }
+
+        $where_lock = array(
+            "primary_1" => $get_last
+        );
+        $this->db->update("hdr_debtor_main AS lock" . $id_user . "", $toupdate, $where_lock);
+        //echo $this->db->last_query();
+        $this->db->simple_query($sql_unlock);
+        $this->release_uncalled($id_user, $get_last);
         return $get_last;
-	}
+    }
 }
-
-?>

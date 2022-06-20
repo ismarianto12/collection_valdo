@@ -65,7 +65,7 @@ a:hover img { border:none; }
 /*========================================================================*/
 #wrap_header { clear:both; margin:0px; padding:0px; width:100%;
 	/*background:url(../images/wrap_header.gif) repeat-x top; */
-	background: #808080;
+	background: #0a80be87;
 	text-align:left; border:none; }
 	
 #wrap_header_syariah { clear:both; margin:0px; padding:0px; width:100%;
@@ -89,7 +89,7 @@ a:hover img { border:none; }
 a.signout { float:right; display:inline-block; margin:-10px 0 0 0; padding:0; width:96px; height:33px; background:url(../images/signout.png); color:#f29132; text-decoration:none; text-indent:-999999px ; }
 a:hover.signout { display:inline-block; margin:-10px 0 0 0; padding:0; width:96px; height:33px; background:url(../images/signout.png); color:#f29132; text-decoration:none; text-indent:-999999px }
 
-#head_menu_wrap { margin:0px auto;  width:100%; height:auto; background:url(../images/bg_menuwrap.gif) repeat-x bottom; }
+#head_menu_wrap { margin:0px auto;  width:100%; height:auto; background: rgb(233, 207, 11); }
 .head_menu { margin:0 auto; clear:both; padding:0;  width:1000px; height:37px; border:none; }
 .head_menu ul { margin:0px; list-style:none; font: normal 13px Arial, Sans-serif; }
 .head_menu li { display:inline; margin:0; padding:0; }
@@ -123,7 +123,7 @@ a:hover.signout { display:inline-block; margin:-10px 0 0 0; padding:0; width:96p
 /*========================================================================*/
 /*		CONTENTS													      */
 /*========================================================================*/
-#wrap_content { clear:both; margin:0px; padding:0px; width:100%; background:url(../images/wrap_content.gif) repeat-x top; border:none; }
+#wrap_content { clear:both; margin:0px; padding:0px; width:100%; background:transparent; border:none; }
 .content { margin:0px auto; padding:0px; width:950px; height:auto; background:transparent; border:none; }
 
 .cmidleft { float:left; padding:10px 0; width:475px; }

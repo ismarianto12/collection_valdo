@@ -763,4 +763,3 @@ INNER JOIN hdr_payment hp ON hp.primary_1 = hdc.primary_1
 			
 
 }
-?>

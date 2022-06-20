@@ -211,5 +211,3 @@ class Hdr_upload_cont extends Controller {
     }
 
 }
-
-?>

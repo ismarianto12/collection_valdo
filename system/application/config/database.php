@@ -38,10 +38,10 @@ ini_set('error_reporting', E_STRICT);
 $active_group = "default";
 $active_record = TRUE;
 
-$db['default']['hostname'] = "localhost";
+$db['default']['hostname'] = "172.25.150.27";
 $db['default']['username'] = "root";
-$db['default']['password'] = "root";
-$db['default']['database'] = "adira_new";
+$db['default']['password'] = "passw0rd";
+$db['default']['database'] = "collection_adira";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = TRUE;
