@@ -91,29 +91,25 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light py-3">
       <div class="container">
-        <!-- Navbar Brand -->
         <a href="#" class="navbar-brand" style="float:center">
           <center>
-            <img src="http://172.26.117.250/debetstate/images/valdo_new.png" alt="logo" width="150">
+            <img src="<?= base_url('assets') ?>/images/valdo_new.png" alt="logo" width="150">
           </center>
         </a>
       </div>
     </nav>
     <br />
   </header>
-
-
   <div class="container">
     <div class="row">
 
       <div class="col-md-8 align-items-center">
         <center>
-          <img src="http://172.25.117.90/dte/assets/img/illustration.svg" alt="" class="img-fluid mb-3 d-none d-md-block" style="width:50%">
+          <img src="<?= base_url('assets/') ?>/images/illustration.svg" alt="" class="img-fluid mb-3 d-none d-md-block" style="width:50%">
           <h1>Deb Collection Manangement</h1>
           </p>
         </center>
       </div>
-
       <div class="col-md-4" style="margin-top:-80px">
         <center>
           <img src="<?= base_url() ?>/assets/images/logo.png" class="img-responsive" style="width: auto;">
