@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 ini_set('error_reporting', E_STRICT);
 /*
 | -------------------------------------------------------------------
@@ -38,11 +38,12 @@ ini_set('error_reporting', E_STRICT);
 $active_group = "default";
 $active_record = TRUE;
 
-$db['default']['hostname'] = "172.25.150.27";
+$db['default']['hostname'] = "localhost";
 $db['default']['username'] = "root";
-$db['default']['password'] = "dcrsv01p@bri2022";
-$db['default']['database'] = "collection_bri";
+$db['default']['password'] = "";
+$db['default']['database'] = "collect_db";
 $db['default']['dbdriver'] = "mysql";
+$db['default']['port'] = 3307;
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;

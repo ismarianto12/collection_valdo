@@ -150,6 +150,14 @@ class Hdr_call_track_model extends Model
             }
         }
         */
+        $sql_unlock = "UNLOCK TABLE";
+
+
+        $this->db->simple_query($sql_unlock);
+        $this->db->query($sql_unlock);
+
+        //    $userq = "LOCK TABLES hdr_user AS lock" . $id_user . " READ";
+        //    $this->db->query($userq);
 
         $where = array(
             "id_user" => $id_user
@@ -500,7 +508,7 @@ class Hdr_call_track_model extends Model
         }
 
         ############################
-        $sql_lock = "LOCK TABLES hdr_debtor_main AS lock" . $id_user . " WRITE";
+        $sql_lock = ""; // "LOCK TABLES hdr_debtor_main AS lock" . $id_user . " WRITE";
         /*$sql = "select primary_1, case when available_contact_call is null then 0 else 1 end as flag from hdr_debtor_main AS lock".$id_user.
 						" $where and (is_paid is null or is_paid='0') $orderby $priority limit 1";*/
         //$priority_data = "ORDER BY createdate ASC";
@@ -534,8 +542,8 @@ class Hdr_call_track_model extends Model
         $this->db->simple_query($sql_lock);
         $q = $this->db->query($sql);
         //echo $sql;
-        // echo $this->db->last_query();
-        // die($sql);
+        echo $this->db->last_query();
+        die($sql);
         //var_dump($sql);
 
         if ($q->num_rows() > 0) {
@@ -546,20 +554,26 @@ class Hdr_call_track_model extends Model
             $get_last = 0;
         }
 
-        $where_lock = array(
-            "primary_1" => $get_last
-        );
-        $this->db->update("hdr_debtor_main AS lock" . $id_user . "", $toupdate, $where_lock);
-        //echo $this->db->last_query();
-        $this->db->simple_query($sql_unlock);
-        //die();
-        //die();
-        $this->release_uncalled($id_user, $get_last);
+        // $where_lock = array(
+        //     "primary_1" => $get_last
+        // );
+        // $this->db->update("hdr_debtor_main AS lock" . $id_user . "", $toupdate, $where_lock);
+        // echo $this->db->last_query();
+        // die;
+        // $this->db->simple_query($sql_unlock);
+        // //die();
+        // //die();
+        // $this->release_uncalled($id_user, $get_last);
 
         //die($get_last);;
         //echo $sql;
         //die();
-        return $get_last;
+        // return $get_last;
+
+        var_dump($get_last);
+        die;
+
+
     }
 
     public function get_main_info($primary_1)

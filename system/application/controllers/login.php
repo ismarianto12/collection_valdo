@@ -34,23 +34,21 @@ class Login extends Controller
 	public function logg()
 	{
 
-		if (isset($_POST['post'])) {
-			$data['username'] = strtolower($this->input->post('username', TRUE));
-			$data['password']  = strtolower($this->input->post('password', TRUE));
-			$get_user = $this->security_model->is_online($data);
-			if ($this->security_model->is_block($data['username']) == 1) {
-				echo 'You cannot Acces, because your account is block, Please Ask Admin to Unblocked it';
-			} elseif ($this->security_model->login($data)) {
-				$this->user_model->set_login_failed($data['username'], 0);
-				echo json_encode([
-					'status' => 1,
-					'msg' => 'login berhasil'
-				]);
-			} else {
-				http_response_code(403);
-				$this->user_model->set_login_failed($data['username'], 1);
-				echo "Please type the correct username and password";
-			}
+		$data['username'] = strtolower($this->input->post('username', TRUE));
+		$data['password']  = strtolower($this->input->post('password', TRUE));
+		$get_user = $this->security_model->is_online($data);
+		if ($this->security_model->is_block($data['username']) == 1) {
+			echo 'You cannot Acces, because your account is block, Please Ask Admin to Unblocked it';
+		} elseif ($this->security_model->login($data)) {
+			// $this->user_model->set_login_failed($data['username'], 0);
+			echo json_encode([
+				'status' => 1,
+				'msg' => 'login berhasil'
+			]);
+		} else {
+			http_response_code(403);
+			// $this->user_model->set_login_failed($data['username'], 1);
+			echo "Please type the correct username and password";
 		}
 	}
 

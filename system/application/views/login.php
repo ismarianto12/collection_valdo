@@ -105,7 +105,7 @@
 
       <div class="col-md-8 align-items-center">
         <center>
-          <img src="<?= base_url() ?>/assets/images/illustration.svg" alt="" class="img-fluid mb-3 d-none d-md-block" style="width:50%">
+          <img src="<?= base_url() ?>/assets/images/computer_ui.png" alt="" class="img-fluid mb-3 d-none d-md-block" style="width:50%">
           <h1>Deb Collection Manangement</h1>
           </p>
         </center>

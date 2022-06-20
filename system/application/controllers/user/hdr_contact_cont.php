@@ -15,7 +15,12 @@ class Hdr_contact_cont extends Controller
     {
         parent::Controller();
         $this->CI = &get_instance();
-       
+        if (@$_SESSION['blevel'] == 'user' || @$_SESSION['blevel'] == 'spv' || @$_SESSION['blevel'] == 'admin' || @$_SESSION['blevel'] == 'spv_sta') {
+            //
+        } else {
+            redirect('login');
+        }
+
         $this->load->model('hdr_debtor/hdr_debtor_model', 'debtor_model');
         $this->load->model('user/hdr_call_track_model', 'call_track_model');
     }
@@ -78,13 +83,11 @@ class Hdr_contact_cont extends Controller
             }
 
 
-            // var_dump($primary_1);
-            // die;
 
             $type_calling = $this->uri->segment(4);
             $data['primary_1'] = $primary_1;
 
-            // var_dump($primary_1);
+            // var_dump($_SESSION['blevel']);
             // die;
 
             if ($_SESSION['blevel'] == 'user') :
@@ -92,10 +95,8 @@ class Hdr_contact_cont extends Controller
                     if ($type_calling == 'call') {
 
                         $no_loan = $this->call_track_model->get_dpds(0);
-                        // var_dump($no_loan);
-                        // die();
                         $get_last = base64_encode($no_loan . "_" . DATE("i"));
-
+                        
                         $dtnow = date("Y-m-d");
                         $sql = "update hdr_debtor_main hdm, hdr_calltrack hc
 								set hdm.called=1
@@ -144,25 +145,25 @@ class Hdr_contact_cont extends Controller
                 }
             endif;
         }
-        ## Martin Add -> GET REMINDER ##
-        // $data['get_reminder_new'] = $this->call_track_model->get_reminder_new($primary_1, $id_user);
+
+        // reminder
+        // $data['get_reminder_new'] = $this->call_track_model->get_reminder_new($primary_1, $_SESSION['bid_user_s']);
         // $reminder_count = count($data['get_reminder_new']);
         // if ($reminder_count > 0) {
         //     $data['div_state'] = "block";
         // } else {
         //     $data['div_state'] = "none";
         // }
-        ################
-
+        ################ 
         #### Count Call Today ####
-        $today = date("Y-m-d");
-        $sql = "SELECT COUNT(id_calltrack) AS work from hdr_calltrack WHERE call_date = '$today' AND id_user = '$id_user'";
-        $query = $this->db->query($sql);
-        $result = $query->row();
-        $work_count = $result->work;
-        $work_percentage = (($work_count / 250) * 100);
-        $data['work_percentage'] = $work_percentage;
-        $data['get_signout_option'] = $this->call_track_model->get_signout_option();
+        // $today = date("Y-m-d");
+        // $sql = "SELECT COUNT(id_calltrack) AS work from hdr_calltrack WHERE call_date = '$today' AND id_user = '$id_user'";
+        // $query = $this->db->query($sql);
+        // $result = $query->row();
+        // $work_count = $result->work;
+        // $work_percentage = (($work_count / 250) * 100);
+        // $data['work_percentage'] = $work_percentage;
+        // $data['get_signout_option'] = $this->call_track_model->get_signout_option();
         ##########################
 
         // var_dump($primary_1);

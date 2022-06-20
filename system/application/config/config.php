@@ -25,7 +25,7 @@ $config['base_url'] .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME']))
 | variable so that it is blank.
 |
 */
-$config['index_page'] = "index.php/";
+$config['index_page'] = "";
 
 $fr_loc =  explode('/',$_SERVER['SCRIPT_NAME']);
 $base_path = $_SERVER['DOCUMENT_ROOT'] . '/'.$fr_loc[1];
