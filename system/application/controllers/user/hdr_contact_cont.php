@@ -15,11 +15,7 @@ class Hdr_contact_cont extends Controller
     {
         parent::Controller();
         $this->CI = &get_instance();
-        // if (@$_SESSION['blevel'] == 'user' || @$_SESSION['blevel'] == 'spv' || @$_SESSION['blevel'] == 'admin' || @$_SESSION['blevel'] == 'spv_sta') {
-        //     //
-        // } else {
-        //     redirect('login');
-        // }
+       
         $this->load->model('hdr_debtor/hdr_debtor_model', 'debtor_model');
         $this->load->model('user/hdr_call_track_model', 'call_track_model');
     }
@@ -149,13 +145,13 @@ class Hdr_contact_cont extends Controller
             endif;
         }
         ## Martin Add -> GET REMINDER ##
-        $data['get_reminder_new'] = $this->call_track_model->get_reminder_new($primary_1, $id_user);
-        $reminder_count = count($data['get_reminder_new']);
-        if ($reminder_count > 0) {
-            $data['div_state'] = "block";
-        } else {
-            $data['div_state'] = "none";
-        }
+        // $data['get_reminder_new'] = $this->call_track_model->get_reminder_new($primary_1, $id_user);
+        // $reminder_count = count($data['get_reminder_new']);
+        // if ($reminder_count > 0) {
+        //     $data['div_state'] = "block";
+        // } else {
+        //     $data['div_state'] = "none";
+        // }
         ################
 
         #### Count Call Today ####
