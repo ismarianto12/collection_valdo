@@ -15,12 +15,11 @@ class Hdr_contact_cont extends Controller
     {
         parent::Controller();
         $this->CI = &get_instance();
-
-        if (@$_SESSION['blevel'] == 'user' || @$_SESSION['blevel'] == 'spv' || @$_SESSION['blevel'] == 'admin' || @$_SESSION['blevel'] == 'spv_sta') {
-            //
-        } else {
-            redirect('login');
-        }
+        // if (@$_SESSION['blevel'] == 'user' || @$_SESSION['blevel'] == 'spv' || @$_SESSION['blevel'] == 'admin' || @$_SESSION['blevel'] == 'spv_sta') {
+        //     //
+        // } else {
+        //     redirect('login');
+        // }
         $this->load->model('hdr_debtor/hdr_debtor_model', 'debtor_model');
         $this->load->model('user/hdr_call_track_model', 'call_track_model');
     }
