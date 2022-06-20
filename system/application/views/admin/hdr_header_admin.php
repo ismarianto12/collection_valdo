@@ -102,7 +102,7 @@
 	<!-- HEADER start -->
 	<div id="wrap_header">
 		<div id="header">
-			<!-- <span class="head_logo"><a href="#"><img src="<?= base_url() ?>assets/images/logo2.gif" /></a></span> -->
+			<span class="head_logo"><a href="#"><img src="<?= base_url() ?>assets/images/logo.png" style="width:150px ;" /></a></span>
 			<div class="head_right">
 				<div class="head_welcome">
 					<p>Welcome, <?php echo @$_SESSION['bsname_s'] ?></p> <a href="<?php echo site_url() ?>logout" class="signout">Sign out</a>

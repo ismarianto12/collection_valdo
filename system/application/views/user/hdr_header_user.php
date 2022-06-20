@@ -4,7 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="shortcut icon" href="<?php echo base_url() ?>/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="https://www.brifinance.co.id/images/bank-bri.png" sizes="32x32" type="image/png" />
+
     <title> Valdo Management - TC Dashboard <?= $title ?> &nbsp;-<?php echo @$_SESSION['bsname_s'] ?>-</title>
     <!--flexi grid-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/hdr_style.css" />
@@ -156,7 +157,7 @@
     <!-- HEADER start -->
     <div id="wrap_header">
         <div id="header">
-            <!-- <span class="head_logo"><a href="#"><img src="<?= base_url() ?>assets/images/syaria.gif" /></a></span> -->
+            <span class="head_logo"><a href="#"><img src="<?= base_url() ?>assets/images/logo.png" style="width:150px ;" /></a></span>
             <div class="head_right">
                 <div class="head_welcome">
                     <p>Welcome, <?php echo @$_SESSION['bsname_s'] ?></p> <a onclick="doLogout()" class="signout">Sign out</a>

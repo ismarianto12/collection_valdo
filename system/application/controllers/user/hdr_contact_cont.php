@@ -96,7 +96,7 @@ class Hdr_contact_cont extends Controller
 
                         $no_loan = $this->call_track_model->get_dpds(0);
                         $get_last = base64_encode($no_loan . "_" . DATE("i"));
-                        
+
                         $dtnow = date("Y-m-d");
                         $sql = "update hdr_debtor_main hdm, hdr_calltrack hc
 								set hdm.called=1
@@ -168,7 +168,7 @@ class Hdr_contact_cont extends Controller
 
         // var_dump($primary_1);
         // die;  
-        // $primary_1 = '1_55';
+        $primary_1 = '1_55';
 
         if ($primary_1 == 0 || $primary_1 == '0' || $primary_1 == '') {
             $this->load->view('user/hdr_header_user', $data);

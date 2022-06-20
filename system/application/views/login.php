@@ -89,7 +89,9 @@
 
 <body>
   <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light py-3">
+    <nav class="navbar navbar-expand-lg navbar-light py-3" style="
+    background: #026de26b;
+">
       <div class="container">
         <a href="#" class="navbar-brand" style="float:center">
           <center>
@@ -105,14 +107,14 @@
 
       <div class="col-md-8 align-items-center">
         <center>
-          <img src="<?= base_url() ?>/assets/images/computer_ui.png" alt="" class="img-fluid mb-3 d-none d-md-block" style="width:50%">
+          <img src="https://cdn.dribbble.com/users/1484145/screenshots/14190807/media/2ddaa3247796d79157a19993ad960066.png?compress=1&resize=500x400" alt="" class="img-fluid mb-3 d-none d-md-block" style="width:50%">
           <h1>Deb Collection Manangement</h1>
           </p>
         </center>
       </div>
       <div class="col-md-4" style="margin-top:-80px">
         <center>
-          <img src="<?= base_url() ?>/assets/images/logo.png" class="img-responsive" style="width: auto;">
+          <img src="<?= base_url() ?>/assets/images/logo.png" class="img-responsive" style="width: 55%;">
         </center>
         <br />
 
